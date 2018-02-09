@@ -291,8 +291,20 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>// 前缀形式：  （++i）<br>        int&amp; int::operator++() //这里返回的是一个引用，说明函数返回值也可以作为一个左值使用<br>        {//函数本身无参，意味着是在函数体内加1<br>              <em>this += 1;<br>               return </em>this;<br>        }</p>
-<p> //后缀形式:（i++）<br>        const int int::operator++(int) //函数返回值是一个非左值，与前缀形有所差别<br>        {//函数带参，<br>            int oldValue = <em>this;<br>            ++(</em>this); // 增加<br>            return oldValue;<br>        }</p>
+        <p>// 前缀形式：  （++i）</p>
+<pre><code>int&amp; int::operator++() //这里返回的是一个引用，说明函数返回值也可以作为一个左值使用
+    {//函数本身无参，说明是在函数体内加1
+        *this += 1;  
+         return *this;  
+    }
+</code></pre><p> //后缀形式:（i++）</p>
+<pre><code>const int int::operator++(int) //函数返回值是一个非左值，与前缀形有所差别
+{//函数带参,会新建一个临时空间
+    int oldValue = *this;  
+    ++(*this); // 增加
+    return oldValue;  
+}
+</code></pre><p>综上所述，前加加要比后加加略微快一丢丢</p>
 
       
     </div>
