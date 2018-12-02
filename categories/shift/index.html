@@ -5,21 +5,18 @@
   <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
   
   
+   
+    <meta name="keywords" content="shift" />
   
   
-  <title>linux启动过程 | TransMiss</title>
+  <title>Category: shift | TransMiss</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="目前电脑的启动的方式分为BIOS+MBR 和UEFI+GPT两种。 第一种方式：BIOS+MBR 1.按电源2.读取BIOS芯片3.选择启动顺序为首的存储设备4.读取存储设备主引导扇区，即开头512字节。如果该512字节的结束字符为0xAA55时，表示这个设备可以用于启动, 否则表示不能用于启动系统。 此处具体介绍一下主引导扇区：主引导扇区不属于此块磁盘上的任意一个分区，因此分区空间内的格式化命令">
-<meta name="keywords" content="linux原理">
-<meta property="og:type" content="article">
-<meta property="og:title" content="linux启动过程">
-<meta property="og:url" content="http://tranzimiss.com/2018/09/05/linux启动过程/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="TransMiss">
+<meta property="og:url" content="http://tranzimiss.com/categories/shift/index.html">
 <meta property="og:site_name" content="TransMiss">
-<meta property="og:description" content="目前电脑的启动的方式分为BIOS+MBR 和UEFI+GPT两种。 第一种方式：BIOS+MBR 1.按电源2.读取BIOS芯片3.选择启动顺序为首的存储设备4.读取存储设备主引导扇区，即开头512字节。如果该512字节的结束字符为0xAA55时，表示这个设备可以用于启动, 否则表示不能用于启动系统。 此处具体介绍一下主引导扇区：主引导扇区不属于此块磁盘上的任意一个分区，因此分区空间内的格式化命令">
-<meta property="og:updated_time" content="2018-10-13T13:28:19.390Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux启动过程">
-<meta name="twitter:description" content="目前电脑的启动的方式分为BIOS+MBR 和UEFI+GPT两种。 第一种方式：BIOS+MBR 1.按电源2.读取BIOS芯片3.选择启动顺序为首的存储设备4.读取存储设备主引导扇区，即开头512字节。如果该512字节的结束字符为0xAA55时，表示这个设备可以用于启动, 否则表示不能用于启动系统。 此处具体介绍一下主引导扇区：主引导扇区不属于此块磁盘上的任意一个分区，因此分区空间内的格式化命令">
+<meta name="twitter:title" content="TransMiss">
   
     <link rel="alternative" href="/atom.xml" title="TransMiss" type="application/atom+xml">
   
@@ -44,10 +41,10 @@
           fancybox: true,
           animate: true,
           isHome: false,
-          isPost: true,
+          isPost: false,
           isArchive: false,
           isTag: false,
-          isCategory: false,
+          isCategory: true,
           open_in_new: false
       }
   </script>
@@ -264,202 +261,60 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-linux启动过程" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a  href="/2018/09/05/linux启动过程/" class="article-date">
-      <time datetime="2018-09-05T12:55:00.000Z" itemprop="datePublished">2018-09-05</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a  href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a  href="/2018/12/02/test/" class="archive-article-date">
+      <time datetime="2018-12-02T06:19:57.000Z" itemprop="datePublished">12-02</time>
 </a>
 
-    </div>
+        </div>
+         
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      linux启动过程
+    <h1 itemprop="name">
+      <a  class="archive-article-title" href="/2018/12/02/test/">test</a>
     </h1>
   
 
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux原理/">linux原理</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="article-info info-on-archive">
           
-        <p>目前电脑的启动的方式分为BIOS+MBR 和UEFI+GPT两种。</p>
-<p>第一种方式：BIOS+MBR</p>
-<p>1.按电源<br>2.读取BIOS芯片<br>3.选择启动顺序为首的存储设备<br>4.读取存储设备主引导扇区，即开头512字节。如果该512字节的结束字符为0xAA55时，表示这个设备可以用于启动, 否则表示不能用于启动系统。</p>
-<p>此处具体介绍一下主引导扇区：<br>主引导扇区不属于此块磁盘上的任意一个分区，因此分区空间内的格式化命令不能清除主因到记录的信息。这也是主引导分区中的病毒难查杀的重要原因。<br>4.1结构<br>446<br>0000H-0088H    主引导记录（即主引导程序MBR）  共计136个字节<br>0089H-00BDH    出错信息                    共计310个字节<br>01BEH-01FDH    分区表（DPT）               共计64个字节<br>01FEH-01FFH    幻数   0x55AA                 共计2个字节</p>
-<p>4.2主引导程序<br>检查分区表是否正确，在硬件自检完成之后引导具有激活标志的分区上的操作系统，并将计算机的控制权交给启动程序。</p>
-<p>4.3分区表</p>
-<p>DPT一共为64个字节，最多分为四个组，这也是一块硬盘上最多只有四个主分区的原因。每个组占用16个字节。其中：<br>第一字节              引导标志，若值为80H表示为活动分区，若值为00H表示为非活动分区。<br>第二字节               本分区的起始磁头号<br>第三字节低六位          本分区的起始扇区号<br>第三字节高两位+第四字节  柱面号<br>第五字节               分区类型标志<br>第六字节               本分区的结束磁头号<br>第七字节低六位          结束扇区号<br>第七字节高二位+第八字节  柱面号<br>9+10+11+12           本分区已用扇区数<br>13+14+15+16          本分区总的扇区数</p>
-<p>5.启动boot loader即linux中的grub或者grub2<br>6.读取/sbin/init程序，对于parrot来讲，运行的是systemd程序。<br>7.根据预先设定的默认运行级别选择开启的服务数量（例如级别一不需要启动x图形服务等），但是我们已经没有inittab了，而是使用systemctl set-default xxx.target实现。当然，也可以通过修改/etc/rcx.d中的链接实现<br>8.用户登录界面，输入密码，读取用户空间内的相应设置，操作系统启动完成。</p>
-<p>第二种方式：UEFI+GPT<br>首先做简单介绍，参考自archwiki（别人家的wiki）<br>UEFI 全称为Unified Extensible Firmware Interface  翻译为统一可扩展固件接口，用于替换legancy bios<br>此处介绍一下GPT（GUID Patition Table,GUID分区表），GPT是使用全局唯一标识符（GUID，globally unique identifiers全局唯一标识符）在PC上的物理存储设备中使用的分区表布局标准，它是UEFI的一部分，但是在某些情况下可以用于BIOS引导中。</p>
-<p>1.点击电源<br>2.开机自检<br>3.加载UEFI固件，固件初始化引导相应的硬件<br>4.读取固件管理器中的相关条目，确定相应分区<br>5.查找/efi分区，查找其中的\EFI\BOOT\BOOTTX64.EFI并启动<br>6.启动引导管理器（如system-boot）或者直接加载Linux内核。<br>7.读取/sbin/init程序，对于parrot来讲，运行的是systemd程序。<br>8.根据预先设定的默认运行级别选择开启的服务数量（例如级别一不需要启动x图形服务等），但是我们已经没有inittab了，而是使用systemctl set-default xxx.target实现。当然，也可以通过修改/etc/rcx.d中的链接实现<br>9.用户登录界面，输入密码，读取用户空间内的相应设置，操作系统启动完成。</p>
-
-      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/shift/">shift</a>
     </div>
-    
+
+
+          
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络安全-工具-存档/">网络安全 工具 存档</a></li></ul>
+    </div>
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2018/09/05/linux启动过程/">linux启动过程</a></p>
-        <p><span>文章作者:</span><a  href="/" title="访问 Trans 的个人博客">Trans</a></p>
-        <p><span>发布时间:</span>2018年09月05日 - 20时55分</p>
-        <p><span>最后更新:</span>2018年10月13日 - 21时28分</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/09/05/linux启动过程/" title="linux启动过程">http://tranzimiss.com/2018/09/05/linux启动过程/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2018/09/05/linux启动过程/　　作者: Trans" title=""></span>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
-
-
-
-<nav id="article-nav">
-  
-    <a  href="/2018/12/02/暗网wiki/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          暗网wiki
-        
-      </div>
-    </a>
-  
-  
-    <a  href="/2018/02/23/Trojanizer-Trojanize-Your-Payload/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Trojanizer-Trojanize Your Payload</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
-
-  
 </article>
-
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    
-</div>
-<style>
-    .left-col .switch-btn {
-        display: none;
-    }
-    .left-col .switch-area {
-        display: none;
-    }
-</style>
-<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-<script>
-    var valueHide = "隐藏目录";
-    var valueShow = "显示目录";
-    if ($(".left-col").is(":hidden")) {
-        $("#tocButton").attr("value", valueShow);
-    }
-    $("#tocButton").click(function() {
-        if ($("#toc").is(":hidden")) {
-            $("#tocButton").attr("value", valueHide);
-            $("#toc").slideDown(320);
-            $(".switch-btn, .switch-area").fadeOut(300);
-        }
-        else {
-            $("#tocButton").attr("value", valueShow);
-            $("#toc").slideUp(350);
-            $(".switch-btn, .switch-area").fadeIn(500);
-        }
-    })
-    if ($(".toc").length < 1) {
-        $("#toc, #tocButton").hide();
-        $(".switch-btn, .switch-area").show();
-    }
-</script>
-
-
-
-
-
+  
+  
+    </div></section>
+  
 
     
-        <section class="changyan" id="comments">
-  <!--<div id="uyan_frame"></div>-->
-  <div id="SOHUCS"></div>
-  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
-  <script type="text/javascript">
-    window.changyan.api.config({
-      appid: 'xxxx',
-      conf: 'xxxxxxxxx'
-    });
-  </script>
-</section>
-    
 
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a  href="/2018/12/02/暗网wiki/" title="上一篇: 暗网wiki">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-        
-            <a  href="/2018/02/23/Trojanizer-Trojanize-Your-Payload/" title="下一篇: Trojanizer-Trojanize Your Payload">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/test/">test</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/暗网wiki/">暗网wiki</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/05/linux启动过程/">linux启动过程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/23/Trojanizer-Trojanize-Your-Payload/">Trojanizer-Trojanize Your Payload</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/定制自己的shell提示符/">定制自己的shell提示符</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/11/交换机的工作原理/">交换机的工作原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/教堂与集市笔记归纳/">教堂与集市笔记归纳</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/敬请期待/">敬请期待</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/未完待续/">未完待续</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/Markdown格式（转）/">Markdown格式（转）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/前加加和后加加的区别/">前加加和后加加的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/08/一个好的编程小习惯/">一个好的编程小习惯</a></li></ul>
-    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-    <script>
-        $(".post-list").addClass("toc-article");
-        // $(".post-list-item a").attr("target","_blank");
-        $("#post-nav-button > a:nth-child(2)").click(function() {
-            $(".fa-bars, .fa-times").toggle();
-            $(".post-list").toggle(300);
-            if ($(".toc").length > 0) {
-                $("#toc, #tocButton").toggle(200, function() {
-                    if ($(".switch-area").is(":visible")) {
-                        $("#toc, .switch-btn, .switch-area").toggle();
-                        $("#tocButton").attr("value", valueHide);
-                        }
-                    })
-            }
-            else {
-                $(".switch-btn, .switch-area").fadeToggle(300);
-            }
-        })
-    </script>
-
-
-
-
-    <script>
-        
-    </script>
 
 </div>
       <footer id="footer">
@@ -549,6 +404,17 @@ ga('send', 'pageview');
         };
     })
 </script>
+
+    <button class="hide-labels">TAG 开关</button>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $(".article-info").toggle(200);
+            });
+        });
+    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
