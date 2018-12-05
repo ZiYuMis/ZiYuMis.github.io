@@ -189,7 +189,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 15px;">原理</a> <a href="/tags/存档/" style="font-size: 12.5px;">存档</a> <a href="/tags/工具/" style="font-size: 17.5px;">工具</a> <a href="/tags/漏洞/" style="font-size: 10px;">漏洞</a> <a href="/tags/网络安全/" style="font-size: 12.5px;">网络安全</a>
+                        <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 15px;">原理</a> <a href="/tags/存档/" style="font-size: 12.5px;">存档</a> <a href="/tags/工具/" style="font-size: 17.5px;">工具</a> <a href="/tags/漏洞/" style="font-size: 10px;">漏洞</a> <a href="/tags/漏洞扫描/" style="font-size: 12.5px;">漏洞扫描</a> <a href="/tags/网络安全/" style="font-size: 12.5px;">网络安全</a>
                     </div>
                 </section>
                 
@@ -263,6 +263,362 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-漏洞基本概念" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/05/漏洞基本概念/" class="article-date">
+      <time datetime="2018-12-05T14:10:10.000Z" itemprop="datePublished">2018-12-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/05/漏洞基本概念/">漏洞基本概念</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ol>
+<li>SCAP(Security Content Automation Protocol)<ul>
+<li>SCAP是一个集合了多种安全标准框架</li>
+<li>其中含有六个元素：CVE、OVAL、CCE、CPE、CVSS、XCCDF</li>
+<li>目的是以标准的方法展示和操作安全数据</li>
+<li>由NIST负责维护</li>
+<li>解决的三个问题<ul>
+<li>实现高层政策法规等到底层实施的落地（如FISMA、ISO27000系列）</li>
+<li>将信息安全所涉及的各个要素标准化（如统一漏洞的命名以及严重性度量）</li>
+<li>将复杂的系统配置核查自动化</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>NVD （National Vulnerability Database）</p>
+<ul>
+<li>美国政府的漏洞管理标准数据</li>
+<li>完全基于SCAP框架</li>
+<li>实现自动化漏洞管理、安全测量、合规要求</li>
+<li>包含以下库<ul>
+<li>安全检查列表</li>
+<li>软件安全漏洞</li>
+<li>配置错误</li>
+<li>产品名称</li>
+<li>影响度量</li>
+</ul>
+</li>
+<li>网址 <a href="https://nvd.nist.gov/" target="_blank" rel="noopener">https://nvd.nist.gov/</a></li>
+</ul>
+</li>
+<li><p>OVAL（Open Vulnerability and Assessment Language）</p>
+<ul>
+<li>描述漏洞检测方法的机器可识别语言</li>
+<li>详细的描述漏洞检测的技术细节，可导入自动化检测工具中实施漏洞检测工作</li>
+<li>OVAL使用XML语言描述，包含了严密的语法逻辑</li>
+</ul>
+</li>
+<li><p>CCE</p>
+<ul>
+<li>描述软件配置缺陷的一种标准化格式</li>
+<li>在信息安全风险评估中，配置缺陷的检测是一项重要内容，使用CCE可以让配置缺陷以标准的方式展现出来，便于配置缺陷评估的可量化操作</li>
+</ul>
+</li>
+<li><p>CPE（Common Product Enumeration）</p>
+<ul>
+<li>信息技术产品、系统、软件包的结构化命名规范，分类命名</li>
+</ul>
+</li>
+<li><p>CWE（Common Weakness Enumeration）</p>
+<ul>
+<li>常见的漏洞类型的字典，描述不同类型漏洞的特征（访问控制，信息泄漏，拒绝服务）</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li>常见的Vulnerability Reference<ul>
+<li>CVE</li>
+<li>MS</li>
+<li>CERT</li>
+<li>BID</li>
+<li>IAVM</li>
+<li>OVAL</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/漏洞扫描/">漏洞扫描</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-OPENVAS" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/05/OPENVAS/" class="article-date">
+      <time datetime="2018-12-05T14:06:16.000Z" itemprop="datePublished">2018-12-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/05/OPENVAS/">OPENVAS</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ol>
+<li>配置步骤<ul>
+<li>安装</li>
+<li>创建证书</li>
+<li>同步弱点数据库</li>
+<li>创建客户端证书</li>
+<li>重建数据库</li>
+<li>备份数据库</li>
+<li>启动服务装入插件</li>
+<li>创建管理员帐号</li>
+<li>创建普通用户帐号</li>
+<li>配置服务侦听端口</li>
+<li>安装验证</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/漏洞扫描/">漏洞扫描</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-WAF" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/05/WAF/" class="article-date">
+      <time datetime="2018-12-05T14:02:13.000Z" itemprop="datePublished">2018-12-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/05/WAF/">WAF</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>WEB应用防火墙</p>
+<p>wafw00f 域名</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-负载均衡" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/05/负载均衡/" class="article-date">
+      <time datetime="2018-12-05T13:58:42.000Z" itemprop="datePublished">2018-12-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/05/负载均衡/">负载均衡</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li><p>广域网负载均衡使用DNS</p>
+</li>
+<li><p>HTTP-Loadbalancina</p>
+<ul>
+<li>Nginx</li>
+<li>Apache</li>
+</ul>
+</li>
+</ul>
+<p>lbd  域名</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-SNMP原理" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -732,316 +1088,9 @@
 
 
   
-    <article id="post-nmap" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/03/nmap/" class="article-date">
-      <time datetime="2018-12-03T13:27:27.000Z" itemprop="datePublished">2018-12-03</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/03/nmap/">nmap</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>四层发现：</p>
-<ul>
-<li>nmap  192.168.1.0/24 -PU53  -sn</li>
-<li>nmap  192.168.1.0/24 -PA80  -sn</li>
-<li>nmap  -iL iplist.txt -PA80  -sn</li>
-</ul>
-<p>端口扫描:</p>
-<ul>
-<li>nmap -sU 192.168.1.1      扫描默认的1000个端口</li>
-<li>nmap 192.168.1.1 -sU -p 53</li>
-<li>nmap -iL iplist.txt -sU -p  1-200</li>
-</ul>
-<p>隐蔽端口扫描：</p>
-<ul>
-<li>nmap -sS 192.168.1.1 -p xx,xx,xx,xx</li>
-<li>nmap -sS 192.168.1.1 -p -65535 -open</li>
-<li>nmap -sS 192.168.1.1 -p –open</li>
-<li>nmap -sS -iL iplist -p 80</li>
-</ul>
-<p>[隐蔽端口扫描还有hping3 命令]</p>
-<p>全连接端口扫描</p>
-<ul>
-<li>nmap -sT 127.0.0.1       扫描默认的1000个端口</li>
-<li>nmap -sT 127.0.0.1 -p 80</li>
-<li>nmap -sT 127.0.0.1 -p 80-1080</li>
-<li>nmap -sT -iL iplist.txt -p 80</li>
-</ul>
-<p>僵尸扫描</p>
-<ul>
-<li>发现僵尸机 nmap 192.168.1.1 -p 445 –script=ipldseq.nse</li>
-<li>使用僵尸机 nmap xxx.xxx.xxx.僵尸机 -sl xxx.xxx.xxx.目标机 -Pn -p 0-100</li>
-</ul>
-<p>服务扫描</p>
-<p>nmap通过发送系列复杂的探测，依据相应特征signature</p>
-<p>nmap 127.0.0.1 -p 80 -sV</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-三层发现" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/02/三层发现/" class="article-date">
-      <time datetime="2018-12-02T14:14:34.000Z" itemprop="datePublished">2018-12-02</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/02/三层发现/">三层发现</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>路由追踪</p>
-<p>traceroute xxx.com</p>
-<p>ping命令</p>
-<p>fping命令</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-二层发现" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/02/二层发现/" class="article-date">
-      <time datetime="2018-12-02T14:08:01.000Z" itemprop="datePublished">2018-12-02</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/02/二层发现/">二层发现</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Netdiscover</p>
-<p>简介：专用于二层发现，可以用于无线和交换网络环境，主动和被动探测</p>
-<p>主动：</p>
-<p>netdiscover -l eth0 -r 192.168.0.0/24<br>netdiscover -l iplist.txt</p>
-<p>被动：</p>
-<p>netdiscover -p</p>
-<p>手动探测工具  scapy   基于python<br>aptitude install python-gnuplot</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-recon-ng" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/02/recon-ng/" class="article-date">
-      <time datetime="2018-12-02T14:05:11.000Z" itemprop="datePublished">2018-12-02</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/02/recon-ng/">recon-ng</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>简介： 基于python开发的全特性的web侦查框架</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
