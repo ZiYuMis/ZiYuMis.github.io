@@ -264,6 +264,124 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-nmap" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/03/nmap/" class="article-date">
+      <time datetime="2018-12-03T13:27:27.000Z" itemprop="datePublished">2018-12-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/03/nmap/">nmap</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>四层发现：</p>
+<ul>
+<li>nmap  192.168.1.0/24 -PU53  -sn</li>
+<li>nmap  192.168.1.0/24 -PA80  -sn</li>
+<li>nmap  -iL iplist.txt -PA80  -sn</li>
+</ul>
+<p>端口扫描:</p>
+<ul>
+<li>nmap -sU 192.168.1.1      扫描默认的1000个端口</li>
+<li>nmap 192.168.1.1 -sU -p 53</li>
+<li>nmap -iL iplist.txt -sU -p  1-200</li>
+</ul>
+<p>隐蔽端口扫描：</p>
+<ul>
+<li>nmap -sS 192.168.1.1 -p xx,xx,xx,xx</li>
+<li>nmap -sS 192.168.1.1 -p -65535 -open</li>
+<li>nmap -sS 192.168.1.1 -p –open</li>
+<li>nmap -sS -iL iplist -p 80</li>
+</ul>
+<p>[隐蔽端口扫描还有hping3 命令]</p>
+<p>全连接端口扫描</p>
+<ul>
+<li>nmap -sT 127.0.0.1       扫描默认的1000个端口</li>
+<li>nmap -sT 127.0.0.1 -p 80</li>
+<li>nmap -sT 127.0.0.1 -p 80-1080</li>
+<li>nmap -sT -iL iplist.txt -p 80</li>
+</ul>
+<p>僵尸扫描</p>
+<ul>
+<li>发现僵尸机 nmap 192.168.1.1 -p 445 –script=ipldseq.nse</li>
+<li>使用僵尸机 nmap xxx.xxx.xxx.僵尸机 -sl xxx.xxx.xxx.目标机 -Pn -p 0-100</li>
+</ul>
+<p>服务扫描</p>
+<p>nmap通过发送系列复杂的探测，依据相应特征signature</p>
+<ul>
+<li>nmap 127.0.0.1 -p 80 -sV</li>
+</ul>
+<p>SMB扫描</p>
+<ul>
+<li>nmap -v -p 139,445 127.0.0.1</li>
+<li>nmap 127.0.0.1 -p 139,445 –script=smb-check-vulns –script-args=unsafe=1 127.0.01</li>
+</ul>
+<p>SMTP扫描</p>
+<ul>
+<li>nmap 域名服务器 -p25 –script=smtp-enum-users.nse –script-args=smtp-enum-users.methods={VRFY}</li>
+<li>nmap 域名服务器 -p25 –script=smtp-open-relay.nse</li>
+</ul>
+<p>防火墙识别</p>
+<ul>
+<li>nmap -sA 127.0.0.1 -p 22     防火墙过滤检测功能</li>
+</ul>
+<p>WAF识别</p>
+<p>nmap 域名 –script=http-waf-detect.nse</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-三层发现" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -870,76 +988,6 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-tcpdump" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/02/tcpdump/" class="article-date">
-      <time datetime="2018-12-02T06:37:45.000Z" itemprop="datePublished">2018-12-02</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/02/tcpdump/">tcpdump</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>tcpdump -n -r file.cap | awk ‘{print $3}’ | sort -U</p>
-<p>tcpdump -n src host xxx.xxx.xxx.xxx -r file.cap</p>
-<p>tcpdump -n dst host xxx.xxx.xxx.xxx -r file.cap</p>
-<p>tcpdump -n port xx -r file.cap</p>
-<p>tcpdump -nX port xx -r file.cap</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
     </div>
 
       
