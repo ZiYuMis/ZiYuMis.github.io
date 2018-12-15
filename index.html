@@ -264,6 +264,84 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-隐藏痕迹" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/15/隐藏痕迹/" class="article-date">
+      <time datetime="2018-12-15T02:57:44.000Z" itemprop="datePublished">2018-12-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/15/隐藏痕迹/">隐藏痕迹</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ol>
+<li>禁止在登录界面显示新建帐号</li>
+<li>REG ADD “HKEY——LOCAL——MACHINE、SOFTWARE、Microsoft\Windows NT\CurrentVersion\WinLogon\SpecialAccounts\UserList” /v uname /T REG_DWORD /D 0</li>
+<li>del %WINDIR%*.log /a/s/q/f</li>
+<li>History</li>
+<li>日志<ul>
+<li>auth.log /secure</li>
+<li>btmp / wtmp</li>
+<li>lastlog / faillog</li>
+</ul>
+</li>
+<li>其他日志和HIDS等</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-linux基本信息收集" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -1007,83 +1085,6 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-命令行连接无线" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/08/命令行连接无线/" class="article-date">
-      <time datetime="2018-12-08T11:49:27.000Z" itemprop="datePublished">2018-12-08</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/08/命令行连接无线/">命令行连接无线</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>自从由mate转i3之后。。。。还是学一下咋用命令行连无线吧。。。毕竟家里穷，买不起鼠标。。。。。</p>
-<ol>
-<li>查看可以使用的无线网</li>
-</ol>
-<p><code>nmcli device wifi</code></p>
-<ol>
-<li>连接无线网</li>
-</ol>
-<p><code>nmcli device wifi connect essid（即无线网名称） password password</code></p>
-<ol>
-<li>如果essid和密码没有输入错误的话，那么现在应该是已经连接成功了。。。[装逼成功]     </li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Linux/">Linux</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/parrot使用/">parrot使用</a></li></ul>
     </div>
 
       
