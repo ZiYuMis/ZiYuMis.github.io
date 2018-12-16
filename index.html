@@ -314,8 +314,7 @@
 <li>attrib 文件名 +或- 添加文件或目录的属性  A存档  R 只读 S系统  H隐藏 例如 <code>attrib test.txt +H</code></li>
 </ul>
 </li>
-<li><p>net命令</p>
-<ul>
+<li>net命令<ul>
 <li>net user 用户名 密码  /add 建立用户</li>
 <li>net user guest /active:yes 激活guest账户</li>
 <li>net user 查看有哪些账户</li>
@@ -329,10 +328,10 @@
 <li>net start 查看开启了哪些服务</li>
 <li>net start 服务名   开启服务</li>
 <li>net stop 服务名   停止服务</li>
+<li>net view 查看局域网内其他计算机名称</li>
 </ul>
 </li>
-<li><p>copy命令</p>
-</li>
+<li>copy命令</li>
 <li>move命令</li>
 <li>telnet命令</li>
 <li>dir命令</li>
@@ -342,6 +341,22 @@
 <li>rd命令 删除目录</li>
 <li>ren命令 重命名文件</li>
 <li>del命令 删除文件</li>
+<li>死亡之ping  ping -t -l 65550 ip</li>
+<li><p>ipconfig命令</p>
+<ul>
+<li>ipconfig /release 释放ip</li>
+<li>ipconfig /renew 重新获得ip</li>
+</ul>
+</li>
+<li><p>注册表结构</p>
+<ul>
+<li>HKEY_CLASSES_ROOT  管理文件系统，根据在windows中安装的应用程序的扩展名，该根键指明其文件类型的名称，相应打开该文件所要调用的程序等等信息。</li>
+<li>HKEY_CURRENT_USER  管理系统当前的用户信息，在这个根键中保存了本地计算机中存放的当前登录的用户信息，包括用户名和暂存的密码，在用户登录windows时，其信息从HKEY_USERS中相应的项拷贝到HKEY_CURRENT_USER中</li>
+<li>HKEY_LOCAL_MACHINE 管理当前系统硬件配置，在这个根键中保存了本地计算机硬件配置数据，此根键下的子关键字包括在SYSTEM.DAT中，用来提供HKEY_LOCALMACHINE所需的信息，或者在远程计算机中可访问的一组键中。这个根键中许多子键和system.ini文件中设置项类似。</li>
+<li>HKEY_USERS  管理系统的用户信息。在这个根键中保存了存放在本地计算机口令列表中的用户标识和密码列表。同时每个用户的预配置信息都存储在HKEY_USERS根键中。HKEY_USERS是远程计算机中访问的根键之一。</li>
+<li>HKEY_CURRENT_CONFIG  管理当前用户的系统配置。在这个根键中保存着定义当前用户桌面配置（如显示器）的数据，该用户使用过的文档列表（MRU），应用程序配置和其他有关当前用户的windows的安装的信息。</li>
+</ul>
+</li>
 </ol>
 
       
@@ -582,6 +597,14 @@
 <li>业务数据库 ； 身份认证数据库</li>
 <li>临时文件目录</li>
 <li>UserProfile\AppData\Local\Microsoft\Window\Temporary Internet Files\</li>
+</ol>
+<p>注册表信息：</p>
+<ol>
+<li>HKEY_LOCAL_MACHINE\software\hzhost\config\settings\mysqlpass</li>
+<li>HKEY_LOCAL_MACHINE\software\hzhost\config\settings\mssqlpss</li>
+<li>HKEY_LOCAL_MACHINE\software\hzhost\config\settings\mastersvrpass</li>
+<li>HKEY_LOCAL_MACHINE\SYSTEM\LIWEIWENSOFT\INSTALLFREEADMIN\11</li>
+<li>HKEY_LOCAL_MACHINE\SYSTEM\LIWEIWENSOFT\INSTALLFreeHost\11</li>
 </ol>
 
       
