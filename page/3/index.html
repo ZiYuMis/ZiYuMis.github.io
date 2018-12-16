@@ -189,7 +189,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 15px;">原理</a> <a href="/tags/存档/" style="font-size: 12.5px;">存档</a> <a href="/tags/工具/" style="font-size: 17.5px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/漏洞/" style="font-size: 10px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 12.5px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/设计模式/" style="font-size: 12.5px;">设计模式</a>
+                        <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 15px;">原理</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/存档/" style="font-size: 12.5px;">存档</a> <a href="/tags/工具/" style="font-size: 17.5px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/漏洞/" style="font-size: 10px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 12.5px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/设计模式/" style="font-size: 12.5px;">设计模式</a>
                     </div>
                 </section>
                 
@@ -263,6 +263,97 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-服务扫描" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/03/服务扫描/" class="article-date">
+      <time datetime="2018-12-03T14:09:25.000Z" itemprop="datePublished">2018-12-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/03/服务扫描/">服务扫描</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li>识别开放端口上运行的应用</li>
+<li>识别目标操作系统</li>
+<li>提高攻击效率<ul>
+<li>Banner捕获<ul>
+<li>软件开发商</li>
+<li>软件名称</li>
+<li>服务类型</li>
+<li>版本号[可以直接发现已知的漏洞和弱点]</li>
+</ul>
+</li>
+<li>连接建立后直接获取banner</li>
+<li>服务识别<ul>
+<li>另类服务识别方法<ul>
+<li>特征行为和响应字段</li>
+<li>不同的响应可以用于识别底层操作系统</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>操作系统识别</li>
+<li>SNMP 分析</li>
+<li>防火墙识别</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-端口扫描" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -911,74 +1002,6 @@
 <p>DNS追踪:  dig + trace example.com</p>
 <p>区域传输：dig @xxx.xxx.com   xxx.com axfr</p>
 <p>区域传输： host -T -l xxx.com 114.114.114.114</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-NSLOOKUP" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/02/NSLOOKUP/" class="article-date">
-      <time datetime="2018-12-02T06:57:10.000Z" itemprop="datePublished">2018-12-02</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/02/NSLOOKUP/">NSLOOKUP</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>nslookup 域名</p>
-<p>type=a、mx、ns、any</p>
-<p>nslookup -type=ns xxx.com </p>
 
       
     </div>

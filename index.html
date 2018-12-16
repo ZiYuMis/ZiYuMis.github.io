@@ -189,7 +189,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 15px;">原理</a> <a href="/tags/存档/" style="font-size: 12.5px;">存档</a> <a href="/tags/工具/" style="font-size: 17.5px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/漏洞/" style="font-size: 10px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 12.5px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/设计模式/" style="font-size: 12.5px;">设计模式</a>
+                        <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 15px;">原理</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/存档/" style="font-size: 12.5px;">存档</a> <a href="/tags/工具/" style="font-size: 17.5px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/漏洞/" style="font-size: 10px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 12.5px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/设计模式/" style="font-size: 12.5px;">设计模式</a>
                     </div>
                 </section>
                 
@@ -263,6 +263,121 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-windows使用入门" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/16/windows使用入门/" class="article-date">
+      <time datetime="2018-12-15T23:47:28.000Z" itemprop="datePublished">2018-12-16</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/16/windows使用入门/">windows使用入门</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ol>
+<li><p>netstat命令</p>
+<ul>
+<li>netstat -a 查看开启了端口</li>
+<li>netstat -n 查看端口的网络连接情况，常用netstat -an</li>
+<li>netstat -v 查看正在进行的工作</li>
+</ul>
+</li>
+<li><p>at命令</p>
+<ul>
+<li>at id号 开启已经注册的某个计划任务</li>
+<li>at /delete 停止所有计划任务，用参数/yes则不需要确认就直接停止</li>
+<li>at id号 /delete 停止某个已注册的计划任务</li>
+<li>at 查看所有的计划任务</li>
+</ul>
+</li>
+<li>attrib命令<ul>
+<li>attrib 文件名（目录名）  查看某文件（目录）的属性</li>
+<li>attrib 文件名 +或- 添加文件或目录的属性  A存档  R 只读 S系统  H隐藏 例如 <code>attrib test.txt +H</code></li>
+</ul>
+</li>
+<li><p>net命令</p>
+<ul>
+<li>net user 用户名 密码  /add 建立用户</li>
+<li>net user guest /active:yes 激活guest账户</li>
+<li>net user 查看有哪些账户</li>
+<li>net user 账户名 查看账户的属性</li>
+<li>net localGroup administrators 用户名 /add 把用户添加到管理员中使其具有管理员权限（administrator后加s表示复数）</li>
+<li>net user guest 12345 将guest用户的密码改为12345</li>
+<li>net passwd 密码 更改系统登录密码</li>
+<li>net share 查看本地开启的共享</li>
+<li>net share ipc5 开启ipc5共享</li>
+<li>net share ipc5 /del 删除ipc5共享</li>
+<li>net start 查看开启了哪些服务</li>
+<li>net start 服务名   开启服务</li>
+<li>net stop 服务名   停止服务</li>
+</ul>
+</li>
+<li><p>copy命令</p>
+</li>
+<li>move命令</li>
+<li>telnet命令</li>
+<li>dir命令</li>
+<li>cd命令</li>
+<li>start命令</li>
+<li>md命令 创建目录</li>
+<li>rd命令 删除目录</li>
+<li>ren命令 重命名文件</li>
+<li>del命令 删除文件</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础/">基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/系统使用/">系统使用</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-隐藏痕迹" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -1004,87 +1119,6 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/漏洞利用/">漏洞利用</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-弱点扫描" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/08/弱点扫描/" class="article-date">
-      <time datetime="2018-12-08T12:24:36.000Z" itemprop="datePublished">2018-12-08</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/08/弱点扫描/">弱点扫描</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ol>
-<li>主动扫描<ul>
-<li>有身份验证</li>
-<li>无身份验证</li>
-</ul>
-</li>
-<li>被动扫描<ul>
-<li>镜像端口抓包</li>
-<li>其他来源输入</li>
-</ul>
-</li>
-<li>基于Agent的扫描<ul>
-<li>支持平台有限</li>
-</ul>
-</li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li></ul>
     </div>
 
       
