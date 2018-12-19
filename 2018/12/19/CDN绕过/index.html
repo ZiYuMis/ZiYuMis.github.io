@@ -7,18 +7,19 @@
   
   
   
-  <title>前加加和后加加的区别 | TransMiss</title>
+  <title>CDN绕过 | TransMiss</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="// 前缀形式：  （++i） int&amp;amp; int::operator++() //这里返回的是一个引用，说明函数返回值也可以作为一个左值使用     {//函数本身无参，说明是在函数体内加1         *this += 1;            return *this;       }  //后缀形式:（i++） const int int::operator++(int) //">
+  <meta name="description" content="什么是CDN 如何判断网站有没有使用CDN（超级ping） 查找二级域名 让服务器主动给你发包（邮件） 敏感文件泄漏 查询历史解析ip 访问绕过cdn（修改hosts文件）">
+<meta name="keywords" content="信息收集,原理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前加加和后加加的区别">
-<meta property="og:url" content="http://tranzimiss.com/2018/02/09/前加加和后加加的区别/index.html">
+<meta property="og:title" content="CDN绕过">
+<meta property="og:url" content="http://tranzimiss.com/2018/12/19/CDN绕过/index.html">
 <meta property="og:site_name" content="TransMiss">
-<meta property="og:description" content="// 前缀形式：  （++i） int&amp;amp; int::operator++() //这里返回的是一个引用，说明函数返回值也可以作为一个左值使用     {//函数本身无参，说明是在函数体内加1         *this += 1;            return *this;       }  //后缀形式:（i++） const int int::operator++(int) //">
-<meta property="og:updated_time" content="2018-10-13T13:28:19.388Z">
+<meta property="og:description" content="什么是CDN 如何判断网站有没有使用CDN（超级ping） 查找二级域名 让服务器主动给你发包（邮件） 敏感文件泄漏 查询历史解析ip 访问绕过cdn（修改hosts文件）">
+<meta property="og:updated_time" content="2018-12-19T13:58:41.962Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前加加和后加加的区别">
-<meta name="twitter:description" content="// 前缀形式：  （++i） int&amp;amp; int::operator++() //这里返回的是一个引用，说明函数返回值也可以作为一个左值使用     {//函数本身无参，说明是在函数体内加1         *this += 1;            return *this;       }  //后缀形式:（i++） const int int::operator++(int) //">
+<meta name="twitter:title" content="CDN绕过">
+<meta name="twitter:description" content="什么是CDN 如何判断网站有没有使用CDN（超级ping） 查找二级域名 让服务器主动给你发包（邮件） 敏感文件泄漏 查询历史解析ip 访问绕过cdn（修改hosts文件）">
   
     <link rel="alternative" href="/atom.xml" title="TransMiss" type="application/atom+xml">
   
@@ -263,11 +264,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-前加加和后加加的区别" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-CDN绕过" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2018/02/09/前加加和后加加的区别/" class="article-date">
-      <time datetime="2018-02-09T12:47:16.000Z" itemprop="datePublished">2018-02-09</time>
+      <a  href="/2018/12/19/CDN绕过/" class="article-date">
+      <time datetime="2018-12-19T13:56:17.000Z" itemprop="datePublished">2018-12-19</time>
 </a>
 
     </div>
@@ -281,7 +282,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      前加加和后加加的区别
+      CDN绕过
     </h1>
   
 
@@ -291,11 +292,15 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/C/">C++</a>
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
     </div>
 
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -303,20 +308,15 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>// 前缀形式：  （++i）</p>
-<pre><code>int&amp; int::operator++() //这里返回的是一个引用，说明函数返回值也可以作为一个左值使用
-    {//函数本身无参，说明是在函数体内加1
-        *this += 1;  
-         return *this;  
-    }
-</code></pre><p> //后缀形式:（i++）</p>
-<pre><code>const int int::operator++(int) //函数返回值是一个非左值，与前缀形有所差别
-{//函数带参,会新建一个临时空间
-    int oldValue = *this;  
-    ++(*this); // 增加
-    return oldValue;  
-}
-</code></pre><p>综上所述，前加加要比后加加略微快一丢丢</p>
+        <ul>
+<li>什么是CDN</li>
+<li>如何判断网站有没有使用CDN（超级ping）</li>
+<li>查找二级域名</li>
+<li>让服务器主动给你发包（邮件）</li>
+<li>敏感文件泄漏</li>
+<li>查询历史解析ip</li>
+<li>访问绕过cdn（修改hosts文件）</li>
+</ul>
 
       
     </div>
@@ -325,13 +325,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2018/02/09/前加加和后加加的区别/">前加加和后加加的区别</a></p>
+        <p><span>本文标题:</span><a  href="/2018/12/19/CDN绕过/">CDN绕过</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Trans 的个人博客">Trans</a></p>
-        <p><span>发布时间:</span>2018年02月09日 - 20时47分</p>
-        <p><span>最后更新:</span>2018年10月13日 - 21时28分</p>
+        <p><span>发布时间:</span>2018年12月19日 - 21时56分</p>
+        <p><span>最后更新:</span>2018年12月19日 - 21时58分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/02/09/前加加和后加加的区别/" title="前加加和后加加的区别">http://tranzimiss.com/2018/02/09/前加加和后加加的区别/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2018/02/09/前加加和后加加的区别/　　作者: Trans" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/12/19/CDN绕过/" title="CDN绕过">http://tranzimiss.com/2018/12/19/CDN绕过/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2018/12/19/CDN绕过/　　作者: Trans" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -342,18 +342,9 @@
 
 <nav id="article-nav">
   
-    <a  href="/2018/02/09/Markdown格式（转）/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Markdown格式（转）
-        
-      </div>
-    </a>
   
-  
-    <a  href="/2018/02/08/一个好的编程小习惯/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">一个好的编程小习惯</div>
+    <a  href="/2018/12/19/AWVS/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">AWVS</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -424,13 +415,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/2018/02/09/Markdown格式（转）/" title="上一篇: Markdown格式（转）">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a  href="/2018/02/08/一个好的编程小习惯/" title="下一篇: 一个好的编程小习惯">
+            <a  href="/2018/12/19/AWVS/" title="下一篇: AWVS">
                 <i class="fa fa-angle-right"></i>
             </a>
         

