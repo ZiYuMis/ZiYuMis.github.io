@@ -7,19 +7,19 @@
   
   
   
-  <title>定制自己的shell提示符 | TransMiss</title>
+  <title>重构的设计原则 | TransMiss</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="虽然parrot的shell提示符已经是很骚气了。但是作为喜欢折腾，没有麻烦制造麻烦也要上的我还是决定搞一下事情。 shell提示符的变量 提示符是由 PS1这个环境变量进行定义。我们可以使用echo $PS1命令来打印我们现在的shell命令提示符号的代码。  简单解释一些变量的含义123456789101112131415161718192021222324252627282930313233">
-<meta name="keywords" content="个人定制">
+  <meta name="description" content="以下取自重构改善代码的既有设计 重新组织函数 Extract Method 提炼函数将需要修改的代码放到一个独立函数中，并让函数名解释该函数的用法。 Inline Method内联函数在函数调用点插入函数本体，然后移除该函数。 Inline Temp 内联临时变量将所有对该变量的引用动作，替换为对它赋值的那个表达式自身。 Replace Temp with Query 以查询取代临时变量将表达式提">
+<meta name="keywords" content="重构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="定制自己的shell提示符">
-<meta property="og:url" content="http://tranzimiss.com/2018/02/12/定制自己的shell提示符/index.html">
+<meta property="og:title" content="重构的设计原则">
+<meta property="og:url" content="http://tranzimiss.com/2018/12/31/重构的设计原则/index.html">
 <meta property="og:site_name" content="TransMiss">
-<meta property="og:description" content="虽然parrot的shell提示符已经是很骚气了。但是作为喜欢折腾，没有麻烦制造麻烦也要上的我还是决定搞一下事情。 shell提示符的变量 提示符是由 PS1这个环境变量进行定义。我们可以使用echo $PS1命令来打印我们现在的shell命令提示符号的代码。  简单解释一些变量的含义123456789101112131415161718192021222324252627282930313233">
-<meta property="og:updated_time" content="2018-12-02T06:54:01.196Z">
+<meta property="og:description" content="以下取自重构改善代码的既有设计 重新组织函数 Extract Method 提炼函数将需要修改的代码放到一个独立函数中，并让函数名解释该函数的用法。 Inline Method内联函数在函数调用点插入函数本体，然后移除该函数。 Inline Temp 内联临时变量将所有对该变量的引用动作，替换为对它赋值的那个表达式自身。 Replace Temp with Query 以查询取代临时变量将表达式提">
+<meta property="og:updated_time" content="2018-12-31T13:10:02.834Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="定制自己的shell提示符">
-<meta name="twitter:description" content="虽然parrot的shell提示符已经是很骚气了。但是作为喜欢折腾，没有麻烦制造麻烦也要上的我还是决定搞一下事情。 shell提示符的变量 提示符是由 PS1这个环境变量进行定义。我们可以使用echo $PS1命令来打印我们现在的shell命令提示符号的代码。  简单解释一些变量的含义123456789101112131415161718192021222324252627282930313233">
+<meta name="twitter:title" content="重构的设计原则">
+<meta name="twitter:description" content="以下取自重构改善代码的既有设计 重新组织函数 Extract Method 提炼函数将需要修改的代码放到一个独立函数中，并让函数名解释该函数的用法。 Inline Method内联函数在函数调用点插入函数本体，然后移除该函数。 Inline Temp 内联临时变量将所有对该变量的引用动作，替换为对它赋值的那个表达式自身。 Replace Temp with Query 以查询取代临时变量将表达式提">
   
     <link rel="alternative" href="/atom.xml" title="TransMiss" type="application/atom+xml">
   
@@ -270,11 +270,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-定制自己的shell提示符" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-重构的设计原则" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2018/02/12/定制自己的shell提示符/" class="article-date">
-      <time datetime="2018-02-12T13:01:00.000Z" itemprop="datePublished">2018-02-12</time>
+      <a  href="/2018/12/31/重构的设计原则/" class="article-date">
+      <time datetime="2018-12-31T12:55:41.000Z" itemprop="datePublished">2018-12-31</time>
 </a>
 
     </div>
@@ -288,7 +288,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      定制自己的shell提示符
+      重构的设计原则
     </h1>
   
 
@@ -298,13 +298,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/LINUX/">LINUX</a>
+    <a class="article-category-link" href="/categories/C/">C++</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人定制/">个人定制</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/重构/">重构</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -314,29 +314,101 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>虽然parrot的shell提示符已经是很骚气了。但是作为喜欢折腾，没有麻烦制造麻烦也要上的我还是决定搞一下事情。</p>
-<h5 id="shell提示符的变量"><a href="#shell提示符的变量" class="headerlink" title="shell提示符的变量"></a>shell提示符的变量</h5><p> 提示符是由 <code>PS1</code>这个环境变量进行定义。我们可以使用<code>echo $PS1</code>命令来打印我们现在的shell命令提示符号的代码。</p>
-<p> 简单解释一些变量的含义<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"> \a 	以 ASCII 格式编码的铃声 . 当遇到这个转义序列时，计算机会发出提示声。</span><br><span class="line">\d 	以日，月，天格式来表示当前日期。例如，“Mon May 26.”</span><br><span class="line">\h 	本地机的主机名，但不带末尾的域名。</span><br><span class="line">\H 	完整的主机名。</span><br><span class="line">\j 	运行在当前 shell 会话中的工作数。</span><br><span class="line">\l 	当前终端设备名。</span><br><span class="line">\n 	一个换行符。</span><br><span class="line">\r 	一个回车符。</span><br><span class="line">\s 	shell 程序名。</span><br><span class="line">\t 	以24小时制，hours:minutes:seconds 的格式表示当前时间.</span><br><span class="line">\T 	以12小时制表示当前时间。</span><br><span class="line">\@ 	以12小时制，AM/PM 格式来表示当前时间。</span><br><span class="line">\A 	以24小时制，hours:minutes 格式表示当前时间。</span><br><span class="line">\u 	当前用户名。</span><br><span class="line">\v 	shell 程序的版本号。</span><br><span class="line">\V 	Version and release numbers of the shell.</span><br><span class="line">\w 	当前工作目录名。</span><br><span class="line">\W 	当前工作目录名的最后部分。</span><br><span class="line">\! 	当前命令的历史号。</span><br><span class="line">\# 	当前 shell 会话中的命令数。</span><br><span class="line">\$ 	这会显示一个&quot;$&quot;字符，除非你拥有超级用户权限。在那种情况下， 它会显示一个&quot;#&quot;字符。</span><br><span class="line">\[ 	标志着一系列一个或多个非打印字符的开始。这被用来嵌入非打印 的控制字符，这些字符以某种方式来操作终端仿真器，比方说移动光标或者是更改文本颜色。</span><br><span class="line">\] 	标志着非打印字符序列结束。</span><br><span class="line"></span><br><span class="line">文本颜色</span><br><span class="line">\033[0;30m 	黑色 	</span><br><span class="line">\033[1;30m 	深灰色</span><br><span class="line">\033[0;31m 	红色</span><br><span class="line">\033[1;31m 	浅红色</span><br><span class="line">\033[0;32m 	绿色 	</span><br><span class="line">\033[1;32m 	浅绿色</span><br><span class="line">\033[0;33m 	棕色 	</span><br><span class="line">\033[1;33m 	黄色</span><br><span class="line">\033[0;34m 	蓝色 	</span><br><span class="line">\033[1;34m 	浅蓝色</span><br><span class="line">\033[0;35m 	粉红 	</span><br><span class="line">\033[1;35m 	浅粉色</span><br><span class="line">\033[0;36m 	青色 	</span><br><span class="line">\033[1;36m 	浅青色</span><br><span class="line">\033[0;37m 	浅灰色 	</span><br><span class="line">\033[1;37m 	白色</span><br><span class="line"></span><br><span class="line">背景颜色</span><br><span class="line">\033[0;40m     蓝色</span><br><span class="line"> \033[1;44m    黑色</span><br><span class="line">\033[0;41m    红色</span><br><span class="line"> \033[1;45m   粉红</span><br><span class="line">\033[0;42m    绿色</span><br><span class="line"> \033[1;46m   青色</span><br><span class="line">\033[0;43m    棕色</span><br><span class="line"> \033[1;47m   浅灰色</span><br></pre></td></tr></table></figure></p>
-<p>一般上面那一段是太长不看系列的东西，但是好像可以总结成一个公式<code>\[\e[F;Bm\]</code>其中“F”为字体颜色，编号30~37；“B”为背景色，编号40~47。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">   前景     背景     颜色</span><br><span class="line">　　30      40      黑色</span><br><span class="line">　　31      41      红色</span><br><span class="line">　　32      42      绿色</span><br><span class="line">　　33      43      黄色</span><br><span class="line">　　34      44      蓝色</span><br><span class="line">　　35      45      紫红色</span><br><span class="line">　　36      46      青蓝色</span><br><span class="line">　　37      47      白色</span><br><span class="line"></span><br><span class="line">代码      意义</span><br><span class="line">0            OFF</span><br><span class="line">1            高亮显示</span><br><span class="line">4            underline            </span><br><span class="line">7            反白显示</span><br><span class="line">8            不可见</span><br></pre></td></tr></table></figure>
-<p>关于光标的行为常用的为以下几种，大家可以看看有什么可以用的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">\033[l;cH       把光标移到第 l 行，第 c 列。</span><br><span class="line"></span><br><span class="line">\033[nA         把光标向上移动 n 行。</span><br><span class="line"></span><br><span class="line">\033[nB         把光标向下移动 n 行。</span><br><span class="line"></span><br><span class="line">\033[nC         把光标向前移动 n 个字符。</span><br><span class="line"></span><br><span class="line">\033[nD         把光标向后移动 n 个字符。</span><br><span class="line"></span><br><span class="line">\033[2J         清空屏幕，把光标移到左上角（第零行，第零列）。</span><br><span class="line"></span><br><span class="line">\033[K          清空从光标位置到当前行末的内容。</span><br><span class="line"></span><br><span class="line">\033[s          存储当前光标位置。</span><br><span class="line"></span><br><span class="line">\033[u          唤醒之前存储的光标位置。</span><br></pre></td></tr></table></figure>
-<h6 id="开始我们的定制"><a href="#开始我们的定制" class="headerlink" title="开始我们的定制"></a>开始我们的定制</h6><p>   首先，我们备份当前的环境变量</p>
-<pre><code>ps1Old=&quot;$PS1&quot;
-</code></pre><p>然后，我们需要验证一下我们真的成功备份了这个变量</p>
-<pre><code>echo $ps1Old
-</code></pre><p>然后修改当前的变量</p>
-<p>[\033[0;31m]][\033[01;33m][\033[01;96m][\033[0;31m]]\342\224\200[[\033[0;32m]\t<br>[\033[01;96m][\033[0;31m]]\342\224\200[[\033[0;32m]      表示 红色的]-[</p>
-<p>解释一下暂时我知道的shell默认的配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\[\033[0;31m\]\342\224\214\342\224\200$([[ $? != 0 ]] &amp;&amp; echo &quot;[\[\033[0;31m\]\342\234\227\[\033[0;37m\]]\342\224\200&quot;)[\[\033[0;39m\]\u\[\033[01;33m\]@\[\033[01;96m\]\h\[\033[0;31m\]]\342\224\200[\[\033[0;32m\]\w\[\033[0;31m\]]\n\[\033[0;31m\]\342\224\224\342\224\200\342\224\200\342\225\274 \[\033[0m\]\[\e[01;33m\]\$\[\e[0m\]</span><br></pre></td></tr></table></figure></p>
-<p><code>\[\033[0;31m</code> 表示红色`</p>
-<p><code>\]\342\224\214\342\224\200</code> 貌似是八进制转移字符，这个暂时还没查到，欢迎诸位大佬进行补充。</p>
-<p><code>[\[\033[0;39m\]\u</code>以绿色打印当前用户名</p>
-<p><code>\[\033[01;33m\]@</code>用黄色打印@字符</p>
-<p><code>\[\033[01;96m\]\h</code> 打印主机名</p>
-<p><code>\[\033[0;31m\]]\342\224\200[\[\</code>打印红色的“]-[“符号</p>
-<p><code>033[0;32m\]\w</code>打印绿色的当前目录</p>
-<p><code>\[\033[0;31m\]]\n</code>换行符<br><code>\[\e[01;33m\]\$</code>打印$符号<br><code>\[\e[0m\]</code>清除当前的提示符设置，以系统默认的方法来进行输出</p>
-<p>然后大家就可以参照上面的解释来定制自己的shell提示符。，以下为我自己的提示命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\[\033[1;33m\]\342\224\214\342\224\200$([[ $? != 0 ]] &amp;&amp; echo &quot;[\[\033[0;33m\]\342\234\227\[\033[0;37m\]]\342\224\200&quot;)[\[\033[0;39m\]\u\[\033[01;33m\]@\[\033[01;96m\]\h\[\033[0;33m\]]\342\224\200[\[\033[1;34m\]\w\[\033[01;96m\]\[\033[0;33m\]]\342\224\200[\[\033[1;31m\]\t\[\033[01;96m\]\[\033[1;33m\]]\n\[\033[0;33m\]\342\224\224\342\224\200\342\224\200\342\225\274 \[\033[0m\]\[\e[01;33m\]\$\[\e[0m\]</span><br></pre></td></tr></table></figure></p>
+        <h5 id="以下取自重构改善代码的既有设计"><a href="#以下取自重构改善代码的既有设计" class="headerlink" title="以下取自重构改善代码的既有设计"></a>以下取自重构改善代码的既有设计</h5><ol>
+<li>重新组织函数<ol>
+<li>Extract Method 提炼函数<br>将需要修改的代码放到一个独立函数中，并让函数名解释该函数的用法。</li>
+<li>Inline Method内联函数<br>在函数调用点插入函数本体，然后移除该函数。</li>
+<li>Inline Temp 内联临时变量<br>将所有对该变量的引用动作，替换为对它赋值的那个表达式自身。</li>
+<li>Replace Temp with Query 以查询取代临时变量<br>将表达式提炼到一个独立函数中。将这个临时变量的所有引用点替换为对新函数的调用。此后，新函数就可以被其他函数使用。</li>
+<li>Introduce Explaining Variable 引入解释性变量<br>将该复杂表达式（或其中一部分）的结果放进一个临时变量，以此变量的名称来解释表达式的用途。</li>
+<li>Split Temporary Variable分解临时变量<br>针对每次赋值，创造一个独立、对应的临时变量。</li>
+<li>Remove Assignments to Parameters移除对参数的赋值<br>以一个临时变量取代该参数的位置</li>
+<li>Replace Method with Method Object以函数对象取代函数<br>将这个函数放进一个单独对象中，如此一来局部变量就成了对象内的字段，然后就可以在同一个对象中将这个大型函数分解为多个小型函数。</li>
+<li>Substitute Algorithm替换算法<br>将函数本体替换为另一个算法。</li>
+</ol>
+</li>
+<li>在对象之间搬移特性<ol>
+<li>Move Method 搬移函数<br>在该函数最常引用的类中建立一个有着类似行为的新函数。或将旧函数变成一个单纯的委托函数，或是将旧函数完全移除。</li>
+<li>Move Field 搬移字段<br>在目标类中新建一个字段，修改源字段中的所有用户，令它们改用新字段。</li>
+<li>Extract Class提炼类<br>建立一个新类，将相关的字段和函数从旧类搬移到新类。</li>
+<li>Inline Class将类内联化<br>将这个类的所有特性搬移到另一个类中，然后移除原类。</li>
+<li>Hide Delegate隐藏委托关系<br>在服务类上建立客户所需的所有函数，用以隐藏委托关系。</li>
+<li>Remove Middle Man移除中间人<br>让客户直接调用委托类。</li>
+<li>Introduce Foreign Method引入外加函数<br>在客户类中建立一个函数，并以第一参数的形式传入到一个服务类实例。</li>
+<li>Introduce Local Extension引入本地扩展<br>建立一个新类，使它包含这些额外函数。让这个扩展品成为源类的子类或者包装类。</li>
+</ol>
+</li>
+<li>重新组织数据<ol>
+<li>Self Encapsulate Field自封装字段<br>为这个字段建立取值/设值函数，并且只以这些函数来访问字段。</li>
+<li>Replace Data Value with Object以对象取代数据值<br>将数据项变成对象。</li>
+<li>Change Value to Reference 将值对象改为引用对象<br>将这个值对象改为引用对象</li>
+<li>Change Reference to Value 将引用对象改为值对象<br>将引用对象改为值对象</li>
+<li>Replace Array with Object以对象取代数组<br>以对象替换数组，对于数组中的每个元素，以一个字段来表示。</li>
+<li>Duplicate Observed Data复制“被监视数据”<br>将该数据复制到一个领域对象中，建立一个Observer模式，用以同步领域对象和GUI对象内的重复数据。</li>
+<li>Change Unidirectional Association to Bidirectional将单向关联改为双向关联<br>添加一个反向指针，并使修改函数能够同时更新两条连接。</li>
+<li>Change Bidirectional Association to Unidirectional将双向关联改为单项关联<br>去除不必要的关联。</li>
+<li>Replace Magic Number with Symbolic Constant以字面常量取代魔法数<br>创造一个常量，根据其意义为它命名，并将上述的字面数值替换为这个常量。</li>
+<li>Encapsulate Field封装字段<br>将它声明为private，并提供相应的访问函数。</li>
+<li>Encapsulate Collection 封装集合<br>让这个函数返回该集合的一个只读副本，并在这个类中提供添加/移除集合元素的函数</li>
+<li>Replace Record with Data Class以数据类取代记录<br>为该记录创建一个“哑”数据对象。</li>
+<li>Replace Type Code with Class以类取代枚举<br>以一个新的class替换该枚举类型</li>
+<li>Replace Type COde with Subclasses以子类取代枚举<br>以一个子类取代这个枚举变量</li>
+<li>Replace Type Code with State/Strategy</li>
+<li>Replace Subclass with Fields以值域取代子类<br>如果你的各个subclasses的唯一差别只在返回常量数据的函数身上，修改这些函数，使它返回superclass中的某个新增值域，然后销毁subclasses</li>
+</ol>
+</li>
+<li>简化条件表达式<ol>
+<li>Decompose Conditional分解条件式<br>从if 、else 的段落中分别提炼出独立函数</li>
+<li>Consolidate Conditional Expression合并表达式<br>合并可以合并的条件式，并将这个条件式提炼成为一个独立函数。</li>
+<li>Consolidate Duplicate Conditional Fragments 合并重复的条件片段<br>将重复的代码搬移到条件式之外。</li>
+<li>Remove Control Flag 移除控制标记<br>以break语句或者return语句取代控制标记。</li>
+<li>Replace Nested Conditional with Guard Clauses以卫语句取代嵌套条件式<br>使用卫语句表现所有的特殊情况。</li>
+<li>Replace Conditional with Polymorphism以多态取代表达式<br>如果有一个条件式，会根据对象类型的不同而选择不同的行为，将这个表达式每个分支放进一个subclass内的覆写函数中，然后将原始函数声明为抽象函数。</li>
+<li>Introduce Null Object引入Null对象<br>将null value替换为null object</li>
+<li>Introduce Assertion引入断言<br>如果某一段代码需要对程序状态做出某种假设。那么请以assertion明确表现这种假设。</li>
+</ol>
+</li>
+<li>简化函数调用<ol>
+<li>Rename Method</li>
+<li>Add Parameter</li>
+<li>Remove Parameter</li>
+<li>Separate Query from Modifier将查询函数和修改函数分离</li>
+<li>Parameterize Method令函数携带参数</li>
+<li>Replace Parameter with Explicit Methods 以明确函数取代参数</li>
+<li>Preserve Whole Object保持对象完整。<br>如果需要从某个对象中取出若干值，将它们作为某一次函数调用时的参数。那么应该改成传递整个对象。</li>
+<li>Replace Parameter with Methods 以函数取代参数<br>对象调用某个函数，并将所得结果作为参数，传递给另一个函数。而接受该参数的函数也可以调用前一个函数，那么让参数接受者去除该项参数，并直接调用前一个函数。</li>
+<li>Introduce Parameter Object引入参数对象<br>某些参数总是很自然的同时出现，那么以一个对象取代这些参数。</li>
+<li>Remove Setting Method移除设值函数<br>如果对象里的某些成员变量在对象初创时被设值，然后就不再改变，那么去掉该成员变量的设值函数。</li>
+<li>Hide Method 隐藏某个函数</li>
+<li>Replace Constructor with Factory Method 以工厂函数取代构造函数<br>如果你希望在创建对象时不仅仅是对它做简单的构建动作，那么用工厂函数取代构造函数</li>
+<li>Encapsulate Downcast 封装向下转型动作。<br>将向下转型的动作移到函数中。</li>
+<li>Replace Error Code with Exception以异常取代错误码</li>
+<li>Replace Exception with Test以测试取代异常<br>在调用函数之前先检查</li>
+</ol>
+</li>
+<li>处理概括关系<ol>
+<li>Pull Up Field 值域上移<br>两个子类有相同的成员变量，那么将成员变量移动到父类中。</li>
+<li>Pull Up Method函数上移</li>
+<li>Pull Up Constructor Body</li>
+<li>Push Down Field</li>
+<li>Push Down Method</li>
+<li>Extract Subclass 提炼子类</li>
+<li>Extract Superclass 提炼父类</li>
+<li>Extract Interface提炼接口</li>
+<li>Collapse Hierarchy折叠继承体系</li>
+<li>Form Template Method 塑造模板函数</li>
+<li>Replace Inheritance with Delegation 以委托取代继承</li>
+<li>Replace Delegation with Inheritance</li>
+</ol>
+</li>
+<li>大型重构、重构、复用与现实<ol>
+<li>Tease Apart Inheritance 梳理并分解继承体系</li>
+<li>Convert Procedural Design to Objects将过程化设计转化为对象设计</li>
+<li>Separate Domain from PRESENTATION 将领域和表述/显示分离</li>
+<li>Extract Hierarchy提炼继承体系</li>
+</ol>
+</li>
+</ol>
 
       
     </div>
@@ -345,13 +417,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2018/02/12/定制自己的shell提示符/">定制自己的shell提示符</a></p>
+        <p><span>本文标题:</span><a  href="/2018/12/31/重构的设计原则/">重构的设计原则</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Trans 的个人博客">Trans</a></p>
-        <p><span>发布时间:</span>2018年02月12日 - 21时01分</p>
-        <p><span>最后更新:</span>2018年12月02日 - 14时54分</p>
+        <p><span>发布时间:</span>2018年12月31日 - 20时55分</p>
+        <p><span>最后更新:</span>2018年12月31日 - 21时10分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/02/12/定制自己的shell提示符/" title="定制自己的shell提示符">http://tranzimiss.com/2018/02/12/定制自己的shell提示符/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2018/02/12/定制自己的shell提示符/　　作者: Trans" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/12/31/重构的设计原则/" title="重构的设计原则">http://tranzimiss.com/2018/12/31/重构的设计原则/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2018/12/31/重构的设计原则/　　作者: Trans" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -362,18 +434,9 @@
 
 <nav id="article-nav">
   
-    <a  href="/2018/02/23/Trojanizer-Trojanize-Your-Payload/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Trojanizer-Trojanize Your Payload
-        
-      </div>
-    </a>
   
-  
-    <a  href="/2018/02/11/交换机的工作原理/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">交换机的工作原理</div>
+    <a  href="/2018/12/31/2019计划-随时变动版/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2019计划[随时变动版]</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -385,7 +448,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#shell提示符的变量"><span class="toc-number">1.</span> <span class="toc-text">shell提示符的变量</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#开始我们的定制"><span class="toc-number">1.1.</span> <span class="toc-text">开始我们的定制</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#以下取自重构改善代码的既有设计"><span class="toc-number">1.</span> <span class="toc-text">以下取自重构改善代码的既有设计</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -444,13 +507,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/2018/02/23/Trojanizer-Trojanize-Your-Payload/" title="上一篇: Trojanizer-Trojanize Your Payload">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a  href="/2018/02/11/交换机的工作原理/" title="下一篇: 交换机的工作原理">
+            <a  href="/2018/12/31/2019计划-随时变动版/" title="下一篇: 2019计划[随时变动版]">
                 <i class="fa fa-angle-right"></i>
             </a>
         

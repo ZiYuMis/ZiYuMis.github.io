@@ -191,7 +191,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/C-语法/" style="font-size: 10px;">C++语法</a> <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/linux工具/" style="font-size: 10px;">linux工具</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 17.5px;">原理</a> <a href="/tags/后台管理/" style="font-size: 10px;">后台管理</a> <a href="/tags/基础/" style="font-size: 12.5px;">基础</a> <a href="/tags/存档/" style="font-size: 12.5px;">存档</a> <a href="/tags/工具/" style="font-size: 17.5px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a> <a href="/tags/漏洞/" style="font-size: 15px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 15px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/笔记/" style="font-size: 12.5px;">笔记</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/设计模式/" style="font-size: 12.5px;">设计模式</a>
+                        <a href="/tags/C-语法/" style="font-size: 10px;">C++语法</a> <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/linux工具/" style="font-size: 10px;">linux工具</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 17.5px;">原理</a> <a href="/tags/后台管理/" style="font-size: 10px;">后台管理</a> <a href="/tags/基础/" style="font-size: 12.5px;">基础</a> <a href="/tags/存档/" style="font-size: 12.5px;">存档</a> <a href="/tags/工具/" style="font-size: 17.5px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a> <a href="/tags/漏洞/" style="font-size: 15px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 15px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/笔记/" style="font-size: 12.5px;">笔记</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/设计模式/" style="font-size: 12.5px;">设计模式</a> <a href="/tags/重构/" style="font-size: 10px;">重构</a>
                     </div>
                 </section>
                 
@@ -269,6 +269,166 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-重构的设计原则" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/31/重构的设计原则/" class="article-date">
+      <time datetime="2018-12-31T12:55:41.000Z" itemprop="datePublished">2018-12-31</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/31/重构的设计原则/">重构的设计原则</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h5 id="以下取自重构改善代码的既有设计"><a href="#以下取自重构改善代码的既有设计" class="headerlink" title="以下取自重构改善代码的既有设计"></a>以下取自重构改善代码的既有设计</h5><ol>
+<li>重新组织函数<ol>
+<li>Extract Method 提炼函数<br>将需要修改的代码放到一个独立函数中，并让函数名解释该函数的用法。</li>
+<li>Inline Method内联函数<br>在函数调用点插入函数本体，然后移除该函数。</li>
+<li>Inline Temp 内联临时变量<br>将所有对该变量的引用动作，替换为对它赋值的那个表达式自身。</li>
+<li>Replace Temp with Query 以查询取代临时变量<br>将表达式提炼到一个独立函数中。将这个临时变量的所有引用点替换为对新函数的调用。此后，新函数就可以被其他函数使用。</li>
+<li>Introduce Explaining Variable 引入解释性变量<br>将该复杂表达式（或其中一部分）的结果放进一个临时变量，以此变量的名称来解释表达式的用途。</li>
+<li>Split Temporary Variable分解临时变量<br>针对每次赋值，创造一个独立、对应的临时变量。</li>
+<li>Remove Assignments to Parameters移除对参数的赋值<br>以一个临时变量取代该参数的位置</li>
+<li>Replace Method with Method Object以函数对象取代函数<br>将这个函数放进一个单独对象中，如此一来局部变量就成了对象内的字段，然后就可以在同一个对象中将这个大型函数分解为多个小型函数。</li>
+<li>Substitute Algorithm替换算法<br>将函数本体替换为另一个算法。</li>
+</ol>
+</li>
+<li>在对象之间搬移特性<ol>
+<li>Move Method 搬移函数<br>在该函数最常引用的类中建立一个有着类似行为的新函数。或将旧函数变成一个单纯的委托函数，或是将旧函数完全移除。</li>
+<li>Move Field 搬移字段<br>在目标类中新建一个字段，修改源字段中的所有用户，令它们改用新字段。</li>
+<li>Extract Class提炼类<br>建立一个新类，将相关的字段和函数从旧类搬移到新类。</li>
+<li>Inline Class将类内联化<br>将这个类的所有特性搬移到另一个类中，然后移除原类。</li>
+<li>Hide Delegate隐藏委托关系<br>在服务类上建立客户所需的所有函数，用以隐藏委托关系。</li>
+<li>Remove Middle Man移除中间人<br>让客户直接调用委托类。</li>
+<li>Introduce Foreign Method引入外加函数<br>在客户类中建立一个函数，并以第一参数的形式传入到一个服务类实例。</li>
+<li>Introduce Local Extension引入本地扩展<br>建立一个新类，使它包含这些额外函数。让这个扩展品成为源类的子类或者包装类。</li>
+</ol>
+</li>
+<li>重新组织数据<ol>
+<li>Self Encapsulate Field自封装字段<br>为这个字段建立取值/设值函数，并且只以这些函数来访问字段。</li>
+<li>Replace Data Value with Object以对象取代数据值<br>将数据项变成对象。</li>
+<li>Change Value to Reference 将值对象改为引用对象<br>将这个值对象改为引用对象</li>
+<li>Change Reference to Value 将引用对象改为值对象<br>将引用对象改为值对象</li>
+<li>Replace Array with Object以对象取代数组<br>以对象替换数组，对于数组中的每个元素，以一个字段来表示。</li>
+<li>Duplicate Observed Data复制“被监视数据”<br>将该数据复制到一个领域对象中，建立一个Observer模式，用以同步领域对象和GUI对象内的重复数据。</li>
+<li>Change Unidirectional Association to Bidirectional将单向关联改为双向关联<br>添加一个反向指针，并使修改函数能够同时更新两条连接。</li>
+<li>Change Bidirectional Association to Unidirectional将双向关联改为单项关联<br>去除不必要的关联。</li>
+<li>Replace Magic Number with Symbolic Constant以字面常量取代魔法数<br>创造一个常量，根据其意义为它命名，并将上述的字面数值替换为这个常量。</li>
+<li>Encapsulate Field封装字段<br>将它声明为private，并提供相应的访问函数。</li>
+<li>Encapsulate Collection 封装集合<br>让这个函数返回该集合的一个只读副本，并在这个类中提供添加/移除集合元素的函数</li>
+<li>Replace Record with Data Class以数据类取代记录<br>为该记录创建一个“哑”数据对象。</li>
+<li>Replace Type Code with Class以类取代枚举<br>以一个新的class替换该枚举类型</li>
+<li>Replace Type COde with Subclasses以子类取代枚举<br>以一个子类取代这个枚举变量</li>
+<li>Replace Type Code with State/Strategy</li>
+<li>Replace Subclass with Fields以值域取代子类<br>如果你的各个subclasses的唯一差别只在返回常量数据的函数身上，修改这些函数，使它返回superclass中的某个新增值域，然后销毁subclasses</li>
+</ol>
+</li>
+<li>简化条件表达式<ol>
+<li>Decompose Conditional分解条件式<br>从if 、else 的段落中分别提炼出独立函数</li>
+<li>Consolidate Conditional Expression合并表达式<br>合并可以合并的条件式，并将这个条件式提炼成为一个独立函数。</li>
+<li>Consolidate Duplicate Conditional Fragments 合并重复的条件片段<br>将重复的代码搬移到条件式之外。</li>
+<li>Remove Control Flag 移除控制标记<br>以break语句或者return语句取代控制标记。</li>
+<li>Replace Nested Conditional with Guard Clauses以卫语句取代嵌套条件式<br>使用卫语句表现所有的特殊情况。</li>
+<li>Replace Conditional with Polymorphism以多态取代表达式<br>如果有一个条件式，会根据对象类型的不同而选择不同的行为，将这个表达式每个分支放进一个subclass内的覆写函数中，然后将原始函数声明为抽象函数。</li>
+<li>Introduce Null Object引入Null对象<br>将null value替换为null object</li>
+<li>Introduce Assertion引入断言<br>如果某一段代码需要对程序状态做出某种假设。那么请以assertion明确表现这种假设。</li>
+</ol>
+</li>
+<li>简化函数调用<ol>
+<li>Rename Method</li>
+<li>Add Parameter</li>
+<li>Remove Parameter</li>
+<li>Separate Query from Modifier将查询函数和修改函数分离</li>
+<li>Parameterize Method令函数携带参数</li>
+<li>Replace Parameter with Explicit Methods 以明确函数取代参数</li>
+<li>Preserve Whole Object保持对象完整。<br>如果需要从某个对象中取出若干值，将它们作为某一次函数调用时的参数。那么应该改成传递整个对象。</li>
+<li>Replace Parameter with Methods 以函数取代参数<br>对象调用某个函数，并将所得结果作为参数，传递给另一个函数。而接受该参数的函数也可以调用前一个函数，那么让参数接受者去除该项参数，并直接调用前一个函数。</li>
+<li>Introduce Parameter Object引入参数对象<br>某些参数总是很自然的同时出现，那么以一个对象取代这些参数。</li>
+<li>Remove Setting Method移除设值函数<br>如果对象里的某些成员变量在对象初创时被设值，然后就不再改变，那么去掉该成员变量的设值函数。</li>
+<li>Hide Method 隐藏某个函数</li>
+<li>Replace Constructor with Factory Method 以工厂函数取代构造函数<br>如果你希望在创建对象时不仅仅是对它做简单的构建动作，那么用工厂函数取代构造函数</li>
+<li>Encapsulate Downcast 封装向下转型动作。<br>将向下转型的动作移到函数中。</li>
+<li>Replace Error Code with Exception以异常取代错误码</li>
+<li>Replace Exception with Test以测试取代异常<br>在调用函数之前先检查</li>
+</ol>
+</li>
+<li>处理概括关系<ol>
+<li>Pull Up Field 值域上移<br>两个子类有相同的成员变量，那么将成员变量移动到父类中。</li>
+<li>Pull Up Method函数上移</li>
+<li>Pull Up Constructor Body</li>
+<li>Push Down Field</li>
+<li>Push Down Method</li>
+<li>Extract Subclass 提炼子类</li>
+<li>Extract Superclass 提炼父类</li>
+<li>Extract Interface提炼接口</li>
+<li>Collapse Hierarchy折叠继承体系</li>
+<li>Form Template Method 塑造模板函数</li>
+<li>Replace Inheritance with Delegation 以委托取代继承</li>
+<li>Replace Delegation with Inheritance</li>
+</ol>
+</li>
+<li>大型重构、重构、复用与现实<ol>
+<li>Tease Apart Inheritance 梳理并分解继承体系</li>
+<li>Convert Procedural Design to Objects将过程化设计转化为对象设计</li>
+<li>Separate Domain from PRESENTATION 将领域和表述/显示分离</li>
+<li>Extract Hierarchy提炼继承体系</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/C/">C++</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/重构/">重构</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-2019计划-随时变动版" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -1015,86 +1175,6 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/漏洞/">漏洞</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/漏洞利用/">漏洞利用</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-爆库" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/24/爆库/" class="article-date">
-      <time datetime="2018-12-24T13:28:45.000Z" itemprop="datePublished">2018-12-24</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/24/爆库/">爆库</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ol>
-<li>在文件名后面加::$data 有可能爆出源码，例如：<code>http://127.0.0.1:2299/xyconn.asp::$data</code></li>
-<li>爆库绕过防下载<ol>
-<li><code>#sdsf.mdb 下载时改为%23sdsf.mdb</code></li>
-<li><code>#@!$%^&amp;*asdfkladsf@!#.mdb</code></li>
-<li><code>%23@%21%24%255E%26%2aasdfkladsf@%21%23.mdb</code></li>
-</ol>
-</li>
-<li>高级语法爆库<ol>
-<li>inurl:./..admin../..add..</li>
-<li>inurl:./..admin../..del..</li>
-<li>inurl:/.asp&lt;id=&lt;%&lt;%&lt;%</li>
-</ol>
-</li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库/">数据库</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/渗透测试/">渗透测试</a></li></ul>
     </div>
 
       
