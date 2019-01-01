@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>条款 | TransMiss</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="将C++视为一个语言联邦。今天C++已经成为一个多重泛型编程语言。一个同时支持过程形式、面向对象形式、函数形式、泛型形式、元编程形式的语言。 在C++98标准中：C++分为C、C with class、template、STL四部分组成。 尽量用const、enum、inline替换#define（尽量使用编译器替换预处理器）。常量定义式通常放在头文件中。#define不重视作用域。 尽可能使用">
+<meta name="keywords" content="Effecitive C++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="条款">
+<meta property="og:url" content="http://tranzimiss.com/2019/01/01/条款/index.html">
+<meta property="og:site_name" content="TransMiss">
+<meta property="og:description" content="将C++视为一个语言联邦。今天C++已经成为一个多重泛型编程语言。一个同时支持过程形式、面向对象形式、函数形式、泛型形式、元编程形式的语言。 在C++98标准中：C++分为C、C with class、template、STL四部分组成。 尽量用const、enum、inline替换#define（尽量使用编译器替换预处理器）。常量定义式通常放在头文件中。#define不重视作用域。 尽可能使用">
+<meta property="og:updated_time" content="2019-01-01T09:07:15.027Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="条款">
+<meta name="twitter:description" content="将C++视为一个语言联邦。今天C++已经成为一个多重泛型编程语言。一个同时支持过程形式、面向对象形式、函数形式、泛型形式、元编程形式的语言。 在C++98标准中：C++分为C、C with class、template、STL四部分组成。 尽量用const、enum、inline替换#define（尽量使用编译器替换预处理器）。常量定义式通常放在头文件中。#define不重视作用域。 尽可能使用">
+  
+    <link rel="alternative" href="/atom.xml" title="TransMiss" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/little.jpg">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/headpicture.jpg" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Trans</a></h1>
+        </hgroup>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/C">C++</a></li>
+                        
+                            <li><a  href="/categories/代码设计">代码设计</a></li>
+                        
+                            <li><a  href="/categories/Linux">Linux</a></li>
+                        
+                            <li><a  href="/categories/算法学习">算法学习</a></li>
+                        
+                            <li><a  href="/categories/网络安全">网络安全</a></li>
+                        
+                            <li><a  href="/categories/碎碎念">碎碎念</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="https://github.com/ZiYuMis" title="github">github</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/C-语法/" style="font-size: 10px;">C++语法</a> <a href="/tags/Effecitive-C/" style="font-size: 10px;">Effecitive C++</a> <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/linux工具/" style="font-size: 10px;">linux工具</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 17.5px;">原理</a> <a href="/tags/后台管理/" style="font-size: 10px;">后台管理</a> <a href="/tags/基础/" style="font-size: 12.5px;">基础</a> <a href="/tags/存档/" style="font-size: 12.5px;">存档</a> <a href="/tags/工具/" style="font-size: 17.5px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a> <a href="/tags/漏洞/" style="font-size: 15px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 15px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/笔记/" style="font-size: 12.5px;">笔记</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/设计模式/" style="font-size: 12.5px;">设计模式</a> <a href="/tags/重构/" style="font-size: 10px;">重构</a>
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://parrotsec-cn.org">ParrotSec社区</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://ares-x.com">Akira</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://blog.doylee.cn">乱世之牙</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">一只喜欢巧克力的野生bug狗</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Trans</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/headpicture.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Trans</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/C">C++</a></li>
+                
+                    <li><a href="/categories/代码设计">代码设计</a></li>
+                
+                    <li><a href="/categories/Linux">Linux</a></li>
+                
+                    <li><a href="/categories/算法学习">算法学习</a></li>
+                
+                    <li><a href="/categories/网络安全">网络安全</a></li>
+                
+                    <li><a href="/categories/碎碎念">碎碎念</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/ZiYuMis" title="github">github</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="effective-条款" class="article article-type-effective" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/01/01/条款/" class="article-date">
+      <time datetime="2019-01-01T08:57:14.000Z" itemprop="datePublished">2019-01-01</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      条款
+    </h1>
+  
+
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/C/">C++</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Effecitive-C/">Effecitive C++</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ol>
+<li>将C++视为一个语言联邦。今天C++已经成为一个多重泛型编程语言。一个同时支持过程形式、面向对象形式、函数形式、泛型形式、元编程形式的语言。<br> 在C++98标准中：C++分为C、C with class、template、STL四部分组成。</li>
+<li>尽量用const、enum、inline替换#define（尽量使用编译器替换预处理器）。<br>常量定义式通常放在头文件中。<br>#define不重视作用域。</li>
+<li>尽可能使用const （use const whenever possible)<br>将某些东西声明为const可帮助编译器侦测出错误用法，const可被施加在任何作用域的对象、函数参数、函数返回类型和成员函数本体。<br>编译器强制实施bitwish constness，但是你编写程序时应该使用概念上的常量性（conceptual constness）<br>当const函数和non-const函数有实质等价的实现时，令non-const版本调用const可避免代码重复。</li>
+<li>确定对象使用前已经先被初始化。<br>对内置型对象进行手工初始化，因为C++不保证初始化它们。<br>构造函数最好使用member initialization list，而不要在构造函数本体内使用赋值操作。list列出的成员列表的排列顺序应该和声明顺序相同。<br>为了免除“跨编译单元之初始化次序的问题，请以local static对象替换non-local static对象。</li>
+<li>Know what functions C++ silently write and calls<br>编译器可以暗自为class创建default构造函数，copy构造函数，copy assignment操作符以及析构函数。</li>
+<li><p>Explicitly disallow the use of compiler-generated functions you do not want.</p>
+</li>
+<li><p>Declare destructors virtual in polymorphic base class.<br>polymorphic(带有多态性质的）base classes 应该声明一个virtual析构函数，如果class拥有一个virtual函数，那么它应该拥有一个virtual析构函数。<br>classes的设计目的如果不是用来作为base classes使用，或者不是为了具备ploymorphically（多态性），就不应该声明virtual析构函数。</p>
+</li>
+<li><p>Prevent exceptions from leaving destructors.不要让异常逃离析构函数<br>析构函数绝对不要吐出异常，如果一个被析构函数调用的函数有可能会抛出异常，析构函数应该捕捉任何异常并吞下他们（不传播）或结束程序。如果客户需要对某个操作函数运行期间抛出的异常做出反应，那么class应该提供一个普通函数（而非在析构函数中）执行该操作。</p>
+</li>
+<li>Never call virtual functions during on construction or destruction.绝对不在构造和析构过程中调用virtual函数。<br> 在base class构造期间，virtual 函数并非是virtual函数。</li>
+<li>Have assignment operators return a references to <code>*this</code>. 令赋值操作符返回一个references to <code>*this</code>  赋值采用的是右结合律。</li>
+<li>Handle assignment to self in operator=  在赋值操作符中处理自我赋值<br>  确保当对象自我赋值时operator=仍然有良好的行为。其中技术包括比较“来源对象”和“目的对象”的地址，精心周到的语句顺序、以及copy-and-swap。<br> 确定任何函数如果操作一个以上的对象，而其中多个对象是同一个对象的时候，其行为仍然正确。</li>
+<li>Copy all part of an object.复制对象时勿忘记其中的每一个成分。<br>  copying 函数应该确保复制了对象中的所有的成员变量以及所有的base class成分。<br>  不要尝试用某一个copying函数实现另一个copying函数，例如copy构造函数和copy操作符，应该将共同代码放到第三个函数中，并由两个copy函数共同调用。</li>
+<li>Use objects to manage resources<br>  获得资源之后立刻放到管理对象中。<br>  管理对象运用析构函数确保资源被释放。<br>  资源取得时机便是初始化时机。</li>
+<li>Think carefully about copying behavior in resource-managing classes.</li>
+<li>Provide access to raw resources in resource-managing classes.在资源管理类中提供对原始资源的访问。<br>  对原始资源的访问可能经由显式转换或隐式转换，一般来讲，显式转换比较安全，隐式转换令客户感觉方便。</li>
+<li>Use the same form in corresponding use of new and delete .成对使用new和delete时使用相同形式。<br> 最好尽量不要对数组形式做typedefs动作。</li>
+<li>使用独立语句将new出来的对象放入智能指针中。<br> 编译器对“跨越语句的各项操作”没有重新排列的自由（只有在语句内才会有此自由度）。</li>
+<li>让接口容易被使用，不容易被误用。<br>  促进接口正确使用的方法包括接口的一致性，以及与内置类型的行为兼容。<br>   阻止误用的方法包括建立新的类型，限制类型上的操作，束缚对象值，以及消除客户的资源管理责任。</li>
+<li>Treat class design as type design 设计class犹如设计type<br>   设计class时需要涉及的问题：<ul>
+<li>新type的对象应该如何被创建和销毁。</li>
+<li>对象的初始化和对象的赋值有什么差别。</li>
+<li>新type的对象如果被pass by value，意味着什么。</li>
+<li>什么是新type的”合法值“。</li>
+<li>你的新type是否需要配合某个继承图系（inheritance graph)。</li>
+<li>你的新type需要哪些转换。</li>
+<li>什么样的操作符和函数对于此type是合理的。</li>
+<li>什么样的函数应该设置为private。</li>
+<li>谁该取用新type的成员。</li>
+<li>什么是新type的“未声明接口”。</li>
+<li>你的新type有多么一般化。</li>
+<li>你真的需要一个新type吗？</li>
+</ul>
+</li>
+<li>Prefer pass-by-reference-to-const to pass-by-value<br>  此规则不适用与stl的迭代器和函数对象</li>
+<li>Don‘t want to try return a reference when you must return an object.</li>
+<li>Declare data members private.<br> protected并不比public更具有封装性。</li>
+<li>Prefer non-member non-friend functions to member functions<br> 这样可以增加封装性，包裹弹性（packaging flexibility）和机能扩充性。</li>
+<li>若所有参数都需要类型转换，请为此采用non-member函数</li>
+<li>Consider support for a non-throwing swap考虑写出一个不抛异常的swap函数。<br>当std::swap对你的类型的转换效率不高的时候，提供一个swap成员函数，并确定这个函数不抛异常。<br> 如果你提供一个member swap， 也应该提供一个non-member swap 来调用前者，对于class（而非templates），也请特化std::swap.<br> 千万不要尝试在std内加入某些对于std而言全新的东西。</li>
+<li>Postpone variable definitions as long as possible.尽可能的推迟变量定义的位置。<br>  单一对象可能会有一个以上的地址（如base×指向它的地址和derived×指向它的地址。</li>
+</ol>
+<ul>
+<li>技巧：<ul>
+<li>所谓软件设计，是“令软件做出你希望它做的事情”的步骤和做法。</li>
+<li>在C++编译器的底层会发现，reference往往以指针实现出来。因此，pass by reference通常意味这传递的是指针。</li>
+<li>对于内置类型来说     pass by value 往往比pass by reference 效率高一些。</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2019/01/01/条款/">条款</a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问 Trans 的个人博客">Trans</a></p>
+        <p><span>发布时间:</span>2019年01月01日 - 16时57分</p>
+        <p><span>最后更新:</span>2019年01月01日 - 17时07分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2019/01/01/条款/" title="条款">http://tranzimiss.com/2019/01/01/条款/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2019/01/01/条款/　　作者: Trans" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a  href="/2018/12/31/重构的设计原则/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">重构的设计原则</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+
+
+    
+        <section class="changyan" id="comments">
+  <!--<div id="uyan_frame"></div>-->
+  <div id="SOHUCS"></div>
+  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+      appid: 'xxxx',
+      conf: 'xxxxxxxxx'
+    });
+  </script>
+</section>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/2018/12/31/重构的设计原则/" title="下一篇: 重构的设计原则">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/01/01/条款/">条款</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/31/重构的设计原则/">重构的设计原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/31/2019计划-随时变动版/">2019计划[随时变动版]</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/30/linux知识点总结/">linux知识点总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/30/cmus使用/">cmus使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/30/linux命令行与脚本编程笔记/">linux命令行与脚本编程笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/30/C-中的return/">C++中的return</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/sql注入/">sql注入</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/httpfuzzer/">httpfuzzer</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/cms/">cms</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/下载漏洞/">下载漏洞</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/爆库/">爆库</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/19/CDN绕过/">CDN绕过</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/19/AWVS/">AWVS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/17/常见端口/">常见端口</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/16/windows使用入门/">windows使用入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/15/隐藏痕迹/">隐藏痕迹</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/15/linux基本信息收集/">linux基本信息收集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/15/windows基本信息收集/">windows基本信息收集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/12/基本信息收集/">基本信息收集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/12/http请求方法/">http请求方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/12/渗透测试流程/">渗透测试流程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/12/设计模式的分类/">设计模式的分类</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/12/设计模式八大原则/">设计模式八大原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/08/漏洞利用流程/">漏洞利用流程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/08/弱点扫描/">弱点扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/08/命令行连接无线/">命令行连接无线</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/05/漏洞基本概念/">漏洞基本概念</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/05/OPENVAS/">OPENVAS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/05/WAF/">WAF</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/05/负载均衡/">负载均衡</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/04/SNMP原理/">SNMP原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/04/SNMP扫描/">SNMP扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/04/xss/">xss</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/03/Banner/">Banner</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/03/服务扫描/">服务扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/03/端口扫描/">端口扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/03/nmap/">nmap</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/三层发现/">三层发现</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/二层发现/">二层发现</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/recon-ng/">recon-ng</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/Maltego/">Maltego</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/DNS字典爆破/">DNS字典爆破</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/DNS原理/">DNS原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/DIG/">DIG</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/NSLOOKUP/">NSLOOKUP</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/信息收集/">信息收集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/tcpdump/">tcpdump</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/test/">test</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/暗网wiki/">暗网wiki</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/05/linux启动过程/">linux启动过程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/23/Trojanizer-Trojanize-Your-Payload/">Trojanizer-Trojanize Your Payload</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/定制自己的shell提示符/">定制自己的shell提示符</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/11/交换机的工作原理/">交换机的工作原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/教堂与集市笔记归纳/">教堂与集市笔记归纳</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/敬请期待/">敬请期待</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/未完待续/">未完待续</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/Markdown格式（转）/">Markdown格式（转）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/前加加和后加加的区别/">前加加和后加加的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/08/一个好的编程小习惯/">一个好的编程小习惯</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 Trans
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
