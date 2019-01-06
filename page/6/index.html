@@ -193,7 +193,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/C-primer/" style="font-size: 15px;">C++primer</a> <a href="/tags/C-语法/" style="font-size: 10px;">C++语法</a> <a href="/tags/Effecitive-C/" style="font-size: 10px;">Effecitive C++</a> <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/linux工具/" style="font-size: 10px;">linux工具</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 16.67px;">原理</a> <a href="/tags/后台管理/" style="font-size: 10px;">后台管理</a> <a href="/tags/基础/" style="font-size: 11.67px;">基础</a> <a href="/tags/存档/" style="font-size: 11.67px;">存档</a> <a href="/tags/工具/" style="font-size: 18.33px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a> <a href="/tags/漏洞/" style="font-size: 13.33px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 13.33px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/笔记/" style="font-size: 11.67px;">笔记</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/设计模式/" style="font-size: 11.67px;">设计模式</a> <a href="/tags/重构/" style="font-size: 10px;">重构</a>
+                        <a href="/tags/C-primer/" style="font-size: 15.71px;">C++primer</a> <a href="/tags/C-语法/" style="font-size: 10px;">C++语法</a> <a href="/tags/Effecitive-C/" style="font-size: 10px;">Effecitive C++</a> <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/linux工具/" style="font-size: 10px;">linux工具</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 17.14px;">原理</a> <a href="/tags/后台管理/" style="font-size: 10px;">后台管理</a> <a href="/tags/基础/" style="font-size: 11.43px;">基础</a> <a href="/tags/存档/" style="font-size: 11.43px;">存档</a> <a href="/tags/工具/" style="font-size: 18.57px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a> <a href="/tags/漏洞/" style="font-size: 12.86px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 14.29px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/笔记/" style="font-size: 11.43px;">笔记</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/设计模式/" style="font-size: 11.43px;">设计模式</a> <a href="/tags/重构/" style="font-size: 10px;">重构</a>
                     </div>
                 </section>
                 
@@ -273,6 +273,303 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-nmap" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/03/nmap/" class="article-date">
+      <time datetime="2018-12-03T13:27:27.000Z" itemprop="datePublished">2018-12-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/03/nmap/">nmap</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>四层发现：</p>
+<ul>
+<li>nmap  192.168.1.0/24 -PU53  -sn</li>
+<li>nmap  192.168.1.0/24 -PA80  -sn</li>
+<li>nmap  -iL iplist.txt -PA80  -sn</li>
+</ul>
+<p>端口扫描:</p>
+<ul>
+<li>nmap -sU 192.168.1.1      扫描默认的1000个端口</li>
+<li>nmap 192.168.1.1 -sU -p 53</li>
+<li>nmap -F -sT -v 127.0.0.1 -F即扫描u最有可能开放的100个端口，-v获取扫描信息， -sT 使用tcp扫描</li>
+<li>nmap -iL iplist.txt -sU -p  1-200</li>
+</ul>
+<p>隐蔽端口扫描：</p>
+<ul>
+<li>nmap -sS 192.168.1.1 -p xx,xx,xx,xx</li>
+<li>nmap -sS 192.168.1.1 -p -65535 -open</li>
+<li>nmap -sS 192.168.1.1 -p –open</li>
+<li>nmap -sS -iL iplist -p 80</li>
+</ul>
+<p>[隐蔽端口扫描还有hping3 命令]</p>
+<p>全连接端口扫描</p>
+<ul>
+<li>nmap -sT 127.0.0.1       扫描默认的1000个端口</li>
+<li>nmap -sT 127.0.0.1 -p 80</li>
+<li>nmap -sT 127.0.0.1 -p 80-1080</li>
+<li>nmap -sT -iL iplist.txt -p 80</li>
+</ul>
+<p>僵尸扫描</p>
+<ul>
+<li>发现僵尸机 nmap 192.168.1.1 -p 445 –script=ipldseq.nse</li>
+<li>使用僵尸机 nmap xxx.xxx.xxx.僵尸机 -sl xxx.xxx.xxx.目标机 -Pn -p 0-100</li>
+</ul>
+<p>服务扫描</p>
+<p>nmap通过发送系列复杂的探测，依据相应特征signature</p>
+<ul>
+<li>nmap 127.0.0.1 -p 80 -sV</li>
+<li>nmap -sV –script unusual-port 127.0.0.1</li>
+</ul>
+<p>SMB扫描</p>
+<ul>
+<li>nmap -v -p 139,445 127.0.0.1</li>
+<li>nmap 127.0.0.1 -p 139,445 –script=smb-check-vulns –script-args=unsafe=1 127.0.01</li>
+</ul>
+<p>SMTP扫描</p>
+<ul>
+<li>nmap 域名服务器 -p25 –script=smtp-enum-users.nse –script-args=smtp-enum-users.methods={VRFY}</li>
+<li>nmap 域名服务器 -p25 –script=smtp-open-relay.nse</li>
+</ul>
+<p>防火墙识别</p>
+<ul>
+<li>nmap -sA 127.0.0.1 -p 22     防火墙过滤检测功能</li>
+</ul>
+<p>WAF识别</p>
+<ul>
+<li>nmap 域名 –script=http-waf-detect.nse</li>
+</ul>
+<p>探测操作系统：</p>
+<ul>
+<li>nmap -O 127.0.0.1</li>
+<li>nmap -A 127.0.0.1</li>
+</ul>
+<p>漏洞探测：</p>
+<ul>
+<li>HTTP.sys 远程代码执行<ul>
+<li>nmap -sV –script http-vuln-cve2015-1635 127.0.0.1</li>
+</ul>
+</li>
+<li>IIS短文件泄漏<ul>
+<li>nmap -p8080 –script http-iis-short-name-brute 127.0.0.1</li>
+</ul>
+</li>
+<li>拒绝服务<ul>
+<li>nmap –max-parallelism 800 –script http-slowloris www.baidu.com</li>
+</ul>
+</li>
+<li>验证MySql匿名访问<ul>
+<li>nmap –script mysql-empty-password 127.0.0.1</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>端口扫描的状态</p>
+<ul>
+<li>open               端口开启，数据有到达主机，有程序在端口上监控</li>
+<li>closed             端口关闭，数据有到达主机，没有程序在端口上监控</li>
+<li>filtered           数据没有到达主机，返回的结果为空，数据被防火墙或者是IDS过滤</li>
+<li>unfiltered         数据没有到达主机，但是不能识别端口的当前状态</li>
+<li>open|filtered      端口没有返回值，主要发生在udp，ip，fin，null和xmas扫描中</li>
+<li>closed|filtered    只发生在ip，id ，idle扫描</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-三层发现" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/02/三层发现/" class="article-date">
+      <time datetime="2018-12-02T14:14:34.000Z" itemprop="datePublished">2018-12-02</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/02/三层发现/">三层发现</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>路由追踪</p>
+<p>traceroute xxx.com</p>
+<p>ping命令</p>
+<p>fping命令</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-二层发现" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/02/二层发现/" class="article-date">
+      <time datetime="2018-12-02T14:08:01.000Z" itemprop="datePublished">2018-12-02</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/02/二层发现/">二层发现</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>Netdiscover</p>
+<p>简介：专用于二层发现，可以用于无线和交换网络环境，主动和被动探测</p>
+<p>主动：</p>
+<p>netdiscover -l eth0 -r 192.168.0.0/24<br>netdiscover -l iplist.txt</p>
+<p>被动：</p>
+<p>netdiscover -p</p>
+<p>手动探测工具  scapy   基于python<br>aptitude install python-gnuplot</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-recon-ng" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -646,7 +943,8 @@
           
         <p>nslookup 域名</p>
 <p>type=a、mx、ns、any</p>
-<p>nslookup -type=ns xxx.com </p>
+<p>nslookup -type=ns xxx.com</p>
+<p>域名记录：A ,C name  ，NS， MX ， ptr</p>
 
       
     </div>
@@ -769,210 +1067,9 @@
 
 
   
-    <article id="post-tcpdump" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/02/tcpdump/" class="article-date">
-      <time datetime="2018-12-02T06:37:45.000Z" itemprop="datePublished">2018-12-02</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/02/tcpdump/">tcpdump</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>tcpdump -n -r file.cap | awk ‘{print $3}’ | sort -U</p>
-<p>tcpdump -n src host xxx.xxx.xxx.xxx -r file.cap</p>
-<p>tcpdump -n dst host xxx.xxx.xxx.xxx -r file.cap</p>
-<p>tcpdump -n port xx -r file.cap</p>
-<p>tcpdump -nX port xx -r file.cap</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/02/test/" class="article-date">
-      <time datetime="2018-12-02T06:19:57.000Z" itemprop="datePublished">2018-12-02</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/02/test/">test</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/存档/">存档</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络安全/">网络安全</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-暗网wiki" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/02/暗网wiki/" class="article-date">
-      <time datetime="2018-12-02T02:49:49.000Z" itemprop="datePublished">2018-12-02</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/02/暗网wiki/">暗网wiki</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="http://zqktlwi4fecvo6ri.onion/wiki/index.php/Main_Page" target="_blank" rel="noopener">http://zqktlwi4fecvo6ri.onion/wiki/index.php/Main_Page</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/存档/">存档</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
     </nav>
   
 

