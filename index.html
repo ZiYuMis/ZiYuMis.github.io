@@ -341,6 +341,13 @@
 <li>注：不能对NULL使用比较运算符。</li>
 <li>select * from Product where purchase_price is null;  //字段内容为空</li>
 <li>select * from Product where not sale_price &lt;= 500;  //大于500</li>
+<li>AND运算符在两侧的查询条件同时成立时整个查询条件才成立。</li>
+<li>OR运算符在其两侧的查询条件有一个成立时整个查询条件成立。</li>
+<li>select * from Product where product_type = ‘厨房用具’ and sale_price &gt;= 3000;</li>
+<li>select * from Product where product_type = ‘厨房用具’ or sale_price &gt;= 3000;</li>
+<li>AND运算符优先级高于OR，可以使用括号调整优先级顺序。</li>
+<li>select * from Product where product_type = ‘办公用品’ and ( regist_date = ‘2009-09-11’ or regist_date = ‘2009-09-20’);</li>
+<li>p75</li>
 </ol>
 
       
