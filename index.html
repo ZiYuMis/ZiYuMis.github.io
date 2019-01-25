@@ -334,7 +334,13 @@
 <li>select DISTINCT product_type from Product;  //清除重复内容   注：NULL的条目也会缩减为一条，并且DISTINCT只能放在第一个列名之前。</li>
 <li>select * from Product where product_type = ‘衣服’;</li>
 <li>注释语句： –或者/××/</li>
-<li>select product_name, sale_price, sale_price * 2 as “salse_price_x2” from Product; //进行四则运算。</li>
+<li>select product_name, sale_price, sale_price * 2 as “salse_price_x2” from Product; //进行四则运算。 注：包含null的运算最后结果肯定为NULL。</li>
+<li>select * from Product where sale_price &lt;&gt; 500;  //不等于500</li>
+<li>select * from Product where sale_price &lt;= 500;  //小于等于500</li>
+<li>注：一定让不等号在左，等号在右。</li>
+<li>注：不能对NULL使用比较运算符。</li>
+<li>select * from Product where purchase_price is null;  //字段内容为空</li>
+<li>select * from Product where not sale_price &lt;= 500;  //大于500</li>
 </ol>
 
       

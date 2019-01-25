@@ -16,7 +16,7 @@
 <meta property="og:url" content="http://tranzimiss.com/2019/01/25/sql入门/index.html">
 <meta property="og:site_name" content="TransMiss">
 <meta property="og:description" content="postgresql笔记因为傻鸟里面自带postgresql，因此就买了sql基础教程和sql进阶教程，依然以笔记的方式进行记录 初始 service postgresql start   //因为现在傻鸟里面postgresql不再开机自启了，所以需要手动启动。    su - postgresql     //密码为该用户名的密码 psql -U postgresql -d shop">
-<meta property="og:updated_time" content="2019-01-25T07:12:10.325Z">
+<meta property="og:updated_time" content="2019-01-25T07:36:49.374Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sql入门">
 <meta name="twitter:description" content="postgresql笔记因为傻鸟里面自带postgresql，因此就买了sql基础教程和sql进阶教程，依然以笔记的方式进行记录 初始 service postgresql start   //因为现在傻鸟里面postgresql不再开机自启了，所以需要手动启动。    su - postgresql     //密码为该用户名的密码 psql -U postgresql -d shop">
@@ -349,7 +349,13 @@
 <li>select DISTINCT product_type from Product;  //清除重复内容   注：NULL的条目也会缩减为一条，并且DISTINCT只能放在第一个列名之前。</li>
 <li>select * from Product where product_type = ‘衣服’;</li>
 <li>注释语句： –或者/××/</li>
-<li>select product_name, sale_price, sale_price * 2 as “salse_price_x2” from Product; //进行四则运算。</li>
+<li>select product_name, sale_price, sale_price * 2 as “salse_price_x2” from Product; //进行四则运算。 注：包含null的运算最后结果肯定为NULL。</li>
+<li>select * from Product where sale_price &lt;&gt; 500;  //不等于500</li>
+<li>select * from Product where sale_price &lt;= 500;  //小于等于500</li>
+<li>注：一定让不等号在左，等号在右。</li>
+<li>注：不能对NULL使用比较运算符。</li>
+<li>select * from Product where purchase_price is null;  //字段内容为空</li>
+<li>select * from Product where not sale_price &lt;= 500;  //大于500</li>
 </ol>
 
       
@@ -362,7 +368,7 @@
         <p><span>本文标题:</span><a  href="/2019/01/25/sql入门/">sql入门</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Trans 的个人博客">Trans</a></p>
         <p><span>发布时间:</span>2019年01月25日 - 13时25分</p>
-        <p><span>最后更新:</span>2019年01月25日 - 15时12分</p>
+        <p><span>最后更新:</span>2019年01月25日 - 15时36分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/01/25/sql入门/" title="sql入门">http://tranzimiss.com/2019/01/25/sql入门/</a>
             <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2019/01/25/sql入门/　　作者: Trans" title=""></span>
