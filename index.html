@@ -365,7 +365,11 @@
 <li>select avg(sale_price) from Product;</li>
 <li>select MAX(sale_price), MIN(purchase_price) from Product;</li>
 <li>select count(distinct product_type) from Product;  //计算去除重复数据之后的数据行数。</li>
-<li>select product_type,  COUNT(×) from Product GROUP BY product_type;   //分组<br>9.</li>
+<li>select product_type,  COUNT(×) from Product GROUP BY product_type;   //分组计算</li>
+<li>select purchase_price, COUNT(×) FROM Product where product_type = ‘衣服’ GROUP BY purchase_price;</li>
+<li>注：group by 子句中不能使用别名</li>
+<li>只有select子句和having子句以及order by子句能使用COUNT等聚合函数</li>
+<li>p101</li>
 </ol>
 
       
