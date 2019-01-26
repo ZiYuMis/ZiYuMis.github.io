@@ -16,7 +16,7 @@
 <meta property="og:url" content="http://tranzimiss.com/2019/01/25/sql入门/index.html">
 <meta property="og:site_name" content="TransMiss">
 <meta property="og:description" content="postgresql笔记因为傻鸟里面自带postgresql，因此就买了sql基础教程和sql进阶教程，依然以笔记的方式进行记录 初始 service postgresql start   //因为现在傻鸟里面postgresql不再开机自启了，所以需要手动启动。    su - postgresql     //密码为该用户名的密码 psql -U postgresql -d shop">
-<meta property="og:updated_time" content="2019-01-26T09:23:43.159Z">
+<meta property="og:updated_time" content="2019-01-26T10:31:30.200Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sql入门">
 <meta name="twitter:description" content="postgresql笔记因为傻鸟里面自带postgresql，因此就买了sql基础教程和sql进阶教程，依然以笔记的方式进行记录 初始 service postgresql start   //因为现在傻鸟里面postgresql不再开机自启了，所以需要手动启动。    su - postgresql     //密码为该用户名的密码 psql -U postgresql -d shop">
@@ -341,6 +341,12 @@
 </li>
 <li><p>ALTER TABLE Poduct RENAME TO Product;  //修改表名</p>
 </li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE ProductIns</span><br><span class="line">( product_id            CHAR(4)        NOT NULL,</span><br><span class="line">  product_name          VARCHAR(100)   NOT NULL,</span><br><span class="line">  product_type          VARCHAR(32)    NOT NULL,</span><br><span class="line">  sale_price            INTEGER        DEFAULT 0,</span><br><span class="line">  purchase_price        INTEGER                 ,</span><br><span class="line">  regist_date           DATE                    ,</span><br><span class="line">  PRIMARY KEY (product_id) );</span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">create table ProductCopy</span><br><span class="line">( product_id        CHAR(4)        NOT NULL,</span><br><span class="line">  product_name      VARCHAR(100)   NOT NULL,</span><br><span class="line">  product_type      VARCHAR(32)    NOT NULL,</span><br><span class="line">  sale_price        INTEGER                ,</span><br><span class="line">  purchase_price    INTEGER                ,</span><br><span class="line">  regist_date       DATE                   ,</span><br><span class="line">  PRIMARY  KEY   (product_id) );</span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">create table ProductType</span><br><span class="line">( product_type      VARCHAR(32)    NOT NULL,</span><br><span class="line">  sum_sale_price        INTEGER                ,</span><br><span class="line">  sum_purchase_price    INTEGER                ,</span><br><span class="line">  PRIMARY  KEY   (product_type) );</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <h6 id="select语句"><a href="#select语句" class="headerlink" title="select语句"></a>select语句</h6><p>(万物基于select。。。。。[啊呸，咩有insert你select毛线])</p>
 <ol>
@@ -395,7 +401,19 @@
 <li>order by 子句也可以使用聚合函数。</li>
 <li>select product_type, count(×) from Product group by product_type order by count(×);</li>
 </ol>
-<h6 id="数据更新"><a href="#数据更新" class="headerlink" title="数据更新"></a>数据更新</h6>
+<h6 id="数据更新"><a href="#数据更新" class="headerlink" title="数据更新"></a>数据更新</h6><p>恩，万物基于insert(create你闭嘴)。</p>
+<ol>
+<li>insert into ProductIns (product_id, product_name, product_type, sale_price, purchase_price, regist_date) values (‘0001’, ‘T恤衫’, ‘衣服’, 1000, 500, ‘2009-09-20’);</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO ProductIns values (&apos;0002&apos;, &apos;打孔器&apos;, &apos;办公用品&apos;, 500, 320, &apos;2009-09-11&apos;),</span><br><span class="line">                              (&apos;0003&apos;, &apos;运动T恤&apos;, &apos;衣服&apos;, 4000, 2800, NULL),</span><br><span class="line">                              (&apos;0004&apos;, &apos;菜刀&apos;, &apos;厨房用具&apos;, 3000, 2800, &apos;2009-09-20&apos;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>insert into ProductIns values (‘0005’, ‘高压锅’, ‘厨房用具’, 6800, 5000, ‘2009-01-15’);          //省略列清单</p>
+</li>
+<li>insert into ProductIns (product_id, product_name, product_type, sale_price, purchase_price, regist_date) values (‘0006’, ‘叉子’, ‘厨房用具’, 500, NULL, ‘2009-09-20’);      //插入NULL</li>
+<li>insert into ProductIns (product_id, product_name, product_type, sale_price, purchase_price, regist_date) values (‘0007’, ‘擦菜板’, ‘厨房用具’, DEFAULT, 790, ‘2009-04-28’);  //显式插入默认值</li>
+<li>insert into ProductIns ProductCopy(product_id, product_name, product_type, sale_price, purchase_price, regist_date) select product_id, product_name, product_type, sale_price, purchase_price, regist_date from Product;  //copy一个表中的数据</li>
+<li>insert into ProductType (product_type, sum_sale_price, sum_purchase_price) select product_type, sum(sale_price), sum(purchase_price) from Product GROUP BY product_type; //计算统计值</li>
+</ol>
+
       
     </div>
     
@@ -406,7 +424,7 @@
         <p><span>本文标题:</span><a  href="/2019/01/25/sql入门/">sql入门</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Trans 的个人博客">Trans</a></p>
         <p><span>发布时间:</span>2019年01月25日 - 13时25分</p>
-        <p><span>最后更新:</span>2019年01月26日 - 17时23分</p>
+        <p><span>最后更新:</span>2019年01月26日 - 18时31分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/01/25/sql入门/" title="sql入门">http://tranzimiss.com/2019/01/25/sql入门/</a>
             <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2019/01/25/sql入门/　　作者: Trans" title=""></span>
