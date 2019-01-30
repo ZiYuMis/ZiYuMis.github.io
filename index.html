@@ -551,7 +551,7 @@
 <li><figure class="highlight plain"><figcaption><span>sets 取得部分组合的结果</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">select case when grouping(product_type) = 1</span><br><span class="line">            then &apos;商品种类  合计&apos;</span><br><span class="line">            else product_type end as product_type,</span><br><span class="line">       case when grouping(regist_date) = 1</span><br><span class="line">            then &apos;登记日期 合计&apos;</span><br><span class="line">            else cast(regist_date as VARCHAR(16)) end as regist_date,</span><br><span class="line">       sum(sale_price) as sum_price</span><br><span class="line">from Product</span><br><span class="line">group by grouping sets (product_type, regist_date);</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>以上，sql入门已经完成（啊呸，心里有点b数好不好）。进阶那本明年再说（如果不会压箱底的话），大家能看懂就加油看，看不懂就问度娘，或者问情书大佬（逃</p>
+<p>以上，sql入门已经完成（啊呸，心里有点b数好不好）所有源码都在啥鸟里面测试通过（大概）。进阶那本明年再说（如果不会压箱底的话），大家能看懂就加油看，看不懂就问度娘，或者问情书大佬（逃</p>
 
       
     </div>
