@@ -9,17 +9,17 @@
   
   <title>DNS原理 | TransMiss</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="域名与 FQDN的区别 域名记录  A、 C name 、 NS、 MX、 ptr">
+  <meta name="description" content="域名与 FQDN的区别FQDN：Fully Qualified Domain Name,是域+主机名的总称 域名记录类型：  A  ：地址记录，用来指定域名的IPv4地址，如果需要将域名指向一个IP地址，就需要添加A记录。 AAAA：用来指定主机名（或域名）对应的IPv6地址（例如：ff06:0:0:0:0:0:0:c3）记录。 Cname ：如果需要将域名指向另一个域名，再由另一个域名提供ip地">
 <meta name="keywords" content="信息收集,原理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DNS原理">
 <meta property="og:url" content="http://tranzimiss.com/2018/12/02/DNS原理/index.html">
 <meta property="og:site_name" content="TransMiss">
-<meta property="og:description" content="域名与 FQDN的区别 域名记录  A、 C name 、 NS、 MX、 ptr">
-<meta property="og:updated_time" content="2018-12-05T14:32:15.041Z">
+<meta property="og:description" content="域名与 FQDN的区别FQDN：Fully Qualified Domain Name,是域+主机名的总称 域名记录类型：  A  ：地址记录，用来指定域名的IPv4地址，如果需要将域名指向一个IP地址，就需要添加A记录。 AAAA：用来指定主机名（或域名）对应的IPv6地址（例如：ff06:0:0:0:0:0:0:c3）记录。 Cname ：如果需要将域名指向另一个域名，再由另一个域名提供ip地">
+<meta property="og:updated_time" content="2019-02-08T15:08:10.073Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DNS原理">
-<meta name="twitter:description" content="域名与 FQDN的区别 域名记录  A、 C name 、 NS、 MX、 ptr">
+<meta name="twitter:description" content="域名与 FQDN的区别FQDN：Fully Qualified Domain Name,是域+主机名的总称 域名记录类型：  A  ：地址记录，用来指定域名的IPv4地址，如果需要将域名指向一个IP地址，就需要添加A记录。 AAAA：用来指定主机名（或域名）对应的IPv6地址（例如：ff06:0:0:0:0:0:0:c3）记录。 Cname ：如果需要将域名指向另一个域名，再由另一个域名提供ip地">
   
     <link rel="alternative" href="/atom.xml" title="TransMiss" type="application/atom+xml">
   
@@ -322,8 +322,20 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>域名与 FQDN的区别</p>
-<p>域名记录  A、 C name 、 NS、 MX、 ptr</p>
+        <p>域名与 FQDN的区别<br>FQDN：Fully Qualified Domain Name,是域+主机名的总称</p>
+<p>域名记录类型：</p>
+<ul>
+<li>A  ：地址记录，用来指定域名的IPv4地址，如果需要将域名指向一个IP地址，就需要添加A记录。</li>
+<li>AAAA：用来指定主机名（或域名）对应的IPv6地址（例如：ff06:0:0:0:0:0:0:c3）记录。</li>
+<li>Cname ：如果需要将域名指向另一个域名，再由另一个域名提供ip地址，就需要添加CNAME记录。</li>
+<li>NS ：域名服务器记录，如果需要把子域名交给其他DNS服务商解析，就需要添加NS记录。</li>
+<li>MX ：如果需要设置邮箱，让邮箱能收到邮件，就需要添加MX记录。</li>
+<li>ptr：用于ip地址到域名的映射，与A记录相反。</li>
+<li>TXT：在这里可以填写任何东西，长度限制255。绝大多数的TXT记录是用来做SPF记录（反垃圾邮件）。</li>
+<li>SRV：记录了哪台计算机提供了哪个服务。格式为：服务的名字、点、协议的类型</li>
+</ul>
+<p>显性URL：从一个地址301重定向到另一个地址的时候，就需要添加显性URL记录（注：DNSPod目前只支持301重定向）。</p>
+<p>隐性URL：类似于显性URL，区别在于隐性URL不会改变地址栏中的域名。</p>
 
       
     </div>
@@ -335,7 +347,7 @@
         <p><span>本文标题:</span><a  href="/2018/12/02/DNS原理/">DNS原理</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Trans 的个人博客">Trans</a></p>
         <p><span>发布时间:</span>2018年12月02日 - 15时08分</p>
-        <p><span>最后更新:</span>2018年12月05日 - 22时32分</p>
+        <p><span>最后更新:</span>2019年02月08日 - 23时08分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/12/02/DNS原理/" title="DNS原理">http://tranzimiss.com/2018/12/02/DNS原理/</a>
             <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2018/12/02/DNS原理/　　作者: Trans" title=""></span>
