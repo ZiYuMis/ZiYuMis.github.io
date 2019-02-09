@@ -9,17 +9,17 @@
   
   <title>三层发现 | TransMiss</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="路由追踪 traceroute xxx.com ping命令 fping命令">
+  <meta name="description" content="三层发现：网络层，需要在意ip和icmp协议  三层发现的优点：可路由，速度比较快 三层发现的缺点：速度比二层慢，并且经常被防火墙过滤  ping命令 ping xxx.xxx.xxx.xxx -c 2 ping -r xxx.xxx.xxx.xxx 路由追踪  （在傻鸟里面不知道为什么用不了） ping -c 1 | grep &amp;quot;bytes from&amp;quot; | cut -d &amp;q">
 <meta name="keywords" content="信息收集,工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="三层发现">
 <meta property="og:url" content="http://tranzimiss.com/2018/12/02/三层发现/index.html">
 <meta property="og:site_name" content="TransMiss">
-<meta property="og:description" content="路由追踪 traceroute xxx.com ping命令 fping命令">
-<meta property="og:updated_time" content="2018-12-02T14:16:53.714Z">
+<meta property="og:description" content="三层发现：网络层，需要在意ip和icmp协议  三层发现的优点：可路由，速度比较快 三层发现的缺点：速度比二层慢，并且经常被防火墙过滤  ping命令 ping xxx.xxx.xxx.xxx -c 2 ping -r xxx.xxx.xxx.xxx 路由追踪  （在傻鸟里面不知道为什么用不了） ping -c 1 | grep &amp;quot;bytes from&amp;quot; | cut -d &amp;q">
+<meta property="og:updated_time" content="2019-02-09T15:16:59.678Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="三层发现">
-<meta name="twitter:description" content="路由追踪 traceroute xxx.com ping命令 fping命令">
+<meta name="twitter:description" content="三层发现：网络层，需要在意ip和icmp协议  三层发现的优点：可路由，速度比较快 三层发现的缺点：速度比二层慢，并且经常被防火墙过滤  ping命令 ping xxx.xxx.xxx.xxx -c 2 ping -r xxx.xxx.xxx.xxx 路由追踪  （在傻鸟里面不知道为什么用不了） ping -c 1 | grep &amp;quot;bytes from&amp;quot; | cut -d &amp;q">
   
     <link rel="alternative" href="/atom.xml" title="TransMiss" type="application/atom+xml">
   
@@ -322,10 +322,25 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>路由追踪</p>
-<p>traceroute xxx.com</p>
-<p>ping命令</p>
-<p>fping命令</p>
+        <p>三层发现：网络层，需要在意ip和icmp协议</p>
+<ul>
+<li>三层发现的优点：可路由，速度比较快</li>
+<li>三层发现的缺点：速度比二层慢，并且经常被防火墙过滤</li>
+</ul>
+<h6 id="ping命令"><a href="#ping命令" class="headerlink" title="ping命令"></a>ping命令</h6><ul>
+<li>ping xxx.xxx.xxx.xxx -c 2</li>
+<li>ping -r xxx.xxx.xxx.xxx 路由追踪  （在傻鸟里面不知道为什么用不了）</li>
+<li><code>ping -c 1 | grep &quot;bytes from&quot; | cut -d &quot;  &quot; -f 4 | cut -d &quot;:&quot; -f 1</code><h6 id="traceroute"><a href="#traceroute" class="headerlink" title="traceroute"></a>traceroute</h6>traceroute xxx.com     路由追踪</li>
+</ul>
+<h6 id="fping命令"><a href="#fping命令" class="headerlink" title="fping命令"></a>fping命令</h6><ul>
+<li>fping xxx.xxx.xxx.xxx -c 1</li>
+<li>fping -g xxx.xxx.xxx.0/24</li>
+<li>fping -f iplist.txt</li>
+</ul>
+<h6 id="hping命令"><a href="#hping命令" class="headerlink" title="hping命令"></a>hping命令</h6><p>能够发送几乎任意的tcp/ip包，但是一次只能扫描一个目标。</p>
+<ul>
+<li>hping3 xxx.xxx.xxx.xxx –icmp -c 2</li>
+</ul>
 
       
     </div>
@@ -337,7 +352,7 @@
         <p><span>本文标题:</span><a  href="/2018/12/02/三层发现/">三层发现</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Trans 的个人博客">Trans</a></p>
         <p><span>发布时间:</span>2018年12月02日 - 22时14分</p>
-        <p><span>最后更新:</span>2018年12月02日 - 22时16分</p>
+        <p><span>最后更新:</span>2019年02月09日 - 23时16分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/12/02/三层发现/" title="三层发现">http://tranzimiss.com/2018/12/02/三层发现/</a>
             <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2018/12/02/三层发现/　　作者: Trans" title=""></span>
@@ -374,7 +389,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#ping命令"><span class="toc-number">1.</span> <span class="toc-text">ping命令</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#traceroute"><span class="toc-number">2.</span> <span class="toc-text">traceroute</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#fping命令"><span class="toc-number">3.</span> <span class="toc-text">fping命令</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#hping命令"><span class="toc-number">4.</span> <span class="toc-text">hping命令</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {

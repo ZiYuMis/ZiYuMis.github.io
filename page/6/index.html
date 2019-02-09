@@ -637,10 +637,25 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>路由追踪</p>
-<p>traceroute xxx.com</p>
-<p>ping命令</p>
-<p>fping命令</p>
+        <p>三层发现：网络层，需要在意ip和icmp协议</p>
+<ul>
+<li>三层发现的优点：可路由，速度比较快</li>
+<li>三层发现的缺点：速度比二层慢，并且经常被防火墙过滤</li>
+</ul>
+<h6 id="ping命令"><a href="#ping命令" class="headerlink" title="ping命令"></a>ping命令</h6><ul>
+<li>ping xxx.xxx.xxx.xxx -c 2</li>
+<li>ping -r xxx.xxx.xxx.xxx 路由追踪  （在傻鸟里面不知道为什么用不了）</li>
+<li><code>ping -c 1 | grep &quot;bytes from&quot; | cut -d &quot;  &quot; -f 4 | cut -d &quot;:&quot; -f 1</code><h6 id="traceroute"><a href="#traceroute" class="headerlink" title="traceroute"></a>traceroute</h6>traceroute xxx.com     路由追踪</li>
+</ul>
+<h6 id="fping命令"><a href="#fping命令" class="headerlink" title="fping命令"></a>fping命令</h6><ul>
+<li>fping xxx.xxx.xxx.xxx -c 1</li>
+<li>fping -g xxx.xxx.xxx.0/24</li>
+<li>fping -f iplist.txt</li>
+</ul>
+<h6 id="hping命令"><a href="#hping命令" class="headerlink" title="hping命令"></a>hping命令</h6><p>能够发送几乎任意的tcp/ip包，但是一次只能扫描一个目标。</p>
+<ul>
+<li>hping3 xxx.xxx.xxx.xxx –icmp -c 2</li>
+</ul>
 
       
     </div>
@@ -709,12 +724,12 @@
         <p>二层为数据链路层，主要需要在意ARP协议</p>
 <h6 id="arping"><a href="#arping" class="headerlink" title="arping"></a>arping</h6><p>arping xxx.xxx.xxx.xxx -c 1</p>
 <p><code>arping -c xxx.xxx.xxx.xxx | grep &quot;byte from&quot;  | cut -d &quot;&quot; -f 5 | cut -d &quot;(&quot;  -f 2 | cut -d &quot;)&quot; -f 1</code></p>
-<h6 id="Netdiscover"><a href="#Netdiscover" class="headerlink" title="Netdiscover"></a>Netdiscover</h6><p>简介：专用于二层发现，可以用于无线和交换网络环境，主动和被动探测</p>
+<h6 id="Netdiscover"><a href="#Netdiscover" class="headerlink" title="Netdiscover"></a>Netdiscover</h6><p>简介：专用于二层发现，可以用于无线和交换网络环境，主动和被动探测。主动arp容易触发告警</p>
 <p>主动：</p>
 <p>netdiscover -l eth0 -r 192.168.0.0/24<br>netdiscover -l iplist.txt</p>
 <p>被动：</p>
 <p>netdiscover -p</p>
-<h6 id="scapy"><a href="#scapy" class="headerlink" title="scapy"></a>scapy</h6><p>手动探测工具  scapy   基于python<br>aptitude install python-gnuplot</p>
+<h6 id="scapy"><a href="#scapy" class="headerlink" title="scapy"></a>scapy</h6><p>手动探测工具  scapy   基于python，可以作为python的一个工具库进行调用，也可以作为单独的工具进行使用。主要用于抓包、分析、创建、修改、注入网络流量<br>aptitude install python-gnuplot</p>
 
       
     </div>
@@ -780,7 +795,15 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>简介： 基于python开发的全特性的web侦查框架</p>
+        <ul>
+<li>简介： 基于python开发的全特性的web侦查框架,命令格式与msf一致。</li>
+<li>使用方法：<ul>
+<li>模块</li>
+<li>数据库</li>
+<li>报告</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
