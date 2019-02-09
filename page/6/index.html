@@ -706,13 +706,15 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Netdiscover</p>
-<p>简介：专用于二层发现，可以用于无线和交换网络环境，主动和被动探测</p>
+        <p>二层为数据链路层，主要需要在意ARP协议</p>
+<h6 id="arping"><a href="#arping" class="headerlink" title="arping"></a>arping</h6><p>arping xxx.xxx.xxx.xxx -c 1</p>
+<p><code>arping -c xxx.xxx.xxx.xxx | grep &quot;byte from&quot;  | cut -d &quot;&quot; -f 5 | cut -d &quot;(&quot;  -f 2 | cut -d &quot;)&quot; -f 1</code></p>
+<h6 id="Netdiscover"><a href="#Netdiscover" class="headerlink" title="Netdiscover"></a>Netdiscover</h6><p>简介：专用于二层发现，可以用于无线和交换网络环境，主动和被动探测</p>
 <p>主动：</p>
 <p>netdiscover -l eth0 -r 192.168.0.0/24<br>netdiscover -l iplist.txt</p>
 <p>被动：</p>
 <p>netdiscover -p</p>
-<p>手动探测工具  scapy   基于python<br>aptitude install python-gnuplot</p>
+<h6 id="scapy"><a href="#scapy" class="headerlink" title="scapy"></a>scapy</h6><p>手动探测工具  scapy   基于python<br>aptitude install python-gnuplot</p>
 
       
     </div>

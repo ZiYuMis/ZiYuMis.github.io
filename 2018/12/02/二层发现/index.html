@@ -9,17 +9,17 @@
   
   <title>二层发现 | TransMiss</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Netdiscover 简介：专用于二层发现，可以用于无线和交换网络环境，主动和被动探测 主动： netdiscover -l eth0 -r 192.168.0.0/24netdiscover -l iplist.txt 被动： netdiscover -p 手动探测工具  scapy   基于pythonaptitude install python-gnuplot">
+  <meta name="description" content="二层为数据链路层，主要需要在意ARP协议 arpingarping xxx.xxx.xxx.xxx -c 1 arping -c xxx.xxx.xxx.xxx | grep &amp;quot;byte from&amp;quot;  | cut -d &amp;quot;&amp;quot; -f 5 | cut -d &amp;quot;(&amp;quot;  -f 2 | cut -d &amp;quot;)&amp;quot; -f 1 Netdi">
 <meta name="keywords" content="信息收集,工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="二层发现">
 <meta property="og:url" content="http://tranzimiss.com/2018/12/02/二层发现/index.html">
 <meta property="og:site_name" content="TransMiss">
-<meta property="og:description" content="Netdiscover 简介：专用于二层发现，可以用于无线和交换网络环境，主动和被动探测 主动： netdiscover -l eth0 -r 192.168.0.0/24netdiscover -l iplist.txt 被动： netdiscover -p 手动探测工具  scapy   基于pythonaptitude install python-gnuplot">
-<meta property="og:updated_time" content="2018-12-02T14:13:43.256Z">
+<meta property="og:description" content="二层为数据链路层，主要需要在意ARP协议 arpingarping xxx.xxx.xxx.xxx -c 1 arping -c xxx.xxx.xxx.xxx | grep &amp;quot;byte from&amp;quot;  | cut -d &amp;quot;&amp;quot; -f 5 | cut -d &amp;quot;(&amp;quot;  -f 2 | cut -d &amp;quot;)&amp;quot; -f 1 Netdi">
+<meta property="og:updated_time" content="2019-02-09T14:25:02.444Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二层发现">
-<meta name="twitter:description" content="Netdiscover 简介：专用于二层发现，可以用于无线和交换网络环境，主动和被动探测 主动： netdiscover -l eth0 -r 192.168.0.0/24netdiscover -l iplist.txt 被动： netdiscover -p 手动探测工具  scapy   基于pythonaptitude install python-gnuplot">
+<meta name="twitter:description" content="二层为数据链路层，主要需要在意ARP协议 arpingarping xxx.xxx.xxx.xxx -c 1 arping -c xxx.xxx.xxx.xxx | grep &amp;quot;byte from&amp;quot;  | cut -d &amp;quot;&amp;quot; -f 5 | cut -d &amp;quot;(&amp;quot;  -f 2 | cut -d &amp;quot;)&amp;quot; -f 1 Netdi">
   
     <link rel="alternative" href="/atom.xml" title="TransMiss" type="application/atom+xml">
   
@@ -322,13 +322,15 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Netdiscover</p>
-<p>简介：专用于二层发现，可以用于无线和交换网络环境，主动和被动探测</p>
+        <p>二层为数据链路层，主要需要在意ARP协议</p>
+<h6 id="arping"><a href="#arping" class="headerlink" title="arping"></a>arping</h6><p>arping xxx.xxx.xxx.xxx -c 1</p>
+<p><code>arping -c xxx.xxx.xxx.xxx | grep &quot;byte from&quot;  | cut -d &quot;&quot; -f 5 | cut -d &quot;(&quot;  -f 2 | cut -d &quot;)&quot; -f 1</code></p>
+<h6 id="Netdiscover"><a href="#Netdiscover" class="headerlink" title="Netdiscover"></a>Netdiscover</h6><p>简介：专用于二层发现，可以用于无线和交换网络环境，主动和被动探测</p>
 <p>主动：</p>
 <p>netdiscover -l eth0 -r 192.168.0.0/24<br>netdiscover -l iplist.txt</p>
 <p>被动：</p>
 <p>netdiscover -p</p>
-<p>手动探测工具  scapy   基于python<br>aptitude install python-gnuplot</p>
+<h6 id="scapy"><a href="#scapy" class="headerlink" title="scapy"></a>scapy</h6><p>手动探测工具  scapy   基于python<br>aptitude install python-gnuplot</p>
 
       
     </div>
@@ -340,7 +342,7 @@
         <p><span>本文标题:</span><a  href="/2018/12/02/二层发现/">二层发现</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Trans 的个人博客">Trans</a></p>
         <p><span>发布时间:</span>2018年12月02日 - 22时08分</p>
-        <p><span>最后更新:</span>2018年12月02日 - 22时13分</p>
+        <p><span>最后更新:</span>2019年02月09日 - 22时25分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/12/02/二层发现/" title="二层发现">http://tranzimiss.com/2018/12/02/二层发现/</a>
             <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2018/12/02/二层发现/　　作者: Trans" title=""></span>
@@ -377,7 +379,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#arping"><span class="toc-number">1.</span> <span class="toc-text">arping</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Netdiscover"><span class="toc-number">2.</span> <span class="toc-text">Netdiscover</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#scapy"><span class="toc-number">3.</span> <span class="toc-text">scapy</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
