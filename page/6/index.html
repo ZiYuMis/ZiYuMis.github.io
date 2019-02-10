@@ -333,6 +333,11 @@
 </ul>
 </li>
 </ul>
+<hr>
+<ul>
+<li>nc -nv xxx.xxx.xxx.xxx 22(端口号)</li>
+<li>amap -B xxx.xxx.xxx.xxx 22</li>
+</ul>
 
       
     </div>
@@ -542,6 +547,10 @@
 <ul>
 <li>nmap -O 127.0.0.1</li>
 <li>nmap -A 127.0.0.1</li>
+</ul>
+<p>使用脚本：</p>
+<ul>
+<li>nmap -v -p 139,445 –script=smb-check-vulns –script-args=unsafe=1 xxx.xxx.xxx.xxx</li>
 </ul>
 <p>漏洞探测：</p>
 <ul>

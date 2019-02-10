@@ -16,7 +16,7 @@
 <meta property="og:url" content="http://tranzimiss.com/2018/12/03/nmap/index.html">
 <meta property="og:site_name" content="TransMiss">
 <meta property="og:description" content="四层发现：  nmap  192.168.1.0/24 -PU53  -sn nmap  192.168.1.0/24 -PA80  -sn nmap  -iL iplist.txt -PA80  -sn  端口扫描:  nmap -sU 192.168.1.1      扫描默认的1000个端口 nmap 192.168.1.1 -sU -p 53 nmap -F -sT -v 127.0.0.">
-<meta property="og:updated_time" content="2018-12-19T13:54:43.684Z">
+<meta property="og:updated_time" content="2019-02-10T15:37:52.456Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nmap">
 <meta name="twitter:description" content="四层发现：  nmap  192.168.1.0/24 -PU53  -sn nmap  192.168.1.0/24 -PA80  -sn nmap  -iL iplist.txt -PA80  -sn  端口扫描:  nmap -sU 192.168.1.1      扫描默认的1000个端口 nmap 192.168.1.1 -sU -p 53 nmap -F -sT -v 127.0.0.">
@@ -384,6 +384,10 @@
 <li>nmap -O 127.0.0.1</li>
 <li>nmap -A 127.0.0.1</li>
 </ul>
+<p>使用脚本：</p>
+<ul>
+<li>nmap -v -p 139,445 –script=smb-check-vulns –script-args=unsafe=1 xxx.xxx.xxx.xxx</li>
+</ul>
 <p>漏洞探测：</p>
 <ul>
 <li>HTTP.sys 远程代码执行<ul>
@@ -424,7 +428,7 @@
         <p><span>本文标题:</span><a  href="/2018/12/03/nmap/">nmap</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Trans 的个人博客">Trans</a></p>
         <p><span>发布时间:</span>2018年12月03日 - 21时27分</p>
-        <p><span>最后更新:</span>2018年12月19日 - 21时54分</p>
+        <p><span>最后更新:</span>2019年02月10日 - 23时37分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/12/03/nmap/" title="nmap">http://tranzimiss.com/2018/12/03/nmap/</a>
             <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2018/12/03/nmap/　　作者: Trans" title=""></span>
