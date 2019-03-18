@@ -9,14 +9,17 @@
   
   <title>pwn入门 | TransMiss</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="笔记">
+  <meta name="description" content="nasm a.asm -o a.o -felf32 objdump -d -M intel a.o  objcopy -O binary a.o  xxd -i code      gcc test.c -o test -m32 -zexecstack">
+<meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pwn入门">
 <meta property="og:url" content="http://tranzimiss.com/2019/03/18/pwn入门/index.html">
 <meta property="og:site_name" content="TransMiss">
-<meta property="og:updated_time" content="2019-03-18T02:03:15.259Z">
+<meta property="og:description" content="nasm a.asm -o a.o -felf32 objdump -d -M intel a.o  objcopy -O binary a.o  xxd -i code      gcc test.c -o test -m32 -zexecstack">
+<meta property="og:updated_time" content="2019-03-18T02:19:05.088Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pwn入门">
+<meta name="twitter:description" content="nasm a.asm -o a.o -felf32 objdump -d -M intel a.o  objcopy -O binary a.o  xxd -i code      gcc test.c -o test -m32 -zexecstack">
   
     <link rel="alternative" href="/atom.xml" title="TransMiss" type="application/atom+xml">
   
@@ -323,7 +326,18 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <ol>
+<li>nasm a.asm -o a.o -felf32</li>
+<li><p>objdump -d -M intel a.o</p>
+</li>
+<li><p>objcopy -O binary a.o</p>
+</li>
+<li>xxd -i code   </li>
+</ol>
+<ol>
+<li>gcc test.c -o test -m32 -zexecstack</li>
+</ol>
+
       
     </div>
     
@@ -334,7 +348,7 @@
         <p><span>本文标题:</span><a  href="/2019/03/18/pwn入门/">pwn入门</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Trans 的个人博客">Trans</a></p>
         <p><span>发布时间:</span>2019年03月18日 - 09时51分</p>
-        <p><span>最后更新:</span>2019年03月18日 - 10时03分</p>
+        <p><span>最后更新:</span>2019年03月18日 - 10时19分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/03/18/pwn入门/" title="pwn入门">http://tranzimiss.com/2019/03/18/pwn入门/</a>
             <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2019/03/18/pwn入门/　　作者: Trans" title=""></span>

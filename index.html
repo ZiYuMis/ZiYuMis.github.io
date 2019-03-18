@@ -311,7 +311,18 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <ol>
+<li>nasm a.asm -o a.o -felf32</li>
+<li><p>objdump -d -M intel a.o</p>
+</li>
+<li><p>objcopy -O binary a.o</p>
+</li>
+<li>xxd -i code   </li>
+</ol>
+<ol>
+<li>gcc test.c -o test -m32 -zexecstack</li>
+</ol>
+
       
     </div>
     
