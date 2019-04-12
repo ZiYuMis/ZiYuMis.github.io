@@ -282,6 +282,87 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-OPENVAS" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/05/OPENVAS/" class="article-date">
+      <time datetime="2018-12-05T14:06:16.000Z" itemprop="datePublished">2018-12-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/05/OPENVAS/">OPENVAS</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ol>
+<li>配置步骤<ul>
+<li>安装</li>
+<li>创建证书</li>
+<li>同步弱点数据库</li>
+<li>创建客户端证书</li>
+<li>重建数据库</li>
+<li>备份数据库</li>
+<li>启动服务装入插件</li>
+<li>创建管理员帐号</li>
+<li>创建普通用户帐号</li>
+<li>配置服务侦听端口</li>
+<li>安装验证</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/漏洞扫描/">漏洞扫描</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-WAF" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -1027,90 +1108,6 @@
 <li>unfiltered         数据没有到达主机，但是不能识别端口的当前状态</li>
 <li>open|filtered      端口没有返回值，主要发生在udp，ip，fin，null和xmas扫描中</li>
 <li>closed|filtered    只发生在ip，id ，idle扫描</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-三层发现" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/02/三层发现/" class="article-date">
-      <time datetime="2018-12-02T14:14:34.000Z" itemprop="datePublished">2018-12-02</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/02/三层发现/">三层发现</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>三层发现：网络层，需要在意ip和icmp协议</p>
-<ul>
-<li>三层发现的优点：可路由，速度比较快</li>
-<li>三层发现的缺点：速度比二层慢，并且经常被防火墙过滤</li>
-</ul>
-<h6 id="ping命令"><a href="#ping命令" class="headerlink" title="ping命令"></a>ping命令</h6><ul>
-<li>ping xxx.xxx.xxx.xxx -c 2</li>
-<li>ping -r xxx.xxx.xxx.xxx 路由追踪  （在傻鸟里面不知道为什么用不了）</li>
-<li><code>ping -c 1 | grep &quot;bytes from&quot; | cut -d &quot;  &quot; -f 4 | cut -d &quot;:&quot; -f 1</code><h6 id="traceroute"><a href="#traceroute" class="headerlink" title="traceroute"></a>traceroute</h6>traceroute xxx.com     路由追踪</li>
-</ul>
-<h6 id="fping命令"><a href="#fping命令" class="headerlink" title="fping命令"></a>fping命令</h6><ul>
-<li>fping xxx.xxx.xxx.xxx -c 1</li>
-<li>fping -g xxx.xxx.xxx.0/24</li>
-<li>fping -f iplist.txt</li>
-</ul>
-<h6 id="hping命令"><a href="#hping命令" class="headerlink" title="hping命令"></a>hping命令</h6><p>能够发送几乎任意的tcp/ip包，但是一次只能扫描一个目标。</p>
-<ul>
-<li>hping3 xxx.xxx.xxx.xxx –icmp -c 2</li>
 </ul>
 
       
