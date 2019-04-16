@@ -314,7 +314,9 @@
         <h4 id="主机发现"><a href="#主机发现" class="headerlink" title="主机发现"></a>主机发现</h4><ul>
 <li>nmap -sP  192.168.1.0/24   ping扫描</li>
 <li>nmap -P0  192.168.1.0/24   无ping扫描   –packet-trace显示扫描方法</li>
-<li><p>nmap -PS  127.0.0.1        TCP SYN Ping 扫描</p>
+<li>nmap -PS  127.0.0.1        TCP SYN Ping 扫描</li>
+<li>nmap -PA  127.0.0.1        TCP ACK Ping 扫描</li>
+<li><p>nmap -PU  127.0.0.1        UDP Ping扫描   </p>
 </li>
 <li><p>nmap  192.168.1.0/24 -PU53  -sn</p>
 </li>
