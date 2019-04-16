@@ -9,17 +9,17 @@
   
   <title>nmap | TransMiss</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="四层发现：  nmap  192.168.1.0/24 -PU53  -sn nmap  192.168.1.0/24 -PA80  -sn nmap  -iL iplist.txt -PA80  -sn  端口扫描:  nmap -sU 192.168.1.1      扫描默认的1000个端口 nmap 192.168.1.1 -sU -p 53 nmap -F -sT -v 127.0.0.">
+  <meta name="description" content="主机发现 nmap -sP  192.168.1.0/24   ping扫描 nmap -P0  192.168.1.0/24   无ping扫描   –packet-trace显示扫描方法 nmap -PS  127.0.0.1        TCP SYN Ping 扫描  nmap  192.168.1.0/24 -PU53  -sn  nmap  192.168.1.0/24 -PA80">
 <meta name="keywords" content="信息收集,工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nmap">
 <meta property="og:url" content="http://tranzimiss.com/2018/12/03/nmap/index.html">
 <meta property="og:site_name" content="TransMiss">
-<meta property="og:description" content="四层发现：  nmap  192.168.1.0/24 -PU53  -sn nmap  192.168.1.0/24 -PA80  -sn nmap  -iL iplist.txt -PA80  -sn  端口扫描:  nmap -sU 192.168.1.1      扫描默认的1000个端口 nmap 192.168.1.1 -sU -p 53 nmap -F -sT -v 127.0.0.">
-<meta property="og:updated_time" content="2019-02-10T15:37:52.456Z">
+<meta property="og:description" content="主机发现 nmap -sP  192.168.1.0/24   ping扫描 nmap -P0  192.168.1.0/24   无ping扫描   –packet-trace显示扫描方法 nmap -PS  127.0.0.1        TCP SYN Ping 扫描  nmap  192.168.1.0/24 -PU53  -sn  nmap  192.168.1.0/24 -PA80">
+<meta property="og:updated_time" content="2019-04-16T00:54:57.172Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nmap">
-<meta name="twitter:description" content="四层发现：  nmap  192.168.1.0/24 -PU53  -sn nmap  192.168.1.0/24 -PA80  -sn nmap  -iL iplist.txt -PA80  -sn  端口扫描:  nmap -sU 192.168.1.1      扫描默认的1000个端口 nmap 192.168.1.1 -sU -p 53 nmap -F -sT -v 127.0.0.">
+<meta name="twitter:description" content="主机发现 nmap -sP  192.168.1.0/24   ping扫描 nmap -P0  192.168.1.0/24   无ping扫描   –packet-trace显示扫描方法 nmap -PS  127.0.0.1        TCP SYN Ping 扫描  nmap  192.168.1.0/24 -PU53  -sn  nmap  192.168.1.0/24 -PA80">
   
     <link rel="alternative" href="/atom.xml" title="TransMiss" type="application/atom+xml">
   
@@ -326,9 +326,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>四层发现：</p>
-<ul>
-<li>nmap  192.168.1.0/24 -PU53  -sn</li>
+        <h4 id="主机发现"><a href="#主机发现" class="headerlink" title="主机发现"></a>主机发现</h4><ul>
+<li>nmap -sP  192.168.1.0/24   ping扫描</li>
+<li>nmap -P0  192.168.1.0/24   无ping扫描   –packet-trace显示扫描方法</li>
+<li><p>nmap -PS  127.0.0.1        TCP SYN Ping 扫描</p>
+</li>
+<li><p>nmap  192.168.1.0/24 -PU53  -sn</p>
+</li>
 <li>nmap  192.168.1.0/24 -PA80  -sn</li>
 <li>nmap  -iL iplist.txt -PA80  -sn</li>
 </ul>
@@ -411,6 +415,16 @@
 </ul>
 </li>
 </ul>
+<h4 id="扫描结果保存"><a href="#扫描结果保存" class="headerlink" title="扫描结果保存"></a>扫描结果保存</h4><ul>
+<li>-oN 标准保存</li>
+<li>-oX XML保存</li>
+<li>-oS 133t保存</li>
+<li>-oG Grep保存</li>
+<li>-oA 保存到所有格式</li>
+<li>–append-output 补充保存文件</li>
+<li>-oX –stylesheet 将xsl样式表转换为XML保存</li>
+<li>-oX –no-stylesheet 禁止nmap的XML保存关联任何XSL样式表</li>
+</ul>
 <hr>
 <p>端口扫描的状态</p>
 <ul>
@@ -432,7 +446,7 @@
         <p><span>本文标题:</span><a  href="/2018/12/03/nmap/">nmap</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Trans 的个人博客">Trans</a></p>
         <p><span>发布时间:</span>2018年12月03日 - 21时27分</p>
-        <p><span>最后更新:</span>2019年02月10日 - 23时37分</p>
+        <p><span>最后更新:</span>2019年04月16日 - 08时54分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/12/03/nmap/" title="nmap">http://tranzimiss.com/2018/12/03/nmap/</a>
             <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2018/12/03/nmap/　　作者: Trans" title=""></span>
@@ -469,7 +483,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#主机发现"><span class="toc-number">1.</span> <span class="toc-text">主机发现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#扫描结果保存"><span class="toc-number">2.</span> <span class="toc-text">扫描结果保存</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {

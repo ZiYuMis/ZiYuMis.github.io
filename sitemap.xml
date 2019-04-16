@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tranzimiss.com/2018/12/03/nmap/</loc>
+    
+    <lastmod>2019-04-16T00:54:57.172Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tranzimiss.com/2019/04/12/cpu%E4%B8%AD%E5%90%84%E4%B8%AA%E5%AF%84%E5%AD%98%E5%99%A8%E7%9A%84%E4%BD%9C%E7%94%A8/</loc>
     
     <lastmod>2019-04-12T09:15:54.349Z</lastmod>
@@ -89,13 +96,6 @@
     <loc>http://tranzimiss.com/2018/12/05/WAF/</loc>
     
     <lastmod>2019-02-10T15:50:44.814Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tranzimiss.com/2018/12/03/nmap/</loc>
-    
-    <lastmod>2019-02-10T15:37:52.456Z</lastmod>
     
   </url>
   

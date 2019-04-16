@@ -311,9 +311,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>四层发现：</p>
-<ul>
-<li>nmap  192.168.1.0/24 -PU53  -sn</li>
+        <h4 id="主机发现"><a href="#主机发现" class="headerlink" title="主机发现"></a>主机发现</h4><ul>
+<li>nmap -sP  192.168.1.0/24   ping扫描</li>
+<li>nmap -P0  192.168.1.0/24   无ping扫描   –packet-trace显示扫描方法</li>
+<li><p>nmap -PS  127.0.0.1        TCP SYN Ping 扫描</p>
+</li>
+<li><p>nmap  192.168.1.0/24 -PU53  -sn</p>
+</li>
 <li>nmap  192.168.1.0/24 -PA80  -sn</li>
 <li>nmap  -iL iplist.txt -PA80  -sn</li>
 </ul>
@@ -395,6 +399,16 @@
 <li>nmap –script mysql-empty-password 127.0.0.1</li>
 </ul>
 </li>
+</ul>
+<h4 id="扫描结果保存"><a href="#扫描结果保存" class="headerlink" title="扫描结果保存"></a>扫描结果保存</h4><ul>
+<li>-oN 标准保存</li>
+<li>-oX XML保存</li>
+<li>-oS 133t保存</li>
+<li>-oG Grep保存</li>
+<li>-oA 保存到所有格式</li>
+<li>–append-output 补充保存文件</li>
+<li>-oX –stylesheet 将xsl样式表转换为XML保存</li>
+<li>-oX –no-stylesheet 禁止nmap的XML保存关联任何XSL样式表</li>
 </ul>
 <hr>
 <p>端口扫描的状态</p>
