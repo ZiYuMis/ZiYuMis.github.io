@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tranzimiss.com/2018/12/04/xss/</loc>
+    
+    <lastmod>2019-04-23T13:57:23.332Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tranzimiss.com/2018/12/17/%E5%B8%B8%E8%A7%81%E7%AB%AF%E5%8F%A3/</loc>
+    
+    <lastmod>2019-04-23T09:43:25.584Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tranzimiss.com/2019/04/23/%E7%BC%96%E8%BE%91%E5%99%A8%E6%BC%8F%E6%B4%9E/</loc>
+    
+    <lastmod>2019-04-23T08:36:39.860Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tranzimiss.com/2019/04/23/%E6%97%A0%E6%81%B6%E6%84%8F%E7%89%B9%E5%BE%81%E7%9A%84%E6%BC%8F%E6%B4%9E/</loc>
+    
+    <lastmod>2019-04-23T08:27:05.476Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tranzimiss.com/2019/04/23/XXE/</loc>
+    
+    <lastmod>2019-04-23T08:18:16.972Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tranzimiss.com/2019/04/23/SSRF/</loc>
+    
+    <lastmod>2019-04-23T03:17:44.600Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tranzimiss.com/2019/04/23/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/</loc>
     
     <lastmod>2019-04-23T02:57:58.812Z</lastmod>
@@ -12,13 +54,6 @@
     <loc>http://tranzimiss.com/2018/12/24/sql%E6%B3%A8%E5%85%A5/</loc>
     
     <lastmod>2019-04-23T02:50:21.836Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tranzimiss.com/2018/12/04/xss/</loc>
-    
-    <lastmod>2019-04-23T02:15:02.524Z</lastmod>
     
   </url>
   
@@ -222,13 +257,6 @@
     <loc>http://tranzimiss.com/2019/01/06/%E5%8D%8F%E8%AE%AE%E5%8C%85%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BB%93%E6%9E%84/</loc>
     
     <lastmod>2019-01-06T10:49:23.888Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tranzimiss.com/2018/12/17/%E5%B8%B8%E8%A7%81%E7%AB%AF%E5%8F%A3/</loc>
-    
-    <lastmod>2019-01-06T10:32:06.093Z</lastmod>
     
   </url>
   
@@ -569,6 +597,13 @@
   </url>
   
   <url>
+    <loc>http://tranzimiss.com/2018/02/09/Markdown%E6%A0%BC%E5%BC%8F%EF%BC%88%E8%BD%AC%EF%BC%89/</loc>
+    
+    <lastmod>2018-10-13T13:28:19.389Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tranzimiss.com/2018/02/09/%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD/</loc>
     
     <lastmod>2018-10-13T13:28:19.389Z</lastmod>
@@ -577,13 +612,6 @@
   
   <url>
     <loc>http://tranzimiss.com/2018/02/09/%E6%95%AC%E8%AF%B7%E6%9C%9F%E5%BE%85/</loc>
-    
-    <lastmod>2018-10-13T13:28:19.389Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tranzimiss.com/2018/02/09/Markdown%E6%A0%BC%E5%BC%8F%EF%BC%88%E8%BD%AC%EF%BC%89/</loc>
     
     <lastmod>2018-10-13T13:28:19.389Z</lastmod>
     
