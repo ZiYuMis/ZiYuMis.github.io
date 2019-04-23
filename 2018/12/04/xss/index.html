@@ -9,17 +9,17 @@
   
   <title>xss | TransMiss</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用场景：  直接嵌入html: &amp;lt;script&amp;gt; alert(&amp;#39;XSS&amp;#39;);&amp;lt;/script&amp;gt; 元素标签事件： &amp;lt;body onload=alert(&amp;#39;xss&amp;#39;)&amp;gt; 图片标签： &amp;lt;img src=&amp;quot;javascript:alert(&amp;#39;xss&amp;#39;);&amp;quot;&amp;gt; 其他标签： &amp;lt;ifram">
+  <meta name="description" content="UXSSXSS蠕虫rookit xssFlash XssCRLF注入在响应头会导致XSS使用场景 直接嵌入html: &amp;lt;script&amp;gt; alert(&amp;#39;XSS&amp;#39;);&amp;lt;/script&amp;gt; 元素标签事件： &amp;lt;body onload=alert(&amp;#39;xss&amp;#39;)&amp;gt; 图片标签： &amp;lt;img src=&amp;quot;javascript:alert">
 <meta name="keywords" content="原理,漏洞">
 <meta property="og:type" content="article">
 <meta property="og:title" content="xss">
 <meta property="og:url" content="http://tranzimiss.com/2018/12/04/xss/index.html">
 <meta property="og:site_name" content="TransMiss">
-<meta property="og:description" content="使用场景：  直接嵌入html: &amp;lt;script&amp;gt; alert(&amp;#39;XSS&amp;#39;);&amp;lt;/script&amp;gt; 元素标签事件： &amp;lt;body onload=alert(&amp;#39;xss&amp;#39;)&amp;gt; 图片标签： &amp;lt;img src=&amp;quot;javascript:alert(&amp;#39;xss&amp;#39;);&amp;quot;&amp;gt; 其他标签： &amp;lt;ifram">
-<meta property="og:updated_time" content="2018-12-04T14:01:46.277Z">
+<meta property="og:description" content="UXSSXSS蠕虫rookit xssFlash XssCRLF注入在响应头会导致XSS使用场景 直接嵌入html: &amp;lt;script&amp;gt; alert(&amp;#39;XSS&amp;#39;);&amp;lt;/script&amp;gt; 元素标签事件： &amp;lt;body onload=alert(&amp;#39;xss&amp;#39;)&amp;gt; 图片标签： &amp;lt;img src=&amp;quot;javascript:alert">
+<meta property="og:updated_time" content="2019-04-23T02:15:02.524Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="xss">
-<meta name="twitter:description" content="使用场景：  直接嵌入html: &amp;lt;script&amp;gt; alert(&amp;#39;XSS&amp;#39;);&amp;lt;/script&amp;gt; 元素标签事件： &amp;lt;body onload=alert(&amp;#39;xss&amp;#39;)&amp;gt; 图片标签： &amp;lt;img src=&amp;quot;javascript:alert(&amp;#39;xss&amp;#39;);&amp;quot;&amp;gt; 其他标签： &amp;lt;ifram">
+<meta name="twitter:description" content="UXSSXSS蠕虫rookit xssFlash XssCRLF注入在响应头会导致XSS使用场景 直接嵌入html: &amp;lt;script&amp;gt; alert(&amp;#39;XSS&amp;#39;);&amp;lt;/script&amp;gt; 元素标签事件： &amp;lt;body onload=alert(&amp;#39;xss&amp;#39;)&amp;gt; 图片标签： &amp;lt;img src=&amp;quot;javascript:alert">
   
     <link rel="alternative" href="/atom.xml" title="TransMiss" type="application/atom+xml">
   
@@ -197,7 +197,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/C-primer/" style="font-size: 16.67px;">C++primer</a> <a href="/tags/C-语法/" style="font-size: 10px;">C++语法</a> <a href="/tags/Effecitive-C/" style="font-size: 10px;">Effecitive C++</a> <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/linux工具/" style="font-size: 10px;">linux工具</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息搜集/" style="font-size: 11.67px;">信息搜集</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 18.33px;">原理</a> <a href="/tags/后台管理/" style="font-size: 10px;">后台管理</a> <a href="/tags/基础/" style="font-size: 11.67px;">基础</a> <a href="/tags/存档/" style="font-size: 11.67px;">存档</a> <a href="/tags/工具/" style="font-size: 18.33px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/文件操作/" style="font-size: 10px;">文件操作</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a> <a href="/tags/漏洞/" style="font-size: 15px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 13.33px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a> <a href="/tags/笔记-bak/" style="font-size: 10px;">笔记_bak</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/设计模式/" style="font-size: 11.67px;">设计模式</a> <a href="/tags/重构/" style="font-size: 10px;">重构</a>
+                        <a href="/tags/C-primer/" style="font-size: 15.71px;">C++primer</a> <a href="/tags/C-语法/" style="font-size: 10px;">C++语法</a> <a href="/tags/Effecitive-C/" style="font-size: 10px;">Effecitive C++</a> <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/linux工具/" style="font-size: 10px;">linux工具</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息搜集/" style="font-size: 11.43px;">信息搜集</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 18.57px;">原理</a> <a href="/tags/后台管理/" style="font-size: 10px;">后台管理</a> <a href="/tags/基础/" style="font-size: 11.43px;">基础</a> <a href="/tags/存档/" style="font-size: 11.43px;">存档</a> <a href="/tags/工具/" style="font-size: 17.14px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/文件操作/" style="font-size: 10px;">文件操作</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a> <a href="/tags/漏洞/" style="font-size: 15.71px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 12.86px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/笔记/" style="font-size: 14.29px;">笔记</a> <a href="/tags/笔记-bak/" style="font-size: 10px;">笔记_bak</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/设计模式/" style="font-size: 11.43px;">设计模式</a> <a href="/tags/重构/" style="font-size: 10px;">重构</a>
                     </div>
                 </section>
                 
@@ -326,16 +326,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>使用场景：</p>
-<ul>
+        <h5 id="UXSS"><a href="#UXSS" class="headerlink" title="UXSS"></a>UXSS</h5><h5 id="XSS蠕虫"><a href="#XSS蠕虫" class="headerlink" title="XSS蠕虫"></a>XSS蠕虫</h5><h5 id="rookit-xss"><a href="#rookit-xss" class="headerlink" title="rookit xss"></a>rookit xss</h5><h5 id="Flash-Xss"><a href="#Flash-Xss" class="headerlink" title="Flash Xss"></a>Flash Xss</h5><h5 id="CRLF注入在响应头会导致XSS"><a href="#CRLF注入在响应头会导致XSS" class="headerlink" title="CRLF注入在响应头会导致XSS"></a>CRLF注入在响应头会导致XSS</h5><h5 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h5><ul>
 <li>直接嵌入html: <code>&lt;script&gt; alert(&#39;XSS&#39;);&lt;/script&gt;</code></li>
 <li>元素标签事件： <code>&lt;body onload=alert(&#39;xss&#39;)&gt;</code></li>
 <li>图片标签： <code>&lt;img src=&quot;javascript:alert(&#39;xss&#39;);&quot;&gt;</code></li>
 <li>其他标签： <code>&lt;iframe&gt;,&lt;div&gt;,&lt;link&gt;</code></li>
 <li>DOM对象，篡改页面内容</li>
 </ul>
-<p>漏洞POC：</p>
-<ul>
+<h5 id="漏洞POC"><a href="#漏洞POC" class="headerlink" title="漏洞POC"></a>漏洞POC</h5><ul>
 <li><code>&lt;script&gt; alert(&#39;XSS&#39;);&lt;/script&gt;</code></li>
 <li><code>&lt;a href=&quot;onclick=alert(&#39;xss&#39;)&quot;&gt;type&lt;/a&gt;</code></li>
 <li><code>&lt;img src=http://127.0.0.1/a.jpg onerror=alert(&#39;xss&#39;)&gt;</code></li>
@@ -355,7 +353,7 @@
         <p><span>本文标题:</span><a  href="/2018/12/04/xss/">xss</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Trans 的个人博客">Trans</a></p>
         <p><span>发布时间:</span>2018年12月04日 - 21时29分</p>
-        <p><span>最后更新:</span>2018年12月04日 - 22时01分</p>
+        <p><span>最后更新:</span>2019年04月23日 - 10时15分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/12/04/xss/" title="xss">http://tranzimiss.com/2018/12/04/xss/</a>
             <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2018/12/04/xss/　　作者: Trans" title=""></span>
@@ -392,7 +390,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#UXSS"><span class="toc-number">1.</span> <span class="toc-text">UXSS</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#XSS蠕虫"><span class="toc-number">2.</span> <span class="toc-text">XSS蠕虫</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#rookit-xss"><span class="toc-number">3.</span> <span class="toc-text">rookit xss</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Flash-Xss"><span class="toc-number">4.</span> <span class="toc-text">Flash Xss</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#CRLF注入在响应头会导致XSS"><span class="toc-number">5.</span> <span class="toc-text">CRLF注入在响应头会导致XSS</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#使用场景"><span class="toc-number">6.</span> <span class="toc-text">使用场景</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#漏洞POC"><span class="toc-number">7.</span> <span class="toc-text">漏洞POC</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
