@@ -282,6 +282,96 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-cms" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/24/cms/" class="article-date">
+      <time datetime="2018-12-24T13:44:16.000Z" itemprop="datePublished">2018-12-24</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/24/cms/">cms</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>网站常见后台有：</p>
+<ul>
+<li>织梦</li>
+<li>discuz</li>
+<li>帝国</li>
+<li>phpweb</li>
+<li>wordpress</li>
+<li>aspcms</li>
+<li>科讯</li>
+<li>南方</li>
+<li>良精</li>
+<li>ecshop</li>
+</ul>
+<p>常见默认管理页面：</p>
+<ul>
+<li>admin</li>
+<li>admin.php</li>
+<li>wp-admin</li>
+<li>manager</li>
+<li>login_admin</li>
+<li>login_manager</li>
+<li>login.asp</li>
+<li>houtai</li>
+<li>denglu</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台管理/">后台管理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础/">基础</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-下载漏洞" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -1314,161 +1404,9 @@
 
 
   
-    <article id="post-基本信息收集" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/12/基本信息收集/" class="article-date">
-      <time datetime="2018-12-12T14:13:00.000Z" itemprop="datePublished">2018-12-12</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/12/基本信息收集/">基本信息收集</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ul>
-<li><p>Linux下</p>
-<ul>
-<li>/etc/resolv.conf</li>
-<li>/etc/passwd</li>
-<li>/etc/shadow</li>
-</ul>
-<p>whoami 或者who -a<br>ifconfig -a iptables -L -n<br>uname -a 或者iptables -L -n setstat -m</p>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>后台查找</p>
-<ol>
-<li>弱口令默认后台： admin, admin/login.asp, manage, login.asp等常见后台</li>
-<li>查看网页的链接： 一般来说， 网站的主页有管理登录类似的东西，有些可能被管理员已经删掉</li>
-<li>查看网站图片的属性</li>
-<li>查看网站使用的管理系统，从而确定后台</li>
-<li>用工具查找：wwwscan， intellitamper，御剑</li>
-<li>robots.txt的帮助： robots.txt文件告诉蜘蛛程序在服务器上什么样的文件可以被查看。</li>
-<li>GoogleHacker</li>
-<li>查看网站使用的编辑器是否有后台</li>
-<li>短文件利用</li>
-<li>sqlmap –sql-shell load_file(‘d:/wwroot/index.php’);</li>
-</ol>
-</li>
-<li><p>url采集<br>采集相关url的同类网站</p>
-<ol>
-<li>例如php?id=</li>
-<li>漏洞网站</li>
-<li>url采集器</li>
-</ol>
-</li>
-<li><p>整站分析</p>
-<ol>
-<li>服务器类型<ul>
-<li>服务器平台，版本等</li>
-</ul>
-</li>
-<li>网站容器<ul>
-<li>搭建网站的服务组件，例如： iis， apache， nginx， tomcat等</li>
-</ul>
-</li>
-<li>脚本类型<ul>
-<li>asp，php，jsp，axpx等</li>
-</ul>
-</li>
-<li>数据库类型<ul>
-<li>access， sqlserver, mysql, oracle, postgresql</li>
-</ul>
-</li>
-<li>cms类型</li>
-<li>waf</li>
-</ol>
-</li>
-<li><p>敏感目录</p>
-<ol>
-<li>收集方向<ul>
-<li>robots.txt, 后台目录， 安装包， 上传目录， mysql管理接口， 安装页面， phpinfo， 编辑器，iis短文件</li>
-</ul>
-</li>
-<li>常用工具<ul>
-<li>字典爆破：御剑，dirbuster, wwwscan, IIS_shortname_Scanner等</li>
-<li>蜘蛛爬行：爬行菜刀， webrobot，burp</li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p>域名信息</p>
-<ol>
-<li>对应ip收集<ul>
-<li>相关域名对应的ip， 相关工具：nslookup</li>
-</ul>
-</li>
-<li>子域名收集<ul>
-<li>工具：layer,subDomainsBrute</li>
-</ul>
-</li>
-<li>whois信息查询<ul>
-<li>根据已知域名反查，分析此域名的注册人，邮箱，电话等</li>
-<li>工具：爱站网， 站长工具，微步在线（<a href="https://x.threatbook.cn）" target="_blank" rel="noopener">https://x.threatbook.cn）</a><pre><code>site.ip138.com,    searchdns.netcraft.com
-</code></pre></li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
     </nav>
   
 
