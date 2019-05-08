@@ -282,6 +282,75 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-SqlMap" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/08/SqlMap/" class="article-date">
+      <time datetime="2019-05-08T13:21:02.000Z" itemprop="datePublished">2019-05-08</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/08/SqlMap/">SqlMap</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ul>
+<li>sqlmap -technique 指定注入方法（bool，time，union等）</li>
+<li>可以使用-tamper=chardoubleencode的方法来绕过IPX</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/漏洞利用/">漏洞利用</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-web应用指纹分析" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -1049,149 +1118,6 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/文件操作/">文件操作</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-cpu中各个寄存器的作用" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/04/12/cpu中各个寄存器的作用/" class="article-date">
-      <time datetime="2019-04-12T07:52:59.000Z" itemprop="datePublished">2019-04-12</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/12/cpu中各个寄存器的作用/">cpu中各个寄存器的作用</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h5 id="32位CPU"><a href="#32位CPU" class="headerlink" title="32位CPU"></a>32位CPU</h5><ul>
-<li>数据寄存器<ul>
-<li>EAX ： 可以用做返回值<ul>
-<li>AX：EAX的低16位<ul>
-<li>AH：AX的低八位，可以用作累加器</li>
-<li>AL：AX的高八位，可以用作累加器</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>EBX：可以用作基址寄存器，在内存寻址中用作基地址，<ul>
-<li>BX：EBX的低16位，用作指针寄存器的时候搭配SI或者DI</li>
-</ul>
-</li>
-<li>ECX<ul>
-<li>CX：计数寄存器，在循环中控制循环次数<ul>
-<li>CH</li>
-<li>CL：可以用作移位的位数</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>EDX<ul>
-<li>DX：在进行乘除运算时，可作为默认的操作数参与运算，也可以用于存放I/O的端口地址。</li>
-</ul>
-</li>
-<li>PS：在16位CPU中，AX、BX、CX和DX不能作为基址和变址寄存器来存放存储单元的地址，但在32位CPU中，其32位寄存器EAX、EBX、ECX和EDX不仅可传送数据、暂存数据保存算术逻辑运算结果，而且也可作为指针寄存器，所以，这些32位寄存器更具有通用性。</li>
-</ul>
-</li>
-<li>变指和指针寄存器<ul>
-<li>ESI：用于存放存储单元在段内的偏移量，是源串地址<ul>
-<li>SI，和DS搭配使用</li>
-</ul>
-</li>
-<li>EDI：用于存放存储单元在段内的偏移量，是目的串地址<ul>
-<li>DI：和ES搭配使用</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>指针寄存器<ul>
-<li>ESP：堆栈栈顶指针<ul>
-<li>SP：</li>
-</ul>
-</li>
-<li>EBP：基址针（堆栈栈底指针）<ul>
-<li>BP：可以搭配SI和DI</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>段寄存器</p>
-<ul>
-<li>CS（Code SegmentRegister）：代码段寄存器，代码段的段值</li>
-<li>SS（StackSegmentRegister）：堆栈段寄存器，堆栈段的段值</li>
-<li>DS（Data SegmentRegister）：数据段寄存器，数据段的段值</li>
-<li>FS（ExtraSegmentRegister）: 附加段寄存器</li>
-<li>GS（ExtraSegmentRegister）: 附加段寄存器</li>
-<li>ES（ExtraSegmentRegister）: 附加段寄存器</li>
-</ul>
-</li>
-<li>指令指针寄存器<ul>
-<li>EIP：是存放下次将要执行的指令在代码段的偏移量</li>
-</ul>
-</li>
-<li>标志寄存器<ul>
-<li>EFLAGS<ul>
-<li>CF：进位和借位标志位</li>
-<li>PF：奇偶标志位</li>
-<li>AF：辅助进位标志位</li>
-<li>ZF：零标志位</li>
-<li>SF：符号标志位</li>
-<li>OF：溢出标志位</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/二进制/">二进制</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
     </div>
 
       

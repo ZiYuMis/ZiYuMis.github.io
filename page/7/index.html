@@ -282,6 +282,160 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-漏洞基本概念" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/12/05/漏洞基本概念/" class="article-date">
+      <time datetime="2018-12-05T14:10:10.000Z" itemprop="datePublished">2018-12-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/12/05/漏洞基本概念/">漏洞基本概念</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ol>
+<li>SCAP(Security Content Automation Protocol)<ul>
+<li>SCAP是一个集合了多种安全标准框架</li>
+<li>其中含有六个元素：CVE、OVAL、CCE、CPE、CVSS、XCCDF</li>
+<li>目的是以标准的方法展示和操作安全数据</li>
+<li>由NIST负责维护</li>
+<li>解决的三个问题<ul>
+<li>实现高层政策法规等到底层实施的落地（如FISMA、ISO27000系列）</li>
+<li>将信息安全所涉及的各个要素标准化（如统一漏洞的命名以及严重性度量）</li>
+<li>将复杂的系统配置核查自动化</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>NVD （National Vulnerability Database）</p>
+<ul>
+<li>美国政府的漏洞管理标准数据</li>
+<li>完全基于SCAP框架</li>
+<li>实现自动化漏洞管理、安全测量、合规要求</li>
+<li>包含以下库<ul>
+<li>安全检查列表</li>
+<li>软件安全漏洞</li>
+<li>配置错误</li>
+<li>产品名称</li>
+<li>影响度量</li>
+</ul>
+</li>
+<li>网址 <a href="https://nvd.nist.gov/" target="_blank" rel="noopener">https://nvd.nist.gov/</a></li>
+</ul>
+</li>
+<li><p>OVAL（Open Vulnerability and Assessment Language）</p>
+<ul>
+<li>描述漏洞检测方法的机器可识别语言</li>
+<li>详细的描述漏洞检测的技术细节，可导入自动化检测工具中实施漏洞检测工作</li>
+<li>OVAL使用XML语言描述，包含了严密的语法逻辑</li>
+</ul>
+</li>
+<li><p>CCE</p>
+<ul>
+<li>描述软件配置缺陷的一种标准化格式</li>
+<li>在信息安全风险评估中，配置缺陷的检测是一项重要内容，使用CCE可以让配置缺陷以标准的方式展现出来，便于配置缺陷评估的可量化操作</li>
+</ul>
+</li>
+<li><p>CPE（Common Product Enumeration）</p>
+<ul>
+<li>信息技术产品、系统、软件包的结构化命名规范，分类命名</li>
+</ul>
+</li>
+<li><p>CWE（Common Weakness Enumeration）</p>
+<ul>
+<li>常见的漏洞类型的字典，描述不同类型漏洞的特征（访问控制，信息泄漏，拒绝服务）</li>
+</ul>
+</li>
+<li><p>CVSS （Common Vulnerability Scoring System）</p>
+<ul>
+<li>CVSS是安全内容自动化协议（SCAP）的一部分</li>
+<li>通常CVSS和CVE一同由美国国家漏洞库（NVD）发布并保持数据的更新</li>
+<li>分值范围由0-10</li>
+<li>不同机构按照CVSS分值定义威胁的中高低威胁级别</li>
+<li>CVSS体现弱点的风险，威胁级别表示弱点风险对企业的影响程度</li>
+<li>CVSS分值是工业标准，但是威胁级别不是</li>
+<li>描述安全漏洞严重程度的统一评分方案</li>
+<li>Basic Metric ：基础的恒定不变的弱点权重</li>
+<li>Temporal Metric: 依赖时间因素的弱点权重</li>
+<li>Enviromental Metric: 利用弱点的环境要求和实施难度的权重</li>
+</ul>
+</li>
+<li><p>CVE (Common Vulnerabilities and Exposures)</p>
+<ul>
+<li>已公开的信息安全漏洞字典，统一的漏洞编号标准</li>
+<li>MITRE公司负责维护（非盈利机构）</li>
+<li>扫描器的大部分扫描项都对应一个CVE编号</li>
+<li>可以实现不同厂商之间信息交换的统一标准</li>
+</ul>
+</li>
+<li><p>常见的Vulnerability Reference</p>
+<ul>
+<li><p>MS</p>
+</li>
+<li><p>CERT</p>
+</li>
+<li>BID</li>
+<li>IAVM</li>
+<li>OVAL</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/漏洞/">漏洞</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-OPENVAS" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -963,182 +1117,6 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原理/">原理</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-nmap" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/12/03/nmap/" class="article-date">
-      <time datetime="2018-12-03T13:27:27.000Z" itemprop="datePublished">2018-12-03</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/12/03/nmap/">nmap</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h4 id="主机发现"><a href="#主机发现" class="headerlink" title="主机发现"></a>主机发现</h4><ul>
-<li>nmap -sP  192.168.1.0/24   ping扫描</li>
-<li>nmap -P0  192.168.1.0/24   无ping扫描   –packet-trace显示扫描方法</li>
-<li>nmap -PS  127.0.0.1        TCP SYN Ping 扫描</li>
-<li>nmap -PA  127.0.0.1        TCP ACK Ping 扫描</li>
-<li><p>nmap -PU  127.0.0.1        UDP Ping扫描   </p>
-</li>
-<li><p>nmap  192.168.1.0/24 -PU53  -sn</p>
-</li>
-<li>nmap  192.168.1.0/24 -PA80  -sn</li>
-<li>nmap  -iL iplist.txt -PA80  -sn</li>
-</ul>
-<p>端口扫描:</p>
-<ul>
-<li>nmap -sU 192.168.1.1      扫描默认的1000个端口</li>
-<li>nmap 192.168.1.1 -sU -p 53</li>
-<li>nmap -F -sT -v 127.0.0.1 -F即扫描u最有可能开放的100个端口，-v获取扫描信息， -sT 使用tcp扫描</li>
-<li>nmap -iL iplist.txt -sU -p  1-200</li>
-</ul>
-<p>隐蔽端口扫描：</p>
-<ul>
-<li>nmap -sS 192.168.1.1 -p xx,xx,xx,xx</li>
-<li>nmap -sS 192.168.1.1 -p -65535 -open</li>
-<li>nmap -sS 192.168.1.1 -p –open</li>
-<li>nmap -sS -iL iplist -p 80</li>
-</ul>
-<p>[隐蔽端口扫描还有hping3 命令]</p>
-<p>全连接端口扫描</p>
-<ul>
-<li>nmap -sT 127.0.0.1       扫描默认的1000个端口</li>
-<li>nmap -sT 127.0.0.1 -p 80</li>
-<li>nmap -sT 127.0.0.1 -p 80-1080</li>
-<li>nmap -sT -iL iplist.txt -p 80</li>
-</ul>
-<p>僵尸扫描</p>
-<ul>
-<li>发现僵尸机 nmap 192.168.1.1 -p 445 –script=ipldseq.nse</li>
-<li>使用僵尸机 nmap xxx.xxx.xxx.僵尸机 -sl xxx.xxx.xxx.目标机 -Pn -p 0-100</li>
-</ul>
-<p>服务扫描</p>
-<p>nmap通过发送系列复杂的探测，依据相应特征signature</p>
-<ul>
-<li>nmap 127.0.0.1 -p 80 -sV</li>
-<li>nmap -sV –script unusual-port 127.0.0.1</li>
-</ul>
-<p>SMB扫描</p>
-<ul>
-<li>nmap -v -p 139,445 127.0.0.1</li>
-<li>nmap 127.0.0.1 -p 139,445 –script=smb-check-vulns –script-args=unsafe=1 127.0.01</li>
-</ul>
-<p>SMTP扫描</p>
-<ul>
-<li>nmap 域名服务器 -p25 –script=smtp-enum-users.nse –script-args=smtp-enum-users.methods={VRFY}</li>
-<li>nmap 域名服务器 -p25 –script=smtp-open-relay.nse</li>
-</ul>
-<p>防火墙识别</p>
-<ul>
-<li>nmap -sA 127.0.0.1 -p 22     防火墙过滤检测功能</li>
-</ul>
-<p>WAF识别</p>
-<ul>
-<li>nmap 域名 –script=http-waf-detect.nse</li>
-</ul>
-<p>探测操作系统：</p>
-<ul>
-<li>nmap -O 127.0.0.1</li>
-<li>nmap -A 127.0.0.1</li>
-</ul>
-<p>使用脚本：</p>
-<ul>
-<li>nmap -v -p 139,445 –script=smb-check-vulns –script-args=unsafe=1 xxx.xxx.xxx.xxx</li>
-</ul>
-<p>漏洞探测：</p>
-<ul>
-<li>HTTP.sys 远程代码执行<ul>
-<li>nmap -sV –script http-vuln-cve2015-1635 127.0.0.1</li>
-</ul>
-</li>
-<li>IIS短文件泄漏<ul>
-<li>nmap -p8080 –script http-iis-short-name-brute 127.0.0.1</li>
-</ul>
-</li>
-<li>拒绝服务<ul>
-<li>nmap –max-parallelism 800 –script http-slowloris www.baidu.com</li>
-</ul>
-</li>
-<li>验证MySql匿名访问<ul>
-<li>nmap –script mysql-empty-password 127.0.0.1</li>
-</ul>
-</li>
-</ul>
-<h4 id="扫描结果保存"><a href="#扫描结果保存" class="headerlink" title="扫描结果保存"></a>扫描结果保存</h4><ul>
-<li>-oN 标准保存</li>
-<li>-oX XML保存</li>
-<li>-oS 133t保存</li>
-<li>-oG Grep保存</li>
-<li>-oA 保存到所有格式</li>
-<li>–append-output 补充保存文件</li>
-<li>-oX –stylesheet 将xsl样式表转换为XML保存</li>
-<li>-oX –no-stylesheet 禁止nmap的XML保存关联任何XSL样式表</li>
-</ul>
-<hr>
-<p>端口扫描的状态</p>
-<ul>
-<li>open               端口开启，数据有到达主机，有程序在端口上监控</li>
-<li>closed             端口关闭，数据有到达主机，没有程序在端口上监控</li>
-<li>filtered           数据没有到达主机，返回的结果为空，数据被防火墙或者是IDS过滤</li>
-<li>unfiltered         数据没有到达主机，但是不能识别端口的当前状态</li>
-<li>open|filtered      端口没有返回值，主要发生在udp，ip，fin，null和xmas扫描中</li>
-<li>closed|filtered    只发生在ip，id ，idle扫描</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网络安全/">网络安全</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息收集/">信息收集</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
     </div>
 
       
