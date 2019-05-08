@@ -16,7 +16,7 @@
 <meta property="og:url" content="http://tranzimiss.com/2018/12/24/sql注入/index.html">
 <meta property="og:site_name" content="TransMiss">
 <meta property="og:description" content="定义  攻击者利用应用程序根据提交的数据动态生成sal命令的特性，在url、表单域或者其他的输入域中输入自己的sql命令，改变sql命令的操作，将被修改的sql命令注入到后端数据库引擎中执行。 危害 数据库信息泄漏 网页篡改 挂马 服务器被远程控制 瘫痪全系统  常用sql语句 判断数据库 and exsits(select * from msysobjects)&amp;gt;0 access and">
-<meta property="og:updated_time" content="2019-04-23T02:50:21.836Z">
+<meta property="og:updated_time" content="2019-05-08T13:05:18.592Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sql注入">
 <meta name="twitter:description" content="定义  攻击者利用应用程序根据提交的数据动态生成sal命令的特性，在url、表单域或者其他的输入域中输入自己的sql命令，改变sql命令的操作，将被修改的sql命令注入到后端数据库引擎中执行。 危害 数据库信息泄漏 网页篡改 挂马 服务器被远程控制 瘫痪全系统  常用sql语句 判断数据库 and exsits(select * from msysobjects)&amp;gt;0 access and">
@@ -386,6 +386,36 @@
 <li>xp_dirtree</li>
 <li>sp_oamethod</li>
 </ol>
+<h5 id="常见表名"><a href="#常见表名" class="headerlink" title="常见表名"></a>常见表名</h5><ul>
+<li>admin</li>
+<li>admin_user</li>
+<li>admin_name</li>
+<li>admin_login</li>
+<li>login</li>
+<li>manager</li>
+<li>guanli</li>
+<li>login_name</li>
+<li>login_user</li>
+<li>username</li>
+<li>login_admin</li>
+<li>manage</li>
+<li>main</li>
+</ul>
+<h5 id="管理用户列名"><a href="#管理用户列名" class="headerlink" title="管理用户列名"></a>管理用户列名</h5><ul>
+<li>admin</li>
+<li>username</li>
+<li>admin_name</li>
+<li>admin_user</li>
+<li>admin_usr</li>
+<li>usr</li>
+<li>user_name</li>
+</ul>
+<h5 id="管理员密码列"><a href="#管理员密码列" class="headerlink" title="管理员密码列"></a>管理员密码列</h5><ul>
+<li>password</li>
+<li>admin_pass</li>
+<li>admin_password</li>
+<li>pwd</li>
+</ul>
 
       
     </div>
@@ -397,7 +427,7 @@
         <p><span>本文标题:</span><a  href="/2018/12/24/sql注入/">sql注入</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Trans 的个人博客">Trans</a></p>
         <p><span>发布时间:</span>2018年12月24日 - 21时55分</p>
-        <p><span>最后更新:</span>2019年04月23日 - 10时50分</p>
+        <p><span>最后更新:</span>2019年05月08日 - 21时05分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/12/24/sql注入/" title="sql注入">http://tranzimiss.com/2018/12/24/sql注入/</a>
             <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2018/12/24/sql注入/　　作者: Trans" title=""></span>
@@ -434,7 +464,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#危害"><span class="toc-number">2.</span> <span class="toc-text">危害</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#常用sql语句"><span class="toc-number">3.</span> <span class="toc-text">常用sql语句</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#偏移注入"><span class="toc-number">4.</span> <span class="toc-text">偏移注入</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ORACLE"><span class="toc-number">5.</span> <span class="toc-text">ORACLE</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MYSQL"><span class="toc-number"></span> <span class="toc-text">MYSQL</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#SQL-SERVER"><span class="toc-number">1.</span> <span class="toc-text">SQL SERVER</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#危害"><span class="toc-number">2.</span> <span class="toc-text">危害</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#常用sql语句"><span class="toc-number">3.</span> <span class="toc-text">常用sql语句</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#偏移注入"><span class="toc-number">4.</span> <span class="toc-text">偏移注入</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ORACLE"><span class="toc-number">5.</span> <span class="toc-text">ORACLE</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MYSQL"><span class="toc-number"></span> <span class="toc-text">MYSQL</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#SQL-SERVER"><span class="toc-number">1.</span> <span class="toc-text">SQL SERVER</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#常见表名"><span class="toc-number">2.</span> <span class="toc-text">常见表名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#管理用户列名"><span class="toc-number">3.</span> <span class="toc-text">管理用户列名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#管理员密码列"><span class="toc-number">4.</span> <span class="toc-text">管理员密码列</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
