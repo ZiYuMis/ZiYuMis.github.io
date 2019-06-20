@@ -567,7 +567,7 @@
 <tr>
 <td style="text-align:center">161/udp</td>
 <td style="text-align:center">SNMP简单网络管理协议</td>
-<td style="text-align:center">默认社区字符串，枚举MIB</td>
+<td style="text-align:center">未授权访问；默认社区字符串，枚举MIB</td>
 <td style="text-align:center">snmpwalk，snmpenum</td>
 </tr>
 <tr>
@@ -579,13 +579,13 @@
 <tr>
 <td style="text-align:center">443</td>
 <td style="text-align:center">ssl</td>
-<td style="text-align:center">openssl心脏出血</td>
+<td style="text-align:center">openssl心脏出血；ms15-034</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
 <td style="text-align:center">445</td>
 <td style="text-align:center">smb</td>
-<td style="text-align:center">win10拒绝服务， 永恒之蓝RCE</td>
+<td style="text-align:center">win10拒绝服务， 永恒之蓝RCE；ms17-010</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -637,9 +637,21 @@
 <td style="text-align:center"></td>
 </tr>
 <tr>
+<td style="text-align:center">2082、2083</td>
+<td style="text-align:center">cpanel主机管理系统登陆</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center">2181</td>
 <td style="text-align:center">zookeeper</td>
 <td style="text-align:center">未授权访问</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">2222</td>
+<td style="text-align:center">DA虚拟主机管理系统登陆</td>
+<td style="text-align:center"></td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -649,9 +661,15 @@
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">2601</td>
+<td style="text-align:center">2601、3128</td>
 <td style="text-align:center">squid</td>
 <td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">2601、2604</td>
+<td style="text-align:center">zebra路由</td>
+<td style="text-align:center">默认密码zebra</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -669,7 +687,7 @@
 <tr>
 <td style="text-align:center">3389</td>
 <td style="text-align:center">win2003远程登录默认端口(RDP协议)</td>
-<td style="text-align:center">暴力破解；shift后门</td>
+<td style="text-align:center">暴力破解；shift后门；ms12-020</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -697,6 +715,12 @@
 <td style="text-align:center"></td>
 </tr>
 <tr>
+<td style="text-align:center">5060</td>
+<td style="text-align:center">SIP会话初始协议</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Sipflanker,Sipscan</td>
+</tr>
+<tr>
 <td style="text-align:center">5432</td>
 <td style="text-align:center">postgresql</td>
 <td style="text-align:center">RCE,默认帐号postgres</td>
@@ -715,12 +739,6 @@
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">5060</td>
-<td style="text-align:center">SIP会话初始协议</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">Sipflanker,Sipscan</td>
-</tr>
-<tr>
 <td style="text-align:center">5900</td>
 <td style="text-align:center">VNC</td>
 <td style="text-align:center">爆破；认证绕过</td>
@@ -730,6 +748,12 @@
 <td style="text-align:center">5984</td>
 <td style="text-align:center">CouchDB</td>
 <td style="text-align:center"><a href="http://xxx:5984/_utils/" target="_blank" rel="noopener">http://xxx:5984/_utils/</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">6001</td>
+<td style="text-align:center">X11</td>
+<td style="text-align:center">未授权访问</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -751,6 +775,12 @@
 <td style="text-align:center"></td>
 </tr>
 <tr>
+<td style="text-align:center">7778</td>
+<td style="text-align:center">Kloxo主机控制面板登录</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center">8069</td>
 <td style="text-align:center">zabbix服务</td>
 <td style="text-align:center">远程命令执行；注入</td>
@@ -763,9 +793,21 @@
 <td style="text-align:center"></td>
 </tr>
 <tr>
+<td style="text-align:center">8888</td>
+<td style="text-align:center">amh/LuManager 主机管理系统默认端口</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center">8083、8086</td>
 <td style="text-align:center">influxDB</td>
 <td style="text-align:center">未授权访问</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">8083</td>
+<td style="text-align:center">Vestacp主机管理系统</td>
+<td style="text-align:center"></td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -778,6 +820,12 @@
 <td style="text-align:center">8161</td>
 <td style="text-align:center">activemq</td>
 <td style="text-align:center">弱口令；写文件</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">8649</td>
+<td style="text-align:center">ganglia</td>
+<td style="text-align:center"></td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -805,6 +853,12 @@
 <td style="text-align:center"></td>
 </tr>
 <tr>
+<td style="text-align:center">10000</td>
+<td style="text-align:center">Virtualmin/Webmin服务器虚拟主机管理系统</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center">11211</td>
 <td style="text-align:center">memcache</td>
 <td style="text-align:center">未授权，UDP</td>
@@ -817,9 +871,9 @@
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">11211</td>
-<td style="text-align:center">memcached</td>
-<td style="text-align:center">未授权访问</td>
+<td style="text-align:center">28017</td>
+<td style="text-align:center">mongodb统计页面</td>
+<td style="text-align:center"></td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -1113,7 +1167,23 @@
 <li>/etc/resolv.conf</li>
 <li>/etc/passwd</li>
 <li>/etc/shadow</li>
-<li>/etc, /usr/local/etc</li>
+<li>/etc</li>
+</ol>
+<ul>
+<li>/etc/my.cnf</li>
+<li>/etc/httpd/conf/httpd.conf</li>
+<li>/usr/local/etc</li>
+<li>/root/.ssh/authorized_keys</li>
+<li>/root/.ssh/id_rsa</li>
+<li>/root/.ssh/id_rsa.keystore</li>
+<li>/root/.ssh/known_hosts</li>
+<li>/root/.bash_history</li>
+<li>/root/.mysql_history</li>
+<li>/proc/mounts</li>
+<li>/proc/config.gz</li>
+<li>/proc/self/fd/fd*</li>
+</ul>
+<ol>
 <li>.ssh , .gnupg</li>
 <li>/tmp</li>
 <li>whoami, who -a</li>
@@ -1217,6 +1287,16 @@
 <li>HKEY_LOCAL_MACHINE\SYSTEM\LIWEIWENSOFT\INSTALLFREEADMIN\11</li>
 <li>HKEY_LOCAL_MACHINE\SYSTEM\LIWEIWENSOFT\INSTALLFreeHost\11</li>
 </ol>
+<p>敏感文件</p>
+<ul>
+<li>C:\boot.ini</li>
+<li>C:\Windows\System32\inetsrv\MetaBase.xml \IIS配置文件</li>
+<li>C:\Windows\repair\sam       \存储系统初次安装的密码</li>
+<li>C:\Program Files\mysql\my.ini   \Mysql配置</li>
+<li>C:\Program Files\mysql\data\mysql\user.MYD    \Mysql root</li>
+<li>C:\Windows\php.ini    \php配置信息</li>
+<li>C:\Windows\my.ini     \Mysql配置信息</li>
+</ul>
 
       
     </div>
