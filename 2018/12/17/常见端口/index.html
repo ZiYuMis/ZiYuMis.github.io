@@ -9,17 +9,17 @@
   
   <title>常见端口 | TransMiss</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="端口号 描述 漏洞 工具     21 ftp协议代理服务器常用端口 默认用户名密码：anonymous:anonymous    , 爆破 ,拒绝服务    22 ssh scp 暴力破解 爆破工具：hydra，medusa;连接工具：putty，winscp   23 telnet协议代理服务器常用端口 爆破 ，Winebox(CVE-2018-14847)    25 smtp 默认的">
+  <meta name="description" content="端口号 描述 漏洞 工具     21 ftp协议代理服务器常用端口 默认用户名密码：anonymous:anonymous    , 爆破 ,拒绝服务    22 ssh scp 暴力破解;open ssh漏洞 爆破工具：hydra，medusa;连接工具：putty，winscp   23 是telnet协议代理服务器常用端口 爆破 ;嗅探;弱口令;Winebox(CVE-2018-14">
 <meta name="keywords" content="信息收集,原理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常见端口">
 <meta property="og:url" content="http://tranzimiss.com/2018/12/17/常见端口/index.html">
 <meta property="og:site_name" content="TransMiss">
-<meta property="og:description" content="端口号 描述 漏洞 工具     21 ftp协议代理服务器常用端口 默认用户名密码：anonymous:anonymous    , 爆破 ,拒绝服务    22 ssh scp 暴力破解 爆破工具：hydra，medusa;连接工具：putty，winscp   23 telnet协议代理服务器常用端口 爆破 ，Winebox(CVE-2018-14847)    25 smtp 默认的">
-<meta property="og:updated_time" content="2019-04-23T09:43:25.584Z">
+<meta property="og:description" content="端口号 描述 漏洞 工具     21 ftp协议代理服务器常用端口 默认用户名密码：anonymous:anonymous    , 爆破 ,拒绝服务    22 ssh scp 暴力破解;open ssh漏洞 爆破工具：hydra，medusa;连接工具：putty，winscp   23 是telnet协议代理服务器常用端口 爆破 ;嗅探;弱口令;Winebox(CVE-2018-14">
+<meta property="og:updated_time" content="2019-06-20T02:26:20.370Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常见端口">
-<meta name="twitter:description" content="端口号 描述 漏洞 工具     21 ftp协议代理服务器常用端口 默认用户名密码：anonymous:anonymous    , 爆破 ,拒绝服务    22 ssh scp 暴力破解 爆破工具：hydra，medusa;连接工具：putty，winscp   23 telnet协议代理服务器常用端口 爆破 ，Winebox(CVE-2018-14847)    25 smtp 默认的">
+<meta name="twitter:description" content="端口号 描述 漏洞 工具     21 ftp协议代理服务器常用端口 默认用户名密码：anonymous:anonymous    , 爆破 ,拒绝服务    22 ssh scp 暴力破解;open ssh漏洞 爆破工具：hydra，medusa;连接工具：putty，winscp   23 是telnet协议代理服务器常用端口 爆破 ;嗅探;弱口令;Winebox(CVE-2018-14">
   
     <link rel="alternative" href="/atom.xml" title="TransMiss" type="application/atom+xml">
   
@@ -345,13 +345,13 @@
 <tr>
 <td style="text-align:center">22</td>
 <td style="text-align:center">ssh scp</td>
-<td style="text-align:center">暴力破解</td>
+<td style="text-align:center">暴力破解;open ssh漏洞</td>
 <td style="text-align:center">爆破工具：hydra，medusa;连接工具：putty，winscp</td>
 </tr>
 <tr>
 <td style="text-align:center">23</td>
-<td style="text-align:center">telnet协议代理服务器常用端口</td>
-<td style="text-align:center">爆破 ，Winebox(CVE-2018-14847)</td>
+<td style="text-align:center">是telnet协议代理服务器常用端口</td>
+<td style="text-align:center">爆破 ;嗅探;弱口令;Winebox(CVE-2018-14847)</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -369,8 +369,14 @@
 <tr>
 <td style="text-align:center">53/udp</td>
 <td style="text-align:center">DNS服务</td>
-<td style="text-align:center">DNS域传送、针对dns的拒绝服务攻击、枚举二级域名，泄漏域名信息</td>
+<td style="text-align:center">DNS域传送；DNS劫持；DNS缓存投毒；DNS欺骗；针对dns的拒绝服务攻击、枚举二级域名，泄漏域名信息</td>
 <td style="text-align:center">dnsenum, nslookup, dig, fierce</td>
+</tr>
+<tr>
+<td style="text-align:center">67、68</td>
+<td style="text-align:center">DHCP服务</td>
+<td style="text-align:center">DHCP劫持、欺骗</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
 <td style="text-align:center">69</td>
@@ -391,9 +397,9 @@
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">109</td>
+<td style="text-align:center">109、110</td>
 <td style="text-align:center">POP3服务</td>
-<td style="text-align:center">缓冲区溢出</td>
+<td style="text-align:center">缓冲区溢出；爆破；嗅探</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -409,9 +415,15 @@
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">137/139/445</td>
+<td style="text-align:center">137/139</td>
 <td style="text-align:center">SMB通信协议</td>
+<td style="text-align:center">爆破；未授权访问；远程命令执行</td>
 <td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">143</td>
+<td style="text-align:center">IMAP协议</td>
+<td style="text-align:center">爆破</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -422,8 +434,8 @@
 </tr>
 <tr>
 <td style="text-align:center">389</td>
-<td style="text-align:center">ladp</td>
-<td style="text-align:center">匿名访问，ladp注入</td>
+<td style="text-align:center">ldap</td>
+<td style="text-align:center">匿名访问，ldap注入；弱口令</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -439,15 +451,33 @@
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">875</td>
+<td style="text-align:center">512、513、514</td>
+<td style="text-align:center">Linux Rexec服务</td>
+<td style="text-align:center">爆破Rlogin登录</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">873、875</td>
 <td style="text-align:center">rsync</td>
-<td style="text-align:center">匿名访问</td>
+<td style="text-align:center">匿名访问；未授权访问；文件上传</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1080</td>
+<td style="text-align:center">socket</td>
+<td style="text-align:center">爆破</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
 <td style="text-align:center">1080/udp</td>
 <td style="text-align:center">qq默认端口</td>
 <td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">1352</td>
+<td style="text-align:center">Lotus domino邮件服务</td>
+<td style="text-align:center">爆破、信息泄漏</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -461,6 +491,24 @@
 <td style="text-align:center">oracle数据库默认端口</td>
 <td style="text-align:center">暴力破解，枚举数据库工具</td>
 <td style="text-align:center">枚举工具：Tnsver、Tnscmd</td>
+</tr>
+<tr>
+<td style="text-align:center">2049</td>
+<td style="text-align:center">NFS服务</td>
+<td style="text-align:center">nfs配置不当</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">2181</td>
+<td style="text-align:center">zookeeper</td>
+<td style="text-align:center">未授权访问</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">2375</td>
+<td style="text-align:center">docker remote api</td>
+<td style="text-align:center">未授权访问</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
 <td style="text-align:center">2601</td>
@@ -483,7 +531,7 @@
 <tr>
 <td style="text-align:center">3389</td>
 <td style="text-align:center">win2003远程登录默认端口(RDP协议)</td>
-<td style="text-align:center">暴力破解</td>
+<td style="text-align:center">暴力破解；shift后门</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -505,9 +553,21 @@
 <td style="text-align:center"></td>
 </tr>
 <tr>
+<td style="text-align:center">5000</td>
+<td style="text-align:center">DB2、sybase数据库</td>
+<td style="text-align:center">爆破；注入；提权</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center">5432</td>
 <td style="text-align:center">postgresql</td>
 <td style="text-align:center">RCE,默认帐号postgres</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">5632</td>
+<td style="text-align:center">pcanywhere服务</td>
+<td style="text-align:center">抓密码；代码执行</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -525,7 +585,7 @@
 <tr>
 <td style="text-align:center">5900</td>
 <td style="text-align:center">VNC</td>
-<td style="text-align:center"></td>
+<td style="text-align:center">爆破；认证绕过</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -553,9 +613,33 @@
 <td style="text-align:center"></td>
 </tr>
 <tr>
+<td style="text-align:center">8069</td>
+<td style="text-align:center">zabbix服务</td>
+<td style="text-align:center">远程命令执行；注入</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center">8080</td>
 <td style="text-align:center">tomcat默认的端口号</td>
 <td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">8083、8086</td>
+<td style="text-align:center">influxDB</td>
+<td style="text-align:center">未授权访问</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">8089</td>
+<td style="text-align:center">jboss、resin</td>
+<td style="text-align:center">爆破；put文件上传；反序列化</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">8161</td>
+<td style="text-align:center">activemq</td>
+<td style="text-align:center">弱口令；写文件</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -595,6 +679,12 @@
 <td style="text-align:center"></td>
 </tr>
 <tr>
+<td style="text-align:center">11211</td>
+<td style="text-align:center">memcached</td>
+<td style="text-align:center">未授权访问</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center">50000</td>
 <td style="text-align:center">SAP命令执行</td>
 <td style="text-align:center"></td>
@@ -622,7 +712,7 @@
         <p><span>本文标题:</span><a  href="/2018/12/17/常见端口/">常见端口</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Trans 的个人博客">Trans</a></p>
         <p><span>发布时间:</span>2018年12月17日 - 21时38分</p>
-        <p><span>最后更新:</span>2019年04月23日 - 17时43分</p>
+        <p><span>最后更新:</span>2019年06月20日 - 10时26分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/12/17/常见端口/" title="常见端口">http://tranzimiss.com/2018/12/17/常见端口/</a>
             <span class="copy-path" data-clipboard-text="原文: http://tranzimiss.com/2018/12/17/常见端口/　　作者: Trans" title=""></span>
